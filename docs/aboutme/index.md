@@ -1,2 +1,3 @@
 #About Me
-This is how to edit
+Ryan Thomas
+Hey all, Thank You for visiting my portfolio I am currently studying Mechanical Engineering at UNCC. 
