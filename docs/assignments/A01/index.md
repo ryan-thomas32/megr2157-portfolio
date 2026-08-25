@@ -42,7 +42,7 @@ For the jaws of the channel locks, we can first see the teeth, the mouth of the 
 
 Possible Alternatives:
 
-Crescent Wrench: Uses a threaded worm screw and a sliding jaw, which can only be oriented parallel instead of having a pivot point. It gives infinite adjustment options within the size of the wrench and is more precise than Channellock's stepped positions, but sacrifices a large amount of clamping force due to the lack of leverage from the squeezing action of the channellock's long grips and jaw geometry
+Crescent Wrench: Uses a threaded worm screw and a sliding jaw, which can only be oriented parallel instead of having a pivot point. It gives infinite adjustment options within the size of the wrench and is more precise than Channellock's stepped positions, but sacrifices a large amount of clamping force due to the lack of leverage from the squeezing action of the Channellock's long grips and jaw geometry
 
 Pipe Wrench: uses a floating hinged jaw and heavily serrated teeth that bite harder the more torque is applied rather than a fixed pivot position. Better suited to high-torque applications and cylindrical objects.
 
@@ -50,6 +50,10 @@ One possible design engineering the decision that the engineer made while creati
 
 
 ## Decide
+
+Homepage Creation- I oriented my home page as a summary and a guide that viewers can use throughout my course and portfolio to see how I grew as an engineer. First, I summarize the portfolio's purpose. I also explain how the portfolio is organized for quick access to all assignments and share key information about the course and the design decisions made throughout it. Overall, I keep the summary brief and avoid overcomplicating it.
+
+Homepage Identity-
 
 
 ## Communicate
