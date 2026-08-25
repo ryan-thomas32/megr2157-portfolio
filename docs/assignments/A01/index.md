@@ -25,11 +25,20 @@ c.Evidence of reasoning: While Jack does show some comparative reasoning like fo
 
 d. Professional Tone: Also measured against the standard of technical writing expected in a mechanical engineering resume Some feel specific terminologies use without definition and some of his Engineering projects page use very informal descriptions any in a fixed narrative with phrasing that's not typical of a document you would hand to an employer for engineering for example on the bicep curl page he used that at least what I tell my friends at the gym which is phrasing that wouldn't be appropriate For an employer.
 
-Product Analysis: Tounge and Groove adjustable pliers
+Product Analysis: Tongue and Groove adjustable pliers "channellocks"
 
-The  primary function of this product is to hold and grip nuts and bolts by turning a clamping force from your hand through a pivot point to a pair of jaws on the other side 
+The main function of the adjustable pliers is to grip and hold different-sized bolts and fasteners effectively. It does this by converting applied hand force into a concentrated compressive force in the jaws. The device operates as a lever system: when the user squeezes the handles, torque is generated about the pivot point, thus increasing force in the jaws. Other functions include maintaining jaw alignment and concentrating clamping force on the correct portions of the jaw teeth to prevent tool slippage. 
 
+The main design of channel locks is essentially a compound lever with a moving pivot point that slides across multiple grooves or sizes; the main equation for this product to find force in jaws is a simple mechanics problem that says Force in hnadle times lemngth in handle is equal too Force jaw times jaw length which creates a simple relation for mechanical advantage of jaw force over handle force must equal Handle length over jaw length where length are meausured from the pivot point, this sytem relies heavily and only holds true on a rigid-body equilibrium system to create mechanical advantage that the user applies with their hand through the handles. But this is not always true: if the tool bends or deforms, it can render these calculations and models useless, as elasticity comes into play, which is why the tool is usually designed with a highly bending-resistant material to behave correctly, like carbon steel, like the ones I have here.
 
+You can find the patent here: https://patents.google.com/patent/EP2949426B1/en?q=(water+pump+pliers)&oq=water+pump+pliers
+
+<img width="400" height="266" alt="s-l400 (1)" src="https://github.com/user-attachments/assets/576a2daa-f1c3-437d-854a-4e2d17c2dd98" />
+Jaws and Sliding Mechanism/Pivot
+
+For the jaws of the channel locks, we can first see the teeth, the mouth of the pliers, shaped in triangles to help grip round objects and prevent them from slipping while in use. Then we have the physical jaws, or mouth, of the pliers, which are angled toward each other rather than parallel like a wrench. This lets you grab pipes by closing the jaws around them, rather than holding them parallel like a wrench. In addition, the teeth in the mouth help keep the pliers from slipping during use. Also, in this picture, the groove or slot on the jaws of the adjustable pliers is visible. The pin can also be seen as the black circle holding the two handles together; it slides through that groove and locks into the triangular grooves. This allows the pliers to be adjusted in size without slipping to a different size while in use. Those teeth on the side act like a simple locking mechanism: as the shape of the pin under the handles is pulled back parallel to the groove, the two handles can slide freely in the groove, and when ready to lock, the teardrop shape of the pin locks physically against those triangular teeth, and friction holds it together.
+
+<img width="400" height="266" alt="s-l400 (2)" src="https://github.com/user-attachments/assets/e86ca0df-c2fe-4ff2-a282-c6e68e5a71f6" />
 
 ## Decide
 
