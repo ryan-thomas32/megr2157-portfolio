@@ -53,7 +53,8 @@ One possible design engineering the decision that the engineer made while creati
 
 Homepage Creation- I oriented my home page as a summary and a guide that viewers can use throughout my course and portfolio to see how I grew as an engineer. First, I summarize the portfolio's purpose. I also explain how the portfolio is organized for quick access to all assignments and share key information about the course and the design decisions made throughout it. Overall, I keep the summary brief and avoid overcomplicating it.
 
-Homepage Identity-
+Homepage Identity- For my homepage, I included an image with my name in the portfolio title to add personalization and identity. The image makes it more enjoyable to view and may encourage people to explore my portfolio further. It also clearly shows the locking action.
+
 
 
 ## Communicate
