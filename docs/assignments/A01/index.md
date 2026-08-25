@@ -55,7 +55,7 @@ Homepage Creation- I oriented my home page as a summary and a guide that viewers
 
 Homepage Identity- For my homepage, I included an image with my name in the portfolio title to add personalization and identity. The image makes it more enjoyable to view and may encourage people to explore my portfolio further. It also clearly shows the locking action.
 
-
+Documentation Standard: I hold myself to a standard of putting maximum effort into documenting as much as possible, without missing any details, to make the content I produce easy for everyone to understand.
 
 ## Communicate
 
