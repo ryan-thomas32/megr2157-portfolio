@@ -9,7 +9,7 @@ Github based Portfolio [https://nhoong.github.io/index.html](https://nhoong.gith
 
 a.Navigability: Nathan's portfolio initially opens to a single continuous page including a picture of himself, his about me section, and links to many of his numerous CAD projects. At the top, there is a bar for other sections for his work experience and resume. Finding every specific piece of work in less than 60 seconds would not work, as anything not on the main page would take longer than 60 seconds to find because the projects lack organized tabs and folders.
 
-b. Reproducibility: The documentation provided throughout Nathan's portfolio provides more of a descriptive, based way of how he completed his projects, with no instructions included, only renders and an objective and results overview. There is only one exception: his linked capstone project PDF, which includes word-for-word instructions on the development of his project so you can easily replicate his process.
+b. Reproducibility: The documentation provided throughout Nathan's portfolio provides more of a descriptive, process-based way of how he completed his projects, with no instructions included, only renders and an objective and results overview. There is only one exception: his linked capstone project PDF, which includes word-for-word instructions on the development of his project so you can easily replicate his process.
 
 c.Evidence of Reasoning: Nathan's portfolio favors more of the format mentioned above, like the objective result method, where he summarizes at a glance why he chose a specific method and choice over another, but then skips over the validation part. In his work experience page section he does slightly better on this format; he uses bullet points, explaining what he did at his jobs and how he evaluated stuff with certain programs to verify his design choices, and briefly shows the method and the outcome, as he did with his CAD projects
 
@@ -39,6 +39,15 @@ Jaws and Sliding Mechanism/Pivot
 For the jaws of the channel locks, we can first see the teeth, the mouth of the pliers, shaped in triangles to help grip round objects and prevent them from slipping while in use. Then we have the physical jaws, or mouth, of the pliers, which are angled toward each other rather than parallel like a wrench. This lets you grab pipes by closing the jaws around them, rather than holding them parallel like a wrench. In addition, the teeth in the mouth help keep the pliers from slipping during use. Also, in this picture, the groove or slot on the jaws of the adjustable pliers is visible. The pin can also be seen as the black circle holding the two handles together; it slides through that groove and locks into the triangular grooves. This allows the pliers to be adjusted in size without slipping to a different size while in use. Those teeth on the side act like a simple locking mechanism: as the shape of the pin under the handles is pulled back parallel to the groove, the two handles can slide freely in the groove, and when ready to lock, the teardrop shape of the pin locks physically against those triangular teeth, and friction holds it together.
 
 <img width="400" height="266" alt="s-l400 (2)" src="https://github.com/user-attachments/assets/e86ca0df-c2fe-4ff2-a282-c6e68e5a71f6" />
+
+Possible Alternatives:
+
+Crescent Wrench: Uses a threaded worm screw and a sliding jaw, which can only be oriented parallel instead of having a pivot point. It gives infinite adjustment options within the size of the wrench and is more precise than Channellock's stepped positions, but sacrifices a large amount of clamping force due to the lack of leverage from the squeezing action of the channellock's long grips and jaw geometry
+
+Pipe Wrench: uses a floating hinged jaw and heavily serrated teeth that bite harder the more torque is applied rather than a fixed pivot position. Better suited to high-torque applications and cylindrical objects.
+
+One possible design engineering the decision that the engineer made while creating this is the use of a toothed slot versus a smooth slot by cutting the grooves into fixed steps each position locks easily when seated and the ridges resist sliding under clamping force or any hard use but if it was slightly different to where it was a smooth slot the engineering behind the product would have to be much more complicated and would have to include more of a friction force locking system which is hard to design and requires much more parts increasing the production complexity and price.
+
 
 ## Decide
 
