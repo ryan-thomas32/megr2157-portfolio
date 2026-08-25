@@ -1,4 +1,5 @@
 # Ryan Thomas — MEGR 2157 Portfolio
+<img width="1271" height="1271" alt="HFUAjfbamNhbM8dsNSQW3D" src="https://github.com/user-attachments/assets/bf7a3239-f41a-4512-b3fe-cc99c07655f7" />
 
 ![MEGR 2156-7 Title](MEGR2156title.png)
 
@@ -22,4 +23,5 @@ Use the navigation on the left to move between assignments.
 - **Act II (Weeks 8–11):** Surveying the machine-element landscape and formally comparing options.
 - **Act III (Weeks 12–15):** Building the complete lead screw translating system.
 
-By A11, every design decision you defend should trace back to something you analyzed and communicated earlier in this site.
+
+https://cdn.mos.cms.futurecdn.net/v2/t:0,l:495,cw:1271,ch:1271,q:80,w:1271/HFUAjfbamNhbM8dsNSQW3D.jpg Picuture Reference
