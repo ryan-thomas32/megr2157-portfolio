@@ -24,6 +24,13 @@ b.Reproducibility: Jack's project pages very in depth of documentation But the m
 c.Evidence of reasoning: While Jack does show some comparative reasoning like for his bicep curl analysis where he reports some nuances and conclude in his conclusion like how longer limbed individuals need slightly more force in raw terms However most of his projects included on his portfolio like his Formula SAE chassis in capstone aeroponics project were just report the outcome achieved without reporting many of the design alternatives he considered and how many of the boundary hues while using his FEA simulation So while reasoning is not absent it is rather inconsistent across his portfolio.
 
 d. Professional Tone: Also measured against the standard of technical writing expected in a mechanical engineering resume Some feel specific terminologies use without definition and some of his Engineering projects page use very informal descriptions any in a fixed narrative with phrasing that's not typical of a document you would hand to an employer for engineering for example on the bicep curl page he used that at least what I tell my friends at the gym which is phrasing that wouldn't be appropriate For an employer.
+
+Product Analysis: Tounge and Groove adjustable pliers
+
+The  primary function of this product is to hold and grip nuts and bolts by turning a clamping force from your hand through a pivot point to a pair of jaws on the other side 
+
+
+
 ## Decide
 
 
