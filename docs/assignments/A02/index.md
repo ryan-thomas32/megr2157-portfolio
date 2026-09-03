@@ -33,6 +33,8 @@ After finding the support reaction forces and internal loads of the beam, I move
 
 Based on my calculations, the required area to fulfill the specifications designated by the assignment is 308.44 mm^2. The weight I estimate for my truss design with this cross-sectional area is 8.959kg.
 ###  Cross-Sectional Area and Pin Weight Estimate  
+
+For Ksi, I looked up a conversion factors and manually did the calculation afterwards. For converting lb/in^3 to kg/m^3, I used this calculator: (https://www.unitconverters.net/density/pound-cubic-inch-to-kilogram-cubic-meter.htm). The photos below shows my calculations for the pin cross section and diameter as well as the weight of the pins.
 <img width="2376" height="3029" alt="CamScanner 9-3-26 04 02n" src="https://github.com/user-attachments/assets/bc156abe-bd7b-412f-9754-7718bb473471" />
 <img width="2120" height="1061" alt="CamScanner 9-3-26 04 03n (1)" src="https://github.com/user-attachments/assets/7e8ad896-9db1-4590-863e-fbf15498a91f" />
 
