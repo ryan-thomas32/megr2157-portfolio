@@ -5,7 +5,7 @@ For this assignment, we were tasked with designing a lightweight basic truss out
 
 <img width="600" height="262" alt="643664648-39cb4bb8-64b9-476e-9e04-75f2db54fd79" src="https://github.com/user-attachments/assets/4acb32b4-0775-4a2a-9e74-8f801831636e" />
 
-At point A we have a pin, and at point B we have a Roller. The distances for a are each 0.4 m, with the vertical measurement for b being 0.3 m. I chose a force P value between 20 kN and 30 kN. I decided to meet in the middle and go with 25 kN for my P value's.
+At point A we have a pin, and at point B we have a Roller. The distances for a are each 0.4 m, with the vertical measurement for b being 0.3 m. I was given the option of choosing a force P value between 20 kN and 30 kN. I decided to meet in the middle and go with 25 kN for my P value's.
 
 Quick Rundown:  
 a=0.4m  
