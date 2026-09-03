@@ -12,10 +12,10 @@ a=0.4m
 b=0.3m  
 P=25kN  
 
-## Decide  
+## Decide 
+#### Introduction
 <img width="2556" height="1603" alt="CamScanner 9-3-26 02 51n" src="https://github.com/user-attachments/assets/3f3fe491-8d37-4733-a27d-e8a24b44dc1d" />
 
-#### Introduction
 
 I laid out an initial plan to design a truss system that would be as simple as possible, both in terms of effective use of materials and ease of analysis. In my truss drafting phase, I settled on one main design, which was a Warren-style truss with 9 members and 6 joints. During the planning and brainstorming phase of this assignment, I found this truss style very beneficial, as the inclusion of 90-degree angles makes calculating internal forces within the beams less complex and improves workflow efficiency during the calculations. This design style also makes it easy to include zero-force members, which are useful as a backup within the structure if any of the main load-bearing beams undergo critical failure.
 
