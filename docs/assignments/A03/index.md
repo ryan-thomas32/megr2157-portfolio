@@ -112,7 +112,10 @@ I assumed this part of the assignment referred to length rather than deflection,
 
 From the hand calculations, I obtained a length of 2166.043195", which, when rounded down to the hundredths place, matches the result from the global equation. In SolidWorks, the length is 2166.04", indicating that the hand calculation and the FEA percent change are zero for this section.
 
-When it comes down to doing this for deflection, use the given maximum axial deflection value for the problem and FEA in SolidWorks
+When it comes down to doing this for deflection, using the given maximum axial deflection value for the problem of .009" and FEA in SolidWorks of 
+
+
+
 
 
 
