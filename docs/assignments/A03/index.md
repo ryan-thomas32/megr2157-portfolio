@@ -1,7 +1,7 @@
 # A3 – Parametric Design & FEA Analysis
 
 ## Objective
-The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a self-selected cross-sectional dimension, we need to use parametric design concepts to determine the bars' minimum length, as the instructions and design limitations state that the maximum axial deflection must be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
+The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a cross-sectional dimension, we need to use parametric design concepts to determine the bars' minimum length, since the instructions and design limitations require the maximum axial deflection to be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
 
 After designing the Bar with all its dimensions, we need to create and analyze it in CAD, then run an FEA simulation to verify our final findings.
 
@@ -47,7 +47,7 @@ A = 8.946175955 in^2
 
 Now that we have each variable except the length, we can rearrange the Direct Tension Elongation Equation to find L, which will be the maximum length for our bar, as anything shorter would yield a deflection of less than .009 inch. After that, I continued calculating the length by plugging in all the variables. Doing this, I was able to calculate a Length of:
 
-L = 2166.043195in 
+L = 2166.043195"
 
 This was an interesting answer. I initially went back through my work and did not see any glaring errors, so I decided to trust my value for the moment, as it would be cleared up in the next step.
 
@@ -104,11 +104,15 @@ Using the Probe tool in my stress analysis, I found the Max Stress value and loc
 According to my FEA simulation, the maximum stress is 44.11 psi, which converts to 0.04411 ksi. This is significantly below the 40 ksi limit for Aluminum strength.  
 We can also find the safety factor with a quick calculation:
 
-SF = 40 psi / 0.04411 psi = 907
+SF = 40 ksi / 0.04411 ksi = 907
 
-This is a very large safety factor I calculated, which surprised me and, once again, made me review my calculations for errors, which I did not find. All my units are converted correctly. This is a good example for me of how, in the future, I should get much closer to the safety factor and leave less leeway than is represented here.
+This is a very large safety factor I calculated, which surprised me and, once again, prompted me to review my calculations for errors, though I found none. All my units are converted correctly. This is a good example for me of how, in the future, I should get much closer to the safety factor and leave less leeway than is represented here.
+ ### Design Reflection
+I assumed this part of the assignment referred to length rather than deflection, but I solved and calculated both just to be sure. Deflection is given within the parameters of the assignment: "The max axial deflection of the bar is .009 inches.", and remains constant, which means, in theory, its percent change must automatically be zero.
 
+From the hand calculations, I obtained a length of 2166.043195", which, when rounded down to the hundredths place, matches the result from the global equation. In SolidWorks, the length is 2166.04", indicating that the hand calculation and the FEA percent change are zero for this section.
 
+When it comes down to doing this for deflection, use the given maximum axial deflection value for the problem and FEA in SolidWorks
 
 
 
@@ -119,7 +123,6 @@ This is a very large safety factor I calculated, which surprised me and, once ag
 
 
 
-## Decide
 
 
 ## Communicate
