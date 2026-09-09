@@ -52,6 +52,7 @@ L = 2166.043195in
 This was an interesting answer. I initially went back through my work and did not see any glaring errors, so I decided to trust my value for the moment, as it would be cleared up in the next step.
 
 ### Solidworks
+#### Part Creation
 After my calculation, I followed up in SolidWorks, following the instructions
 I set and defined all my equations and variables from my hand calculations in the global equations tab and got the same result for the length as before
 <img width="921" height="416" alt="Screenshot 2026-09-08 175116" src="https://github.com/user-attachments/assets/c70332e3-7de1-465e-9bc7-8bce448ca07a" />
