@@ -95,8 +95,17 @@ Right View:
  <img width="1521" height="827" alt="Screenshot 2026-09-08 200803" src="https://github.com/user-attachments/assets/f588067d-b7c3-48dc-b099-a793f1ee71de" />
 
 
- 
+Using the Probe tool in my stress analysis, I found the Max Stress value and location, as shown in the attachment below.
 
+<img width="1242" height="786" alt="Screenshot 2026-09-08 210613" src="https://github.com/user-attachments/assets/0926bc23-ba54-4637-83ae-27bdb1af9431" />
+
+
+According to my FEA simulation, the maximum stress is 44.11 psi, which converts to 0.04411 ksi. This is significantly below the 40 ksi limit for Aluminum strength.  
+We can also find the safety factor with a quick calculation:
+
+SF = 40 psi / 0.04411 psi = 907
+
+This is a very large safety factor I calculated, which surprised me and, once again, made me review my calculations for errors, which I did not find. All my units are converted correctly. This is a good example for me of how, in the future, I should get much closer to the safety factor and leave less leeway than is represented here.
 
 
 
