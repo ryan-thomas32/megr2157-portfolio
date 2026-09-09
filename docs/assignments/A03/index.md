@@ -39,13 +39,70 @@ Next, I included the direct tension elongation equation from the machinery handb
 
 #### Finding Bar Area
 
-After listing our Direct tension elongation equation, we next need to solve for the cross-sectional area of the beam. Here, I again did not round any digits, and I calculated the Bar Area to be:
+After listing our direct tension-elongation equation, we next need to solve for the beam's cross-sectional area. Here, I again did not round any digits, and I calculated the Bar Area to be:
 
 A = 8.946175955 in^2
 
 #### Adjusting Direct Tension Elongation Equation to find Length(L)
 
-Now that we have each variable except the length, we can rearrange the Direct Tension Elongation Equation to find L, which will be the minimum length required for our bar.
+Now that we have each variable except the length, we can rearrange the Direct Tension Elongation Equation to find L, which will be the maximum length for our bar, as anything shorter would yield a deflection of less than .009 inch. After that, I continued calculating the length by plugging in all the variables. Doing this, I was able to calculate a Length of:
+
+L = 2166.043195in 
+
+This was an interesting answer. I initially went back through my work and did not see any glaring errors, so I decided to trust my value for the moment, as it would be cleared up in the next step.
+
+### Solidworks
+After my calculation, I followed up in SolidWorks, following the instructions
+I set and defined all my equations and variables from my hand calculations in the global equations tab and got the same result for the length as before
+<img width="921" height="416" alt="Screenshot 2026-09-08 175116" src="https://github.com/user-attachments/assets/c70332e3-7de1-465e-9bc7-8bce448ca07a" />
+
+Once the equations section was complete, I drew a circle on the right plane and dimensioned it to the diameter defined in the global equations tab.
+
+<img width="807" height="690" alt="Screenshot 2026-09-08 203038" src="https://github.com/user-attachments/assets/5f4f5283-74d1-45ce-a6e8-4f5b3996e4b5" />
+
+Following that, I extruded the circle, setting the bar's extrusion length to the L variable I found in my calculations and in the global equations tab.
+
+<img width="1261" height="857" alt="Screenshot 2026-09-08 184357" src="https://github.com/user-attachments/assets/0a706168-7d71-4163-ab73-2a6f7a00107c" />
+
+Then I applied a force to the surface at the end of the bar using the simulation tools, and I also fixed the bar on the left face to represent the bar being fixed to a rigid wall in SolidWorks.
+
+Adding Force to the Right Face
+<img width="1278" height="726" alt="Screenshot 2026-09-08 174021" src="https://github.com/user-attachments/assets/bb20d18e-a3f7-4170-bfbe-97d141fe745f" />
+
+Adding Fixture to the Left Face
+<img width="1312" height="827" alt="Screenshot 2026-09-08 174154" src="https://github.com/user-attachments/assets/e07e571c-04a4-4b4c-9750-d4dca60f2fcf" />
+
+#### Bar Views
+
+Front View:
+
+<img width="1652" height="631" alt="Screenshot 2026-09-08 202839" src="https://github.com/user-attachments/assets/34bba638-d78d-43a7-939a-45f790cd1217" />
+
+
+Right View:
+
+<img width="763" height="462" alt="Screenshot 2026-09-08 203043" src="https://github.com/user-attachments/assets/cefba663-0383-41cf-a3a8-beea150de486" />
+
+#### Finite Element Analysis
+ After assigning the fixtures and the Forces to the Bar, I then created a mesh and began running my simulations
+
+ Von Mises Map:
+
+ <img width="1345" height="757" alt="Screenshot 2026-09-08 200726" src="https://github.com/user-attachments/assets/73be17c0-8238-40f1-a7b7-fcbe36f2f3c2" />
+
+ Deflection/ Displacement Map:
+
+ <img width="1521" height="827" alt="Screenshot 2026-09-08 200803" src="https://github.com/user-attachments/assets/f588067d-b7c3-48dc-b099-a793f1ee71de" />
+
+
+ 
+
+
+
+
+
+
+
 
 
  
