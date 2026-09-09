@@ -1,7 +1,7 @@
 # A3 – Parametric Design & FEA Analysis
 
 ## Objective
-The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a cross-sectional dimension, we need to use parametric design concepts to determine the bars' minimum length, since the instructions and design limitations require the maximum axial deflection to be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
+The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a cross-sectional dimension, we need to use parametric design concepts to determine the minimum bar length, since the instructions and design limitations require that the maximum axial deflection be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
 
 After designing the Bar with all its dimensions, we need to create and analyze it in CAD, then run an FEA simulation to verify our final findings.
 
@@ -107,12 +107,36 @@ We can also find the safety factor with a quick calculation:
 SF = 40 ksi / 0.04411 ksi = 907
 
 This is a very large safety factor I calculated, which surprised me and, once again, prompted me to review my calculations for errors, though I found none. All my units are converted correctly. This is a good example for me of how, in the future, I should get much closer to the safety factor and leave less leeway than is represented here.
- ### Design Reflection
+### Design Reflection
+#### Percent Difference Calculations
 I assumed this part of the assignment referred to length rather than deflection, but I solved and calculated both just to be sure. Deflection is given within the parameters of the assignment: "The max axial deflection of the bar is .009 inches.", and remains constant, which means, in theory, its percent change must automatically be zero.
 
-From the hand calculations, I obtained a length of 2166.043195", which, when rounded down to the hundredths place, matches the result from the global equation. In SolidWorks, the length is 2166.04", indicating that the hand calculation and the FEA percent change are zero for this section.
+From the hand calculations, I obtained a length of 2166.043195", which, when rounded down to the 2nd decimal place, matches the result from the global equation. In SolidWorks, the length is 2166.04", indicating that the hand calculation and the FEA percent change result in  0% for this section.
 
-When it comes down to doing this for deflection, using the given maximum axial deflection value for the problem of .009" and FEA in SolidWorks of 
+When it comes down to doing this for deflection, using the given maximum axial deflection value for the problem of .009" and FEA in SolidWorks of .009078", which rounded to the same digits as our given maximum axial deflection, gives .009" also, which means the percent change will again be 0% for this example.
+
+<img width="715" height="491" alt="Screenshot 2026-09-09 175358" src="https://github.com/user-attachments/assets/ecf99e55-6cc8-42f1-a972-4bb0e1d9671e" />
+
+
+This was my goal: not to round any digits throughout my calculation, as I was trying to keep the percent change to the SolidWorks calculation as minimal as possible; in engineering, small differences can have extreme consequences in certain applications.
+
+#### Pin Hole Stress Concentration Calculations
+Imagining a substantial pinhole in the side of my bar, I first used the machinery handbook to find that the stress concentration factor Kt for a flat bar in tension is:
+
+Kt = 3
+
+Then, following the finding of the stress concentration, I created the equation to be used to calculate the peak stress at the hole, which is included in my calculation below
+
+Using these calculations, I found a maximum stress of 132.33 psi (0.13233 ksi) at the hole. This is about 3 times higher than the previous stress, which makes sense since our stress concentration is 3. In line with this finding, I also found my new safety factor, including the pinhole, to be 302, about a third of the 907 safety factor I had before. This safety factor is still high; the design is viable for the objective required but is not nearly as optimized as it realistically should be.
+
+IMAGE
+
+
+
+
+
+
+
 
 
 
