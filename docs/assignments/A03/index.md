@@ -3,7 +3,7 @@
 ## Objective
 The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a cross-sectional dimension, we need to use parametric design concepts to determine the minimum bar length, since the instructions and design limitations require that the maximum axial deflection be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
 
-After designing the Bar with all its dimensions, we need to create and analyze it in CAD, then run an FEA simulation to verify our final findings.
+After designing the Bar with all its dimensions, we need to model it in CAD, then run an FEA simulation to verify our final findings.
 
 ## Analyze
 #### Applied Force, Aluminum, and Dimension Selection
@@ -127,9 +127,38 @@ Kt = 3
 
 Then, following the finding of the stress concentration, I created the equation to be used to calculate the peak stress at the hole, which is included in my calculation below
 
-Using these calculations, I found a maximum stress of 132.33 psi (0.13233 ksi) at the hole. This is about 3 times higher than the previous stress, which makes sense since our stress concentration is 3. In line with this finding, I also found my new safety factor, including the pinhole, to be 302, about a third of the 907 safety factor I had before. This safety factor is still high; the design is viable for the objective required but is not nearly as optimized as it realistically should be.
+Using these calculations, I found a maximum stress of 132.33 psi (0.13233 ksi) at the hole. This is about 3 times higher than the previous stress, which makes sense since our stress concentration is 3. In line with this finding, I also found my new safety factor, including the pinhole, to be 302, about a third of the previous safety factor of 907. This safety factor is still high; the design is viable for the objective required but is not nearly as optimized as it realistically should be.
 
-IMAGE
+<img width="1775" height="777" alt="CamScanner 9-9-26 18 25n" src="https://github.com/user-attachments/assets/d3488ce2-371f-4f54-abf9-12e7a906c14c" />
+
+### 2157 Additional Analysis
+
+#### Design Parameter Alterations
+Following the calculations for our original bar above, we need to change each of the design parameters we chose for our first bar, including Load and cross-sectional dimensions, while keeping our aluminum type, fixture, and max axial deflection constant for both bars. I went searching around in public again, trying to find more fluid, non-preselected values to challenge myself further.
+
+Original Dimensions:  
+F = 372 lbf
+
+d = 3.375"
+
+E = 10007603.9 psi (Constant)
+
+max axial deflection = .009" (Constant)
+
+New Altered Dimensions:  
+
+F = 300 lbf
+
+d = 27.000"
+
+E = 10007603.9 psi (Constant)
+
+max axial deflection = .009" (Constant)
+
+Based on these alterations, I believe that the overall length of the bar will increase significantly, which, as I mentioned before, with the surprising length of my first bar, I figured out and realized that the chosen area is so large that it will make the bar extremely long relative to the diameter and area, as the constant .009" limit for axial deflection does not scale with the dimensions of the bar, leaving me to theorize this throughout my work on this assignment.
+
+For this calculation, we must again find the new altered cross-section area of the bar, then we can follow it up with the equation we used to find the length from before.
+
 
 
 
