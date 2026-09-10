@@ -24,4 +24,4 @@ Use the navigation on the left to move between assignments.
 - **Act III (Weeks 12–15):** Building the complete lead screw translating system.
 
 
-https://cdn.mos.cms.futurecdn.net/v2/t:0,l:495,cw:1271,ch:1271,q:80,w:1271/HFUAjfbamNhbM8dsNSQW3D.jpg Picuture Reference
+https://cdn.mos.cms.futurecdn.net/v2/t:0,l:495,cw:1271,ch:1271,q:80,w:1271/HFUAjfbamNhbM8dsNSQW3D.jpg Picture Reference
