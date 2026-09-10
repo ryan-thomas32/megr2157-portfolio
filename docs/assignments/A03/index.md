@@ -155,9 +155,12 @@ E = 10007603.9 psi (Constant)
 
 max axial deflection = .009" (Constant)
 
-Based on these alterations, I believe that the overall length of the bar will increase significantly, which, as I mentioned before, with the surprising length of my first bar, I figured out and realized that the chosen area is so large that it will make the bar extremely long relative to the diameter and area, as the constant .009" limit for axial deflection does not scale with the dimensions of the bar, leaving me to theorize this throughout my work on this assignment.
+Based on these alterations, I believe the bar's overall length will increase significantly. As I mentioned before, with the surprising length of my first bar, I figured out and realized that the chosen area is so large that it will make the bar extremely long relative to the diameter and area, as the constant .009" limit for axial deflection does not scale with the dimensions of the bar, leaving me to theorize this throughout my work on this assignment.
 
-For this calculation, we must again find the new altered cross-section area of the bar, then we can follow it up with the equation we used to find the length from before.
+For this calculation, we must again find the new cross-sectional area of the bar, then find the length using the equation we used before.
+
+##### Alteration Hand Calculations
+<img width="1106" height="928" alt="CamScanner 9-9-26 23 34n" src="https://github.com/user-attachments/assets/3a3294d1-b718-44c4-ba27-8276a130288b" />
 
 
 
