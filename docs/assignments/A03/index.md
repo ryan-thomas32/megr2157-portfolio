@@ -7,7 +7,7 @@ After designing the Bar with all its dimensions, we need to model it in CAD, the
 
 ## Analyze
 #### Applied Force, Aluminum, and Dimension Selection
-For deciding the chosen dimensions for my bar, I took an engineer's approach to this by asking one of my friends overseas for a value for the force being applied, then followed that up with asking one of my parent for a goal diameter for my bar, and then finally having my uncle choose an aluminum type that fits the requirements of the assignment. The goal of my trying this is to challenge myself and, most importantly, to simulate the requirements a consumer or customer would set for a product. The results of this gave me a Force of 372lbf being applied to the end of the bar, a chosen diameter of 3 3/8" or 3.375", and finally a chosen aluminum type, which is 3003 H12, with a Young's modulus value of around 10.0 x 10^6 psi seen below, but for the calculations of this assignment, I will use the full Young's modulus including each digit, to keep my percent error and calculations as accurate as possible.
+For deciding the chosen dimensions for my bar, I took an engineer's approach to this by asking one of my friends overseas for a value for the force being applied, then followed that up with asking one of my parent for a goal diameter for my bar, and then finally having my uncle choose an aluminum type that fits the requirements of the assignment. The goal of my trying this is to challenge myself further and, most importantly, to simulate the requirements a consumer or customer would set for a product. The results of this gave me a Force of 372lbf being applied to the end of the bar, a chosen diameter of 3 3/8" or 3.375", and finally a chosen aluminum type, which is 3003 H12, with a Young's modulus value of around 10.0 x 10^6 psi seen below, but for the calculations of this assignment, I will use the full Young's modulus including each digit, to keep my percent error and calculations as accurate as possible.
 
 <img width="660" height="530" alt="Screenshot 2026-09-08 163115" src="https://github.com/user-attachments/assets/cb37bcb6-1829-47e6-991e-baea442f0a01" />
 
@@ -139,7 +139,7 @@ Using these calculations, I found a maximum stress of 132.33 psi (0.13233 ksi) a
 ### 2157 Additional Analysis
 
 #### Design Parameter Alterations
-Following the calculations for our original bar above, we need to change each of the design parameters we chose for our first bar, including Load and cross-sectional dimensions, while keeping our aluminum type, fixture, and max axial deflection constant for both bars. I went searching around in public again, trying to find more fluid, non-preselected values to challenge myself further.
+Following the calculations for our original bar above, we need to change each of the design parameters we chose for our first bar, including Load and cross-sectional dimensions, while keeping our aluminum type, fixture, and max axial deflection constant for both bars. I went searching around in public again, trying to find more fluid, non-preselected values to challenge myself.
 
 Original Dimensions:  
 F = 372 lbf
@@ -178,6 +178,9 @@ For both the original and the altered bar, I calculated the ratios, rounding to 
 The lessons I took from this assignment were key to becoming an engineer in the future. This was my first experience with FEA in SolidWorks CAD, programming global variables, and using a parametric design process. I see how this could be used in future tasks to improve workflow efficiency and reduce the time required to design and create parts. Throughout this assignment, I learned that sometimes you have to trust the answers, even when they seem incorrect at first. It took me around 7 1/2 hours to complete this assignment, and I split it up into several parts. This helped keep my mind on the right thing, but it also added time that could have been saved. Throughout the process, I also noticed a lack of detail in the documentation toward the end. I covered it back over to keep it consistent throughout my assignment.
 
 ## Appendix
+[A3 Bar Solidworks Download](https://drive.google.com/file/d/1Qwii7tmqtb_z3lScQhf5fDMD6sxlzVTP/view?usp=sharing)  
+[A3 Bar Full Calculations Page](https://drive.google.com/file/d/1KOsLIL7nLaxN8topsVv0RCSaw7iOyg9J/view?usp=sharing)
+
 
 
 
