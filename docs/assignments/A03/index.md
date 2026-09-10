@@ -3,7 +3,7 @@
 ## Objective
 The objectives of this assignment were to design a solid circular cross-section aluminum beam with a Young's modulus between 8.5-11.5 x 10^6 psi under an applied distributed load on the end of the bar between 300lbf and 500 lbf. After selecting a cross-sectional dimension, we need to use parametric design concepts to determine the minimum bar length, since the instructions and design limitations require that the maximum axial deflection be 0.009 inches. Here is a basic diagram of the objective below.<img width="458" height="55" alt="download" src="https://github.com/user-attachments/assets/450a0c18-4750-4ee0-936b-c2879ee9753a" />
 
-After designing the Bar with all its dimensions, we need to model it in CAD, then run an FEA simulation to verify our final findings.
+After designing the Bar with all its dimensions, we need to model it in CAD and then run an FEA simulation to verify our findings.
 
 ## Analyze
 #### Applied Force, Aluminum, and Dimension Selection
@@ -61,6 +61,7 @@ This was an interesting answer. I initially went back through my work and did no
 After my calculation, I followed up in SolidWorks using the instructions
 
 I set and defined all my equations and variables from my hand calculations in the global equations tab and got the same result for the length as before
+
 <img width="921" height="416" alt="Screenshot 2026-09-08 175116" src="https://github.com/user-attachments/assets/c70332e3-7de1-465e-9bc7-8bce448ca07a" />
 
 Once the equations section was complete, I drew a circle on the right plane and dimensioned it to the diameter defined in the global equations tab.
@@ -119,12 +120,14 @@ I assumed this part of the assignment referred to length rather than deflection,
 
 From the hand calculations, I obtained a length of 2166.043195", which, when rounded down to the 2nd decimal place, matches the result from the global equation. In SolidWorks, the length is 2166.04", indicating that the hand calculation and the FEA percent change result in  0% for this section.
 
-When it comes down to doing this for deflection, using the given maximum axial deflection value for the problem of .009" and FEA in SolidWorks of .009078", which rounded to the same digits as our given maximum axial deflection, gives .009" also, which means the percent change will again be 0% for this example.
+When it comes to deflection, we have the given maximum axial deflection of .009" and the FEA value in SolidWorks of .009078". When rounded to the same digits as the given value, the FEA result also reads .009", which would make the percent change look like it'd be 0%,  but carrying the full FEA number and digits instead gives:
+
+(.009078 − .009) / .009 × 100 = 0.87%
 
 <img width="715" height="491" alt="Screenshot 2026-09-09 175358" src="https://github.com/user-attachments/assets/ecf99e55-6cc8-42f1-a972-4bb0e1d9671e" />
 
 
-This was my goal: not to round any digits throughout my calculation, as I was trying to keep the percent change to the SolidWorks calculation as minimal as possible; in engineering, small differences can have extreme consequences in certain applications.
+This was my goal: not to round any digits throughout my calculation, in an attempt to keep the percent change to the SolidWorks calculation as minimal as possible; in engineering, small differences can have extreme consequences in certain applications.
 
 #### Pin Hole Stress Concentration Calculations
 Imagining a substantial pinhole in the side of my bar, I first used the machinery handbook to find that the stress concentration factor Kt for a flat bar in tension is:
@@ -176,8 +179,7 @@ d/d : L/d
 For both the original and the altered bar, I calculated the ratios, rounding to the next whole number, yielding 1:642 for the original and 1:6367 for the altered. This, I believe, is because, with so much area added, the bar must be much longer to achieve the required deflection.
 
 #### Altered Bar Modeling and FEA in SolidWorks
-After finding all the hand calculation I created the new altered bar is SolidWorks using the same process I used to create my original bar I ran in top some trouble as the length is too long for solid works to even allow so I tried dividing the diameter, force, and length by 6 to see if it would yield the same result after doing this the numbers I got fit the required limitations and was a successful hypothesis.
-
+After finding all the hand calculations, I created the new altered bar in SolidWorks using the same process I used to create my original bar. I ran into trouble because the length exceeded SolidWorks' limit, so I divided the diameter, force, and length by 6 to see whether it would yield the same result. After doing this, the numbers I got met the required limitations and supported my hypothesis.
 Von Mises Map:
 <img width="1508" height="822" alt="Screenshot 2026-09-10 012022" src="https://github.com/user-attachments/assets/c64584e6-2eb9-4c67-9b01-c552eb8b96be" />
 
@@ -190,15 +192,13 @@ Using the Probe tool in my stress analysis, I found the Max Stress value and loc
 
 <img width="946" height="642" alt="Screenshot 2026-09-10 012820" src="https://github.com/user-attachments/assets/615223e4-58d9-467b-ba17-bee783181b3f" />
 
-According to my FEA simulation, the maximum stress is 3.274 psi, which converts to 0.003274 ksi this differs from if you did a hand calculation using the full sized altered bar which  results in a max stress of .524 psi or 0.000524ksi. This is even more below the 40 ksi limit for Aluminum strength we found for our original bar.  
+According to my FEA simulation, the maximum stress is 3.274 psi, which converts to 0.003274 ksi. This differs from what you would get with a hand calculation using the full-sized altered bar, which  yields a max stress of 0.524 psi (0.000524 ksi). This is even below the 40 ksi limit for Aluminum strength we found for our original bar.  
 We can use both these values to find the safety factor with a quick calculation:
 
 SF = 40 ksi / 0.003274 ksi = 12218 (Scaled Down Altered Bar)
 SF = 40 ksi / 0.000524 ksi = 76336 (Full Size Altered Bar)
 
-Both of these design are very overdone from the safety factors calculated on thing I can note is that the biggers the radius the higher the safety factor grrows throughout these beams which make me belive I set my diameters way on the highside for this assignment.
-
-
+Both designs are very overdone based on the calculated safety factors. Still, even after scaling down to fit SolidWorks dimensions, the scaled-down bar does just as good a job as the full-size one at conveying what changed within the bar, such as the change in safety factor. One thing I notice is that the bigger the radius, the higher the safety factor throughout these beams, which makes me think I set my diameters way too high for this assignment.
 
 
 ## Communicate
