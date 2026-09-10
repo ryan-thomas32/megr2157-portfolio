@@ -195,7 +195,7 @@ Using the Probe tool in my stress analysis, I found the Max Stress value and loc
 According to my FEA simulation, the maximum stress is 3.274 psi (0.003274 ksi). This differs from what you would get with a hand calculation using the full-sized altered bar, which  yields a max stress of 0.524 psi (0.000524 ksi). This is even below the 40 ksi limit for Aluminum strength we found for our original bar.  
 We can use both these values to find the safety factor with a quick calculation:
 
-SF = 40 ksi / 0.003274 ksi = 12218 (Scaled Down Altered Bar)
+SF = 40 ksi / 0.003274 ksi = 12218 (Scaled Down Altered Bar)  
 SF = 40 ksi / 0.000524 ksi = 76336 (Full Size Altered Bar)
 
 Both designs are very overdone based on the calculated safety factors. Still, even after scaling down to fit SolidWorks dimensions, the scaled-down bar does just as good a job as the full-size one at conveying what changed within the bar, such as the change in safety factor. One thing I notice is that the bigger the radius, the higher the safety factor throughout these beams, which makes me think I set my diameters way too high for this assignment.
