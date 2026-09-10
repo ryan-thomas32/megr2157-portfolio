@@ -203,12 +203,9 @@ Both designs are very overdone based on the calculated safety factors. Still, ev
 
 ## Communicate
 ### Lessons Learned and Review
-The lessons I took from this assignment were key to becoming an engineer in the future. This was my first experience with FEA in SolidWorks CAD, programming global variables, and using a parametric design process. I see how this could be used in future tasks to improve workflow efficiency and reduce the time required to design and create parts. Throughout this assignment, I learned that sometimes you have to trust the answers, even when they seem incorrect at first. It took me around 7 1/2 hours to complete this assignment, and I split it up into several parts. This helped keep my mind on the right thing, but it also added time that could have been saved. Throughout the process, I also noticed a lack of detail in the documentation toward the end. I covered it back over to keep it consistent throughout my assignment.
+The lessons I took from this assignment were key to becoming an engineer in the future. This was my first experience with FEA in SolidWorks CAD, programming global variables, and using a parametric design process. I see how this could be used in future tasks to improve workflow efficiency and reduce the time required to design and create parts. Throughout this assignment, I learned that sometimes you have to trust the answers, even when they seem incorrect at first. It took me around 8 1/2 hours to complete this assignment, and I split it up into several parts. This helped keep my mind on the right thing, but it also added time that could have been saved. Throughout the process, I also noticed a lack of detail in the documentation toward the end. I covered it back over to keep it consistent throughout my assignment.
 
 ## Appendix
 [A3 Bar Solidworks Download](https://drive.google.com/file/d/1Qwii7tmqtb_z3lScQhf5fDMD6sxlzVTP/view?usp=sharing)  
+[A3 Altered Bar Solidworks Download](https://drive.google.com/file/d/1OqFnuj-HjXRrHFQMzbUO9Czwrn8FKplh/view?usp=sharing)  
 [A3 Bar Full Calculations Page](https://drive.google.com/file/d/1KOsLIL7nLaxN8topsVv0RCSaw7iOyg9J/view?usp=sharing)
-
-
-
-
