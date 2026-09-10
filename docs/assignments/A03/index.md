@@ -141,7 +141,7 @@ Using these calculations, I found a maximum stress of 132.33 psi (0.13233 ksi) a
 #### Design Parameter Alterations
 Following the calculations for our original bar above, we need to change each of the design parameters we chose for our first bar, including Load and cross-sectional dimensions, while keeping our aluminum type, fixture, and max axial deflection constant for both bars. I went searching around in public again, trying to find more fluid, non-preselected values to challenge myself.
 
-Original Dimensions:  
+Original Dimensions:
 F = 372 lbf
 
 d = 3.375"
@@ -149,6 +149,7 @@ d = 3.375"
 E = 10007603.9 psi (Constant)
 
 max axial deflection = .009" (Constant)
+
 
 New Altered Dimensions:  
 
