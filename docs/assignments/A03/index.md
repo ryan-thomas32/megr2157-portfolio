@@ -43,11 +43,16 @@ After listing our direct tension-elongation equation, we next need to solve for 
 
 A = 8.946175955 in^2
 
+<img width="757" height="400" alt="CamScanner 9-9-26 23 46n" src="https://github.com/user-attachments/assets/2e7cbc65-a9ac-4217-bdef-3d8549e5cf6b" />
+
 #### Adjusting Direct Tension Elongation Equation to find Length(L)
 
 Now that we have each variable except the length, we can rearrange the Direct Tension Elongation Equation to find L, which will be the maximum length for our bar, as anything shorter would yield a deflection of less than .009 inch. After that, I continued calculating the length by plugging in all the variables. Doing this, I was able to calculate a Length of:
 
 L = 2166.043195"
+
+<img width="1818" height="652" alt="CamScanner 9-9-26 23 46n1" src="https://github.com/user-attachments/assets/ac29ff07-e322-4d4c-b1ca-9d334c0398dd" />
+
 
 This was an interesting answer. I initially went back through my work and did not see any glaring errors, so I decided to trust my value for the moment, as it would be cleared up in the next step.
 
@@ -160,29 +165,19 @@ Based on these alterations, I believe the bar's overall length will increase sig
 For this calculation, we must again find the new cross-sectional area of the bar, then find the length using the equation we used before.
 
 ##### Alteration Hand Calculations
-<img width="1106" height="928" alt="CamScanner 9-9-26 23 34n" src="https://github.com/user-attachments/assets/3a3294d1-b718-44c4-ba27-8276a130288b" />
+<img width="550" height="465" alt="CamScanner 9-9-26 23 34n" src="https://github.com/user-attachments/assets/3a3294d1-b718-44c4-ba27-8276a130288b" />
 
+My assumption that the length would significantly increase was correct; the length increased by just below 80 times, and doing an additional quick head calculation to find ratios for diameter to length using the equation:
 
+d/d : L/d
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
+For both the original and the altered bar, I calculated the ratios, rounding to the next whole number, yielding 1:642 for the original and 1:6367 for the altered. This, I believe, is because, with so much area added, the bar must be much longer to achieve the required deflection.
 
 ## Communicate
+### Lessons Learned and Review
+The lessons I took from this assignment were key to becoming an engineer in the future. This was my first experience with FEA in SolidWorks CAD, programming global variables, and using a parametric design process. I see how this could be used in future tasks to improve workflow efficiency and reduce the time required to design and create parts. Throughout this assignment, I learned that sometimes you have to trust the answers, even when they seem incorrect at first. It took me around 7 1/2 hours to complete this assignment, and I split it up into several parts. This helped keep my mind on the right thing, but it also added time that could have been saved. Throughout the process, I also noticed a lack of detail in the documentation toward the end. I covered it back over to keep it consistent throughout my assignment.
+
+## Appendix
+
+
 
