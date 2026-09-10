@@ -192,7 +192,7 @@ Using the Probe tool in my stress analysis, I found the Max Stress value and loc
 
 <img width="946" height="642" alt="Screenshot 2026-09-10 012820" src="https://github.com/user-attachments/assets/615223e4-58d9-467b-ba17-bee783181b3f" />
 
-According to my FEA simulation, the maximum stress is 3.274 psi, which converts to 0.003274 ksi. This differs from what you would get with a hand calculation using the full-sized altered bar, which  yields a max stress of 0.524 psi (0.000524 ksi). This is even below the 40 ksi limit for Aluminum strength we found for our original bar.  
+According to my FEA simulation, the maximum stress is 3.274 psi (0.003274 ksi). This differs from what you would get with a hand calculation using the full-sized altered bar, which  yields a max stress of 0.524 psi (0.000524 ksi). This is even below the 40 ksi limit for Aluminum strength we found for our original bar.  
 We can use both these values to find the safety factor with a quick calculation:
 
 SF = 40 ksi / 0.003274 ksi = 12218 (Scaled Down Altered Bar)
