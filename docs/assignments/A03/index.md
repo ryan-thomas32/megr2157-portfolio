@@ -58,7 +58,8 @@ This was an interesting answer. I initially went back through my work and did no
 
 ### Solidworks
 #### Part Creation
-After my calculation, I followed up in SolidWorks, following the instructions
+After my calculation, I followed up in SolidWorks using the instructions
+
 I set and defined all my equations and variables from my hand calculations in the global equations tab and got the same result for the length as before
 <img width="921" height="416" alt="Screenshot 2026-09-08 175116" src="https://github.com/user-attachments/assets/c70332e3-7de1-465e-9bc7-8bce448ca07a" />
 
@@ -173,6 +174,32 @@ My assumption that the length would significantly increase was correct; the leng
 d/d : L/d
 
 For both the original and the altered bar, I calculated the ratios, rounding to the next whole number, yielding 1:642 for the original and 1:6367 for the altered. This, I believe, is because, with so much area added, the bar must be much longer to achieve the required deflection.
+
+#### Altered Bar Modeling and FEA in SolidWorks
+After finding all the hand calculation I created the new altered bar is SolidWorks using the same process I used to create my original bar I ran in top some trouble as the length is too long for solid works to even allow so I tried dividing the diameter, force, and length by 6 to see if it would yield the same result after doing this the numbers I got fit the required limitations and was a successful hypothesis.
+
+Von Mises Map:
+<img width="1508" height="822" alt="Screenshot 2026-09-10 012022" src="https://github.com/user-attachments/assets/c64584e6-2eb9-4c67-9b01-c552eb8b96be" />
+
+Deflection/ Displacement Map(Scaled Up):
+
+<img width="1490" height="703" alt="Screenshot 2026-09-10 011948" src="https://github.com/user-attachments/assets/871351fb-d02b-4508-8dbc-a16003bf377f" />
+
+
+Using the Probe tool in my stress analysis, I found the Max Stress value and location, as shown in the attachment below.
+
+<img width="946" height="642" alt="Screenshot 2026-09-10 012820" src="https://github.com/user-attachments/assets/615223e4-58d9-467b-ba17-bee783181b3f" />
+
+According to my FEA simulation, the maximum stress is 3.274 psi, which converts to 0.003274 ksi this differs from if you did a hand calculation using the full sized altered bar which  results in a max stress of .524 psi or 0.000524ksi. This is even more below the 40 ksi limit for Aluminum strength we found for our original bar.  
+We can use both these values to find the safety factor with a quick calculation:
+
+SF = 40 ksi / 0.003274 ksi = 12218 (Scaled Down Altered Bar)
+SF = 40 ksi / 0.000524 ksi = 76336 (Full Size Altered Bar)
+
+Both of these design are very overdone from the safety factors calculated on thing I can note is that the biggers the radius the higher the safety factor grrows throughout these beams which make me belive I set my diameters way on the highside for this assignment.
+
+
+
 
 ## Communicate
 ### Lessons Learned and Review
