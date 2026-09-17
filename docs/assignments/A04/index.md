@@ -2,7 +2,7 @@
 
 ## Objective
 
-Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5:1 Planetary Gearbox) that attaches to a rigid wall. A load is applied to the tip of the motor shaft. The mount is split into two features, each analyzed as a cantilever beam for stress and deflection, then modeled parametrically in SolidWorks.
+Design a motor mount for a brushed 24 V DC Gear Motor (3.6 kg · cm/46 RPM with a 99.5:1 Planetary Gearbox) that attaches to a rigid wall. A load is applied to the tip of the motor shaft. The mount is split into two features, each analyzed as a cantilever beam for stress and deflection, then modeled parametrically in SolidWorks.
 
 <img width="738" height="594" alt="download (2)" src="https://github.com/user-attachments/assets/58f49c7e-7c99-4ff1-b8a6-d89453fcf776" />
 
