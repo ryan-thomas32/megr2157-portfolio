@@ -32,6 +32,7 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 
 
 ## Analyze
+For this section, instead of including the lists of knowns and unknowns I did on paper, I experimented with making tables in GitHub to organize the data better, since I know my handwriting isn't the best. It's hard to understand on paper; this took time at first. Still, you get the hang of it. It was pretty simple to do. I listed all the material property values for the material I chose, which was ABS plastic. Then I listed the knowns and unknowns, including the quantity symbol and value, and for the knowns, I listed the source where it was given.
 ### Material Properties (ABS)
 
 | Property | Value |
@@ -57,7 +58,7 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 
 **Unknowns**
 
-| Quantity | Symbol | Value |
+| Variable | Symbol | Value |
 |---|---|---|
 | Plate thickness | $t$ | ? |
 | Reaction force | $R_A$ | ? |
@@ -68,6 +69,20 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 | Maximum stress | $\sigma$ | ? |
 | Deflection | $\delta$ | ? |
 | Slope | $\theta$ | ? |
+
+#### Free Body Diagram and Calculations
+The image link below shows my process of calculations for finding all the values and unknowns for feature 1
+
+I first wrote all of my equations out symbolically before plugging in any numbers. My work on paper was somewhat unorganized, which is something I can improve in the future, then followed with the numerical calculations
+<>
+| Variable | Value |
+|---|---|
+| Thickness | $t$ = 11.74 mm |
+| Deflection | $\delta$ = 0.281 mm |
+| Maximum stress | $\sigma$ = 26.7 Mpa |
+Following these calculations for my design I then choose a thickness of 12mm for my  front face of my design
+
+
 
 ## Decide
 
