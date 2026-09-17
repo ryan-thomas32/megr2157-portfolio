@@ -1,5 +1,5 @@
 # Ryan Thomas — MEGR 2157 Portfolio
-![MEGR 2157 Title](MEGR2156title.png)
+
 <img width="6016" height="4016" alt="DSC_9517 (1)" src="https://github.com/user-attachments/assets/c8508a7b-b413-4f0b-a26f-aae884bad87d" />
 
 
