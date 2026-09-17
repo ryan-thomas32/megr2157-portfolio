@@ -23,7 +23,7 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 | Body diameter | Ø28 mm |
 | Mounting boss | Ø18 mm × 2 mm |
 | Shaft length from motor face | 18mm |
-| Screw pattern | 4 M3 screws, 11 mm from center (22 mm spacing) |
+| Screw pattern | 4 M3 screws, 11 mm from center|
 
 ### Research
 <img width="700" height="700" alt="Simucube Mount_02" src="https://github.com/user-attachments/assets/abea8800-ea03-494d-8f5b-72e7a55ec062" />
@@ -34,6 +34,8 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 For this section, instead of including the lists of knowns and unknowns I did on paper, I experimented with making tables in GitHub to organize the data better, since I know my handwriting isn't the best. It's hard to understand on paper; this took time at first. Still, you get the hang of it. It was pretty simple to do. I listed all the material property values for the material I chose, which was ABS plastic. Then I listed the knowns and unknowns, including the quantity symbol and value, and for the knowns, I listed the source where it was given.
 
 ## Feature 1
+For my hand calculations for feature one, I made a single assumption. The first was that the force is applied at the very tip of the shaft, which affects my calculations because I have to adjust the moment equation by multiplying it by the shaft length. I then started drafting up a design for my feature one. I assumed that one end was rigid. I made sure to list all of my knowns and unknowns. Then I solved symbolically and numerically for thickness, and then determined the stress and deflection.
+
 ### Material Properties (ABS)
 
 | Property | Value |
@@ -92,12 +94,7 @@ I first wrote all of my equations out symbolically before plugging in any number
 | Deflection | $\delta$ | 0.281 mm |
 
 ## Feature 2
-### Material Properties (ABS)
-
-| Property | Value |
-|---|---|
-| Elastic modulus, $E$ | 2000 MPa |
-| Tensile strength, $S$ | 30 MPa |
+Feature two is a bit different from feature one, as it's the section of the mount that matches the wall. Still, I was able to repeat the same steps as feature one by creating F baby at the top of my. I also decided to show my cross-section, since I went a little different with my design and had two arms sticking out for my feature. I again listed all my knowns and unknowns, then symbolically and numerically calculated the thickness of my arms using stress and deflection, following all the calculations from this section. With those values, I'll be able to recreate my mount in CAD.### 
 
 ### Feature 2 – Bottom Arms (Attached to Wall)
 
@@ -168,12 +165,11 @@ After completing the main part of the mountain I designed for the assignment, I 
 
 <img width="1077" height="836" alt="image" src="https://github.com/user-attachments/assets/212065ba-062f-489f-9c32-5bc071b2a6b2" />
 
-
-
-
+## 2157 Drawing
+This is my technical drawing that shows all the features and dimensions needed to replicate my motor mount design.
+<img width="652" height="853" alt="image" src="https://github.com/user-attachments/assets/4c4ef45e-a528-4f99-a633-f10f72e99a5c" />
 
 ## Decide
-
-
+My first decision when designing my motor mount was to make it from ABS plastic because its properties fit my design, and I know ABS is a very common printing filament in real-world use. Secondly, I chose a front feature plate width of 40mm for feature one. This fits the 28 mm motor body with room on each side and leaves space for the 22 mm screw pattern, plus plenty of space from the shaft to the edge. Thirdly, I used the full 18mm length of the motor shaft as the lever arm since the load is applied to the tip of the shaft. Lastly, I chose two arms for feature two instead of a solid bottom. A solid bottom would have been very thick and, in my view, would have bent more easily. This gave two arms that resist bending and use less filament.
 ## Communicate
 
