@@ -33,6 +33,7 @@ Design a motor mount using the (Brushed 24V DC Gear Motor 3.6Kg.cm/46RPM w/ 99.5
 
 ## Analyze
 For this section, instead of including the lists of knowns and unknowns I did on paper, I experimented with making tables in GitHub to organize the data better, since I know my handwriting isn't the best. It's hard to understand on paper; this took time at first. Still, you get the hang of it. It was pretty simple to do. I listed all the material property values for the material I chose, which was ABS plastic. Then I listed the knowns and unknowns, including the quantity symbol and value, and for the knowns, I listed the source where it was given.
+## Feature 1
 ### Material Properties (ABS)
 
 | Property | Value |
@@ -41,7 +42,7 @@ For this section, instead of including the lists of knowns and unknowns I did on
 | Tensile strength, $S$ | 30 MPa |
 ### Feature 1 – Front Plate (Attached to Motor)
 
-#### 1. Knowns and Unknowns
+####Knowns and Unknowns
 
 **Knowns**
 
@@ -62,7 +63,6 @@ For this section, instead of including the lists of knowns and unknowns I did on
 |---|---|---|
 | Plate thickness | $t$ | ? |
 | Reaction force | $R_A$ | ? |
-| Reaction moment | $M_A$ | ? |
 | Bending moment | $M$ | ? |
 | Moment of inertia | $I$ | ? |
 | Neutral Axis | $c$ | ? |
@@ -79,14 +79,146 @@ I first wrote all of my equations out symbolically before plugging in any number
 |---|---|---|
 | Plate thickness | $t$ | 11.74 mm |
 | Reaction force | $R_A$ | 900 N |
-| Reaction moment | $M_A$ | 16,200 N |
-| Bending moment | $M$ |  |
-| Moment of inertia | $I$ | ? |
+| Bending moment | $M$ | 16,200 N x mm |
+| Moment of inertia | $I$ | 5760 mm^4 |
 | Neutral Axis | $c$ | 6 mm |
 | Maximum stress | $\sigma$ | 26.7 Mpa |
 | Deflection | $\delta$ | .281mm |
 
-Following these calculations for my design I then choose a thickness of 12mm for my  front face of my design
+Following these calculations for my design I then choose a thickness of 12mm for my front face of my design to do calculations following finding thickness
+
+## Feature 1
+### Material Properties (ABS)
+
+| Property | Value |
+|---|---|
+| Elastic modulus, $E$ | 2000 MPa |
+| Tensile strength, $S$ | 30 MPa |
+
+### Feature 1 – Front Plate (Attached to Motor)
+
+#### Knowns and Unknowns
+
+**Knowns**
+
+| Quantity | Symbol | Value | Source |
+|---|---|---|---|
+| Applied load | $P$ | 300 N | Assignment |
+| Safety factor | $SF$ | 3 | Assignment |
+| Lever arm (shaft length) | $L_{S}$ | 18 mm | Motor drawing |
+| Plate width | $b$ | 40 mm | Chosen |
+| Fixed edge to shaft axis | $L$ | 20 mm | Half of b |
+| Tensile strength | $S$ | 30 MPa | Material |
+| Elastic modulus | $E$ | 2000 MPa | Material |
+| Allowable deflection | $\delta_{max}$ | 0.30 mm | Assignment |
+
+**Unknowns**
+
+| Variable | Symbol | Value |
+|---|---|---|
+| Thickness from stress | $t_{\sigma}$ | ? |
+| Thickness from deflection | $t_{\delta}$ | ? |
+| Plate thickness | $t$ | ? |
+| Reaction force | $R_A$ | ? |
+| Bending moment | $M$ | ? |
+| Moment of inertia | $I$ | ? |
+| Neutral Axis | $c$ | ? |
+| Maximum stress | $\sigma$ | ? |
+| Deflection | $\delta$ | ? |
+
+#### Free Body Diagram and Calculations
+The image link below shows my process of calculations for finding all the values and unknowns for feature 1
+
+I first wrote all of my equations out symbolically before plugging in any numbers. My work on paper was somewhat unorganized, which is something I can improve in the future, then followed with the numerical calculations
+<>
+
+| Variable | Symbol | Value |
+|---|---|---|
+| Thickness from stress | $t_{\sigma}$ | 9.00 mm |
+| Thickness from deflection | $t_{\delta}$ | 11.74 mm |
+| Plate thickness | $t$ | 11.74 mm (use 12 mm) |
+| Reaction force | $R_A$ | 900 N |
+| Bending moment | $M$ | 16,200 N x mm |
+| Moment of inertia | $I$ | 5760 mm^4 |
+| Neutral Axis | $c$ | 6 mm |
+| Maximum stress | $\sigma$ | 16.9 MPa |
+| Deflection | $\delta$ | 0.281 mm |
+
+## Feature 2
+### Material Properties (ABS)
+
+| Property | Value |
+|---|---|
+| Elastic modulus, $E$ | 2000 MPa |
+| Tensile strength, $S$ | 30 MPa |
+
+### Feature 2 – Bottom Arms (Attached to Wall)
+
+#### Knowns and Unknowns
+
+**Knowns**
+
+| Quantity | Symbol | Value | Source |
+|---|---|---|---|
+| Applied load | $P$ | 300 N | Assignment |
+| Safety factor | $SF$ | 3 | Assignment |
+| Lever arm (shaft length) | $L_{S}$ | 18 mm | Motor drawing |
+| Arm length (wall bolts to plate) | $L_{A}$ | 30 mm | Chosen |
+| Width of one arm | $b_{1}$ | 12 mm | Chosen |
+| Total arm width (2 arms) | $b_{arm}$ | 24 mm | 2 × $b_{1}$ |
+| Tensile strength | $S$ | 30 MPa | Material |
+| Elastic modulus | $E$ | 2000 MPa | Material |
+| Allowable deflection | $\delta_{max}$ | 0.30 mm | Assignment |
+
+**Unknowns**
+
+| Variable | Symbol | Value |
+|---|---|---|
+| Thickness from stress | $t_{arm,\sigma}$ | ? |
+| Thickness from deflection | $t_{arm,\delta}$ | ? |
+| Arm thickness | $t_{arm}$ | ? |
+| Reaction force | $R_W$ | ? |
+| Bending moment | $M_{max}$ | ? |
+| Moment of inertia | $I$ | ? |
+| Neutral Axis | $c$ | ? |
+| Maximum stress | $\sigma$ | ? |
+| Deflection | $\delta$ | ? |
+
+#### Free Body Diagram and Calculations
+The image link below shows my process of calculations for finding all the values and unknowns for feature 2
+
+I followed the same process as Feature 1, writing my equations out symbolically before plugging in any numbers. The main difference is that the bottom arms are fixed at the wall bolts, so the moment uses the arm length plus the shaft length. The end of the arms also carries both a force and a moment, so the deflection equation has two terms.
+<>
+
+| Variable | Symbol | Value |
+|---|---|---|
+| Thickness from stress | $t_{arm,\sigma}$ | 18.97 mm |
+| Thickness from deflection | $t_{arm,\delta}$ | 23.41 mm |
+| Arm thickness | $t_{arm}$ | 23.41 mm (use 24 mm) |
+| Reaction force | $R_W$ | 900 N |
+| Bending moment | $M_{max}$ | 43,200 N x mm |
+| Moment of inertia | $I$ | 27,648 mm^4 |
+| Neutral Axis | $c$ | 12 mm |
+| Maximum stress | $\sigma$ | 18.8 MPa |
+| Deflection | $\delta$ | 0.278 mm |
+
+### SolidWorks Model
+Moving on to SolidWorks 2025, I first drew a new sketch on the right plane. I drew an eighteen-millimeter-diameter circle in the center. Then I drew a 3.4 mm circle 11 mm above the origin. Then I used sketch relations to define the rest of my inner cut. I then used a center rectangle, starting at the origin of our cut, and extended it around the cut. Then I set all 4 sides to the same length, since we have a square cross section for the front of feature one. Then I set it to the 40 mm cross-section we decided to use. Then I used the Circular Sketch Pattern feature in SolidWorks to array four holes around the main center circle to create the bolt holes. Because there was very limited space between that 18 mm diameter cut and the holes for the screws, I ended up cutting out a rectangle between the two to prevent material from possibly failing. Then I extruded that out by the thickness we found in my calculations.
+<img width="1002" height="916" alt="image" src="https://github.com/user-attachments/assets/4fcd4db6-dd5f-4e76-bb31-77aa49f62b17" />
+
+Then, on the underside of my first feature, I drew feature #2 for the two arms. First, I drew two rectangles from the front. Next, I made each side equal. Then, I used my global values and my hand calculations to set the arm base width, arm thickness, and arm length for feature 2. Then, I extruded it by the thickness I calculated. To make it easier, I included the wall and the holes to mount it to the wall. Again, those holes are 3.4 mm in diameter, and I placed four on each corner of feature 2.
+
+<img width="1542" height="808" alt="image" src="https://github.com/user-attachments/assets/e7de7e14-8548-4fff-be7d-49c057406e42" />
+
+And after all that is complete we should be left with the bracket we see below
+
+<img width="1006" height="842" alt="image" src="https://github.com/user-attachments/assets/5e3d43d3-6c0c-465e-896c-0b6aa3d61133" />
+
+After completing the main part of the mountain I designed for the assignment, I filleted the edge between the two features to reduce motor mount deflection. I set the fillets to a 12 mm radius so they do not interfere with the motor's radius when inserted into the bracket.
+
+<img width="1077" height="836" alt="image" src="https://github.com/user-attachments/assets/212065ba-062f-489f-9c32-5bc071b2a6b2" />
+
+
 
 
 
