@@ -68,18 +68,24 @@ For this section, instead of including the lists of knowns and unknowns I did on
 | Neutral Axis | $c$ | ? |
 | Maximum stress | $\sigma$ | ? |
 | Deflection | $\delta$ | ? |
-| Slope | $\theta$ | ? |
+
 
 #### Free Body Diagram and Calculations
 The image link below shows my process of calculations for finding all the values and unknowns for feature 1
 
 I first wrote all of my equations out symbolically before plugging in any numbers. My work on paper was somewhat unorganized, which is something I can improve in the future, then followed with the numerical calculations
 <>
-| Variable | Value |
-|---|---|
-| Thickness | $t$ = 11.74 mm |
-| Deflection | $\delta$ = 0.281 mm |
-| Maximum stress | $\sigma$ = 26.7 Mpa |
+| Variable | Symbol | Value |
+|---|---|---|
+| Plate thickness | $t$ | 11.74 mm |
+| Reaction force | $R_A$ | 900 N |
+| Reaction moment | $M_A$ | 16,200 N |
+| Bending moment | $M$ |  |
+| Moment of inertia | $I$ | ? |
+| Neutral Axis | $c$ | 6 mm |
+| Maximum stress | $\sigma$ | 26.7 Mpa |
+| Deflection | $\delta$ | .281mm |
+
 Following these calculations for my design I then choose a thickness of 12mm for my  front face of my design
 
 
