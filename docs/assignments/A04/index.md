@@ -35,7 +35,7 @@ I did a little bit of research because I was looking for a specific design that 
 For this section, instead of including the lists of knowns and unknowns I did on paper, I experimented with making tables in GitHub to organize the data better, since I know my handwriting isn't the best. It's hard to understand on paper; this took time at first. Still, you get the hang of it. It was pretty simple to do. I listed all the material property values for the material I chose, which was ABS plastic. Then I listed the knowns and unknowns, including the quantity symbol and value, and for the knowns, I listed the source where it was given.
 
 ### Feature 1
-For my hand calculations for feature one, I made a single assumption. The first was that the force is applied at the very tip of the shaft, which affects my calculations because I have to adjust the moment equation by multiplying it by the shaft length. I then started drafting up a design for my feature one. I assumed that one end was rigid. I made sure to list all of my knowns and unknowns. Then I solved symbolically and numerically for thickness, and then determined the stress and deflection.
+For my hand calculations for feature one, I made a few assumptions. First, I assumed the force is applied at the tip of the shaft, so I adjusted the moment equation by multiplying it by the shaft length. I then drafted a design for feature one and assumed that one end was rigid. Lastly, SolidWorks listed no yield strength for ABS plastic, so I used tensile strength for my calculation. I listed all my knowns and unknowns, then solved symbolically and numerically for thickness and determined the stress and deflection.
 
 #### Material Properties (ABS)
 
