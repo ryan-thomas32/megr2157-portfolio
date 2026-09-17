@@ -77,7 +77,7 @@ For my hand calculations for feature one, I made a few assumptions. First, I ass
 
 ##### Free Body Diagram and Calculations
 The image link below shows my process of calculations for finding all the values and unknowns for feature 1
-I first wrote all of my equations out symbolically before plugging in any numbers. My work on paper was somewhat disorganized, which I can improve in the future, and then I completed it with the numerical calculations.
+I first wrote all of my equations out symbolically before plugging in any numbers. My work on the paper was somewhat disorganized, which I can improve in the future, and I then completed it with the numerical calculations.
 <img width="2444" height="3264" alt="CamScanner 9-17-26 03 16n" src="https://github.com/user-attachments/assets/114d9425-f240-414a-9710-afd3de0b4e4a" />
 
 
@@ -92,6 +92,8 @@ I first wrote all of my equations out symbolically before plugging in any number
 | Neutral Axis | $c$ | 6 mm |
 | Maximum stress | $\sigma$ | 16.9 MPa |
 | Deflection | $\delta$ | 0.281 mm |
+
+After finding this, I decided to use 11.74mm for the general thickness, as it's the larger of the two and the safer option for design, and I  rounded it up to 12 mm to keep the dimensions easy to understand.
 
 ### Feature 2
 Feature two is a bit different from feature one, as it's the section of the mount that matches the wall. Still, I was able to repeat the same steps as feature one by creating F baby at the top of my. I also decided to show my cross-section, since I went a little different with my design and had two arms sticking out for my feature. I again listed all my knowns and unknowns, then symbolically and numerically calculated the thickness of my arms using stress and deflection, following all the calculations from this section. With those values, I'll be able to recreate my mount in CAD. 
@@ -129,7 +131,7 @@ Feature two is a bit different from feature one, as it's the section of the moun
 | Deflection | $\delta$ | ? |
 
 ##### Free Body Diagram and Calculations
-The image link below shows my process of calculations for finding all the values and unknowns for feature 2
+The image link below shows my process of calculations for finding all the values and unknowns for Feature 2
 
 I followed the same process as Feature 1, writing my equations out symbolically before plugging in any numbers. The main difference is that the bottom arms are fixed at the wall bolts, so the moment uses the arm length plus the shaft length. The end of the arms also carries both a force and a moment, so the deflection equation has two terms.
 <img width="1704" height="2196" alt="CamScanner 9-17-26 03 18n" src="https://github.com/user-attachments/assets/01cb3e17-df9a-4138-8d62-2712aa6f7a6d" />
@@ -146,24 +148,27 @@ I followed the same process as Feature 1, writing my equations out symbolically 
 | Neutral Axis | $c$ | 12 mm |
 | Maximum stress | $\sigma$ | 18.8 MPa |
 | Deflection | $\delta$ | 0.278 mm |
+
+After finding both thicknesses, I took the larger of the two and rounded it up to 24mm for extra safety in my design 
+
 ### Isometric Sketch
 <img width="1676" height="1956" alt="CamScanner 9-17-26 03 18n (1)" src="https://github.com/user-attachments/assets/12069504-4d1b-4f48-882e-fc6621583f4d" />
 
 ### SolidWorks Model
-Moving on to SolidWorks 2025, I first drew a new sketch on the right plane. I drew an eighteen-millimeter-diameter circle in the center. Then I drew a 3.4 mm circle 11 mm above the origin. Then I used sketch relations to define the rest of my inner cut. I then used a center rectangle, starting at the origin of our cut, and extended it around the cut. Then I set all 4 sides to the same length, since we have a square cross section for the front of feature one. Then I set it to the 40 mm cross-section we decided to use. Then I used the Circular Sketch Pattern feature in SolidWorks to array four holes around the main center circle to create the bolt holes. Because there was very limited space between that 18 mm diameter cut and the holes for the screws, I ended up cutting out a rectangle between the two to prevent material from possibly failing. Then I extruded that out by the thickness we found in my calculations.
+Moving on to SolidWorks 2025, I first drew a new sketch on the right plane. I drew an eighteen-millimeter-diameter circle in the center. Then I drew a 3.4 mm circle 11 mm above the origin. Then I used sketch relations to define the rest of my inner cut. I then used a center rectangle, starting at the origin of our cut, and extended it around the cut. Then I set all 4 sides to the same length, since we have a square cross-section for the front of feature one. Then I set it to the 40 mm cross-section we decided to use. Then I used the Circular Sketch Pattern feature in SolidWorks to array four holes around the main center circle to create the bolt holes. Because there was very limited space between that 18 mm diameter cut and the holes for the screws, I ended up cutting out a rectangle between the two to prevent material from possibly failing. Then I extruded that out by the thickness we found in my calculations.
 <img width="1110" height="547" alt="image" src="https://github.com/user-attachments/assets/042ff51a-4799-4f9e-abe1-804b64a919d2" />
 
 <img width="1002" height="916" alt="image" src="https://github.com/user-attachments/assets/4fcd4db6-dd5f-4e76-bb31-77aa49f62b17" />
 
-Then, on the underside of my first feature, I drew feature #2 for the two arms. First, I drew two rectangles from the front. Next, I made each side equal. Then, I used my global values and my hand calculations to set the arm base width, arm thickness, and arm length for feature 2. Then, I extruded it by the thickness I calculated. To make it easier, I included the wall and the holes to mount it to the wall. Again, those holes are 3.4 mm in diameter, and I placed four on each corner of feature 2.
+Then, on the underside of my first feature, I drew feature #2 for the two arms. First, I drew two rectangles from the front. Next, I made each side equal. Then, I used my global values and my hand calculations to set the arm base width, thickness, and length for feature 2. Then, I extruded it by the thickness I calculated. To make it easier, I included the wall and the holes for mounting it. Again, those holes are 3.4 mm in diameter, and I placed four on each corner of feature 2.
 
 <img width="1542" height="808" alt="image" src="https://github.com/user-attachments/assets/e7de7e14-8548-4fff-be7d-49c057406e42" />
 
-And after all that is complete we should be left with the bracket we see below
+And after all that is complete, we should be left with the bracket we see below
 
 <img width="1006" height="842" alt="image" src="https://github.com/user-attachments/assets/5e3d43d3-6c0c-465e-896c-0b6aa3d61133" />
 
-After completing the main part of the mountain I designed for the assignment, I filleted the edge between the two features to reduce motor mount deflection. I set the fillets to a 12 mm radius so they do not interfere with the motor's radius when inserted into the bracket.
+After completing the main part of the mountain I designed for the assignment, I filleted the edge between the two features to reduce deflection at the motor mount. I set the fillets to a 12 mm radius so they do not interfere with the motor's radius when the motor is inserted into the bracket.
 
 <img width="1077" height="836" alt="image" src="https://github.com/user-attachments/assets/212065ba-062f-489f-9c32-5bc071b2a6b2" />
 
@@ -172,7 +177,7 @@ This is my technical drawing that shows all the features and dimensions needed t
 <img width="652" height="853" alt="image" src="https://github.com/user-attachments/assets/4c4ef45e-a528-4f99-a633-f10f72e99a5c" />
 
 ## Decide
-My first decision when designing my motor mount was to make it from ABS plastic because its properties fit my design, and I know ABS is a very common printing filament in real-world use. Secondly, I chose a front feature plate width of 40mm for feature one. This fits the 28 mm motor body with room on each side and leaves space for the 22 mm screw pattern, plus plenty of space from the shaft to the edge. Thirdly, I used the full 18mm length of the motor shaft as the lever arm since the load is applied to the tip of the shaft. Lastly, I chose two arms for feature two instead of a solid bottom. A solid bottom would have been very thick and, in my view, would have bent more easily. This gave two arms that resist bending and use less filament.
+My first decision when designing my motor mount was to make it from ABS plastic because its properties fit my design requirements, and I know ABS is a very common printing filament in real-world applications. Secondly, I chose a front feature plate width of 40mm for feature one. This fits the 28 mm motor body with room on each side and leaves space for the 22 mm screw pattern, plus plenty of space from the shaft to the edge. Thirdly, I used the full 18mm length of the motor shaft as the lever arm since the load is applied to the tip of the shaft. Lastly, I chose two arms for feature two instead of a solid bottom. A solid bottom would have been very thick and, in my view, would have bent more easily. This gave two arms that resist bending and use less filament.
 ## Communicate
 This assignment was really fun and really challenging at the same time. I found it difficult because I hadn't done much with bending or moments of inertia, so getting up to speed was a bit of a challenge. After that, designing and drawing the mountain cat was really enjoyable, since we had a lot of freedom to do what we wanted and try different things to see how they worked. I ended up trying to have two arms as my fixed feature attaching to the wall, which I think worked out pretty well in the end. It might add extra complexity and time to complete this assignment, but overall it took me around 10 hours, which is about the same as the other assignments. So the difficulty felt about on par with the others too, but in the future I don't really think I need to worry too much about time management, since I feel like I did pretty well on this one even though I rushed at the last minute.
 ## Appendix
