@@ -1,7 +1,9 @@
 # Ryan Thomas — MEGR 2157 Portfolio
-<img width="1271" height="1271" alt="HFUAjfbamNhbM8dsNSQW3D" src="https://github.com/user-attachments/assets/bf7a3239-f41a-4512-b3fe-cc99c07655f7" />
+![MEGR 2157 Title](MEGR2156title.png)
+<img width="6016" height="4016" alt="DSC_9517 (1)" src="https://github.com/user-attachments/assets/c8508a7b-b413-4f0b-a26f-aae884bad87d" />
 
-![MEGR 2156-7 Title](MEGR2156title.png)
+
+
 
 This portfolio contains the assignments I will complete in MEGR 2157. It is organized in a tab format on the left, with assignments listed in chronological order for easy access throughout the course. Each document is documented thoroughly to make it easy to follow for those who want to complete the projects on their own. It also shows the design decisions I made during my assignments, which I hope reflects my growth as an engineer and demonstrates the usefulness of this documentation. Throughout this course, the three pillars of site analysis and communication will guide every assignment in my portfolio.
 
