@@ -45,7 +45,7 @@ This section details the symbolic formulas and numeric calculations used to dete
 
 #### Feature B: Deflection Analysis Calculations
 
-<img width="2004" height="2536" alt="CamScanner 9-24-26 05 26(1)n" src="https://github.com/user-attachments/assets/16f264e8-7d17-4238-9484-9e4d254e33b3" />
+<img width="2024" height="2772" alt="CamScanner 9-24-26 08 07n" src="https://github.com/user-attachments/assets/75a3dd0c-2726-4565-9d7d-d4afd048f93b" />
 
 I think there has to be a mistake here somewhere. Spent 30 minutes to an hour retrying the number and trying different things, to no avail, so I just decided to let it ride.
 
@@ -65,7 +65,12 @@ I think there has to be a mistake here somewhere. Spent 30 minutes to an hour re
 
 #### Stress Analysis
 
+<img width="2000" height="2600" alt="CamScanner 9-24-26 07 55n" src="https://github.com/user-attachments/assets/8181059c-dd82-4988-be83-3e027ce419ed" />
+
+
 #### Deflection Analysis
+
+<img width="1992" height="2716" alt="CamScanner 9-24-26 08 08n" src="https://github.com/user-attachments/assets/8fd13bfe-17d4-4aeb-abcc-89b093283dfa" />
 
 ### Lessons Learned
 Governing Failure Mode: For feature B, the failure mode was deflection. Deflection governed the final length, with the same base dimension of 0.25 in and a width within 0.1 in. However, the lengths differed drastically. In my deflection analysis, I calculated the length of the plate connecting features A and B as 10.058 inches. I thought that was wrong, so I reviewed my work to find the mistake, but I could not find one, and I believe my calculations were correct. For feature B, my stress analysis gave a height of only 0.0423 inches, which is a large difference from the other result. I reviewed my work to determine which result was wrong, and I believe the deflection work makes more sense. The stress analysis seemed less likely because I repeated it several times using different equations to see whether I could close the gap.
