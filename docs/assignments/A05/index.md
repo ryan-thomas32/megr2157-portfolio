@@ -61,6 +61,19 @@ I think there has to be a mistake here somewhere. Spent 30 minutes to an hour re
 
 <img width="1948" height="2460" alt="CamScanner 9-24-26 05 27(1)n" src="https://github.com/user-attachments/assets/33d54441-f1ea-4cb9-9197-ff72aa1a1c6e" />
 
+### Hand Drawings
+
+#### Stress Analysis
+
+#### Deflection Analysis
+
+### Lessons Learned
+Governing Failure Mode: For feature B, the failure mode was deflection. Deflection governed the final length, with the same base dimension of 0.25 in and a width within 0.1 in. However, the lengths differed drastically. In my deflection analysis, I calculated the length of the plate connecting features A and B as 10.058 inches. I thought that was wrong, so I reviewed my work to find the mistake, but I could not find one, and I believe my calculations were correct. For feature B, my stress analysis gave a height of only 0.0423 inches, which is a large difference from the other result. I reviewed my work to determine which result was wrong, and I believe the deflection work makes more sense. The stress analysis seemed less likely because I repeated it several times using different equations to see whether I could close the gap.
+
+Error Propagation: I had an instance where one error-propagation value affected later ones. For my first run through features A through E for the stress analysis, I chose a force of 880 pounds, which is outside the 500 to 800 range in the instructions, because it said 0900. I selected 880 and later realized it was outside the requested limits, so I had to redo all my math and calculations for features A through E in my stress analysis. I didn't catch this early enough, which caused significant delays in my workflow.
+
+Assumption Sensitivity: I assumed feature C in feature E had the same height, which hindered the deflection analysis and cost me time. The dimensions were not within the required tolerances, and the part needed to be thicker to meet the safety factor and the material and design thickness requirements. This meant I had to redo the thickness for part D, change the height, and recalculate with the maximum deflection. It changed two of the most important design dimensions, which could have been prevented. You might have been able to calculate feature C, then skip feature D and go to feature E, and then return to D. That might resolve the issue and prevent a situation where assuming feature E before you do affects the analysis.
+
 ## 2157 Addition
 #### Task
 "Design a link (Appendix E) that connects feature A to another cylindrical feature, such that the connection can hold using the same amount of force. The link is to be made from one of the three specified metals."
@@ -70,18 +83,17 @@ I think there has to be a mistake here somewhere. Spent 30 minutes to an hour re
 <img width="2208" height="2808" alt="CamScanner 9-24-26 06 14n" src="https://github.com/user-attachments/assets/60af7f20-1819-4450-ba6d-0fdce86369af" />
 
 ### .730" Hole Callout:
-Based on these specifications, which require a running sliding fit for feature A, I have assumed that an RC6 fit is adequate for the job at hand. An RC6 fit dictates that the .730" diameter hole of the linkage must lie within a tolerance of +.002", -.000". Feature A, which interfaces with this hole, must be .730" and lie within a tolerance of −.0016" to −.0028" (.7272"–.7284"). This provides a clearance of 0.0016" to 0.0048". The RC6 hole can be manufactured by reaming.
+Based on these specifications, which require a running sliding fit for feature A, I have assumed that an RC6 fit is adequate for the job at hand. An RC6 fit dictates that the .730" diameter hole of the linkage must lie within a tolerance of +.002" to -.000". Feature A, which interfaces with this hole, must be .730" and lie within a tolerance of −.0016" to −.0028" (.7272"–.7284"). This provides a clearance of 0.0016" to 0.0048". The RC6 hole can be manufactured by reaming.
 
 <img width="1097" height="468" alt="image" src="https://github.com/user-attachments/assets/484d755f-6051-47c1-91a8-bf79da50511a" />
  Machinery's Handbook pg. 654
 
 ### 1.000" Hole Callout
 Based on these specifications, which require a light assembly pressure fit for feature A, I have assumed that an FN1 (light drive) fit is adequate for the job at hand. An FN1 fit dictates that the 1.000" diameter hole of the linkage must lie within a tolerance of +.0005", −.000" (1.0000"–1.0005"). Feature A, which interfaces with this hole, must be 1.000" and lie within a tolerance of +.0008" to +.0012" (1.0008"–1.0012"). This provides an interference of 0.0003" to 0.0012". The FN1 hole is an H6 tolerance, so it requires precision reaming.
+ 
  <img width="525" height="40" alt="image" src="https://github.com/user-attachments/assets/6fa00427-0cb9-44f8-b913-2904b5d9f626" />
   Machinery's Handbook pg. 658
 
-## Decide
-
-
 ## Communicate
 
+This Assignment took me around 8 hours from start to finish.
