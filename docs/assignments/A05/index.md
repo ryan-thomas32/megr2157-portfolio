@@ -1,7 +1,7 @@
 # A5 – Bracket
 
 ## Objective
-Our task for this project was to design a bracket to support a rope carrying between 500 and 900 pounds of force; I chose 880 lbf for F via a strap connected to the bracket, with the bracket resting on a T-beam. From there, we take the bracket apart piece by piece to determine the geometry through calculations based on the material, which, in my case, I chose as Titanium (Ti-6Al-V4), and the geometry we know. Using a safety factor of 4, we were given this diagram as the basis for our design.
+Our task for this project was to design a bracket to support a rope carrying between 500 and 800 pounds of force. I decided to use 750 lbf for F, with a 0.75-in.-wide strap connected to the bracket, and the bracket resting on a T-beam. From there, we take the bracket apart piece by piece to determine the geometry through calculations based on the material, which, in my case, I chose as Titanium (Ti-6Al-V4), and the geometry we know. Using a safety factor of 4, we were given this diagram as the basis for our design.
 
 <img width="453" height="303" alt="image" src="https://github.com/user-attachments/assets/cbd829de-5796-4668-9139-5af7696f1cf9" />
 
@@ -83,15 +83,17 @@ Assumption Sensitivity: I assumed feature C in feature E had the same height, wh
 <img width="2208" height="2808" alt="CamScanner 9-24-26 06 14n" src="https://github.com/user-attachments/assets/60af7f20-1819-4450-ba6d-0fdce86369af" />
 
 ### .730" Hole Callout:
-Based on these specifications, which require a running sliding fit for feature A, I have assumed that an RC6 fit is adequate for the job at hand. An RC6 fit dictates that the .730" diameter hole of the linkage must lie within a tolerance of +.002" to -.000". Feature A, which interfaces with this hole, must be .730" and lie within a tolerance of −.0016" to −.0028" (.7272"–.7284"). This provides a clearance of 0.0016" to 0.0048". The RC6 hole can be manufactured by reaming.
+Based on these specifications, which require a running sliding fit for feature A, I have assumed that an RC6 fit is adequate for the job. An RC6 fit dictates that the .730" diameter hole of the linkage must lie within a tolerance of +.002" to -.000". Feature A, which interfaces with this hole, must be .730" and lie within a tolerance of −.0016" to −.0028" (.7272"–.7284"). This provides a clearance of 0.0016" to 0.0048". The RC6 hole can be manufactured by reaming.
 
 <img width="1097" height="468" alt="image" src="https://github.com/user-attachments/assets/484d755f-6051-47c1-91a8-bf79da50511a" />
+ 
  Machinery's Handbook pg. 654
 
 ### 1.000" Hole Callout
 Based on these specifications, which require a light assembly pressure fit for feature A, I have assumed that an FN1 (light drive) fit is adequate for the job at hand. An FN1 fit dictates that the 1.000" diameter hole of the linkage must lie within a tolerance of +.0005", −.000" (1.0000"–1.0005"). Feature A, which interfaces with this hole, must be 1.000" and lie within a tolerance of +.0008" to +.0012" (1.0008"–1.0012"). This provides an interference of 0.0003" to 0.0012". The FN1 hole is an H6 tolerance, so it requires precision reaming.
  
  <img width="525" height="40" alt="image" src="https://github.com/user-attachments/assets/6fa00427-0cb9-44f8-b913-2904b5d9f626" />
+ 
   Machinery's Handbook pg. 658
 
 ## Communicate
