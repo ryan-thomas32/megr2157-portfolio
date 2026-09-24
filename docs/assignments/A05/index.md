@@ -15,21 +15,25 @@ From here, I started by sketching a rough layout for my bracket and listing my m
 
 ### Calculating Dimensions from Stress Analysis
 
-#### Feature: A Calculations
+#### Feature: A Stress Analysis Calculations
 
 <img width="1912" height="2536" alt="CamScanner 9-24-26 01 16n" src="https://github.com/user-attachments/assets/a004d851-4589-4d07-8b03-1dfaf1712e6b" />
 
-#### Feature: B Calculations
+#### Feature: B Stress Analysis Calculations
 
 <img width="2360" height="3116" alt="CamScanner 9-24-26 01 39n" src="https://github.com/user-attachments/assets/8ef450bf-fee2-440c-b24e-fc6ae48b9506" />
 
-#### Feature: C Calculations
+#### Feature: C Stress Analysis Calculations
 
 <img width="2068" height="2800" alt="CamScanner 9-24-26 02 06n" src="https://github.com/user-attachments/assets/bc598c31-463a-4151-b8a8-36376f2ad19f" />
 
-#### Feature: D Calculations
+#### Feature: D Stress Analysis Calculations
 
-<img width="2208" height="2900" alt="CamScanner 9-24-26 02 31n" src="https://github.com/user-attachments/assets/6ac6a87d-579b-4931-9a4e-abe7ec43affb" />
+<img width="2344" height="3104" alt="CamScanner 9-24-26 02 55n" src="https://github.com/user-attachments/assets/3784530a-3559-49a6-9590-7fc73eb1ab49" />
+
+#### Feature: E Stress Analysis Calculations
+
+<img width="2172" height="2732" alt="CamScanner 9-24-26 02 54n" src="https://github.com/user-attachments/assets/39fdc0b8-64d2-4cd2-aa7b-f95fad48e958" />
 
 
 ## Decide
