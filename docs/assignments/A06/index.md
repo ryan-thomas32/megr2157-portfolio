@@ -8,7 +8,7 @@ I carried all dimensions for this section over from my stress calculations in A5
 <img width="2000" height="2600" alt="CamScanner 9-24-26 07 55n" src="https://github.com/user-attachments/assets/0d594c4b-f6f6-4d64-999e-13e3251cdd87" />
 
 ### First Attempt – Hard-Coded Dimensions
-My first attempt at my parametric table went well I got all the correct numbers for that matched each of my dimensions calculated from my stress analysis but during my calculations I noticed a single small error in my calculations 4 For the height of feature Where I forgot to add W into my equation for the height so I change that for my parametric equation table and got a new result
+My first attempt at my parametric table went well. I got all the correct numbers that matched each dimension I calculated from my stress analysis. Still, during my calculations, I noticed a small error in the height of feature 4: I forgot to include W in my height equation, so I updated my parametric equation table and got a new result.
 
 ### Final Parametric Equation Table
 
@@ -50,15 +50,51 @@ Next is a sketch on the front face of feature B: the circle cross-section for fe
 
 <img width="457" height="467" alt="Screenshot 2026-09-30 224653" src="https://github.com/user-attachments/assets/d8cf6228-e830-4ba7-9afe-cb9f6006983c" />
 
+## Link Design (2157 Students Only)
+
+For this part, I designed a link that connects to the bracket I modeled in Part 1. I also created an engineering drawing with complete dimensioning and GD&T per ASME Y14.5 so the link can be fabricated and assembled accurately.
+
+<img width="2208" height="2808" alt="CamScanner 9-24-26 06 14n" src="https://github.com/user-attachments/assets/a9db8dcb-281c-480c-a0a8-0bf61e215f88" />
+
+### Bracket Interface
+<!-- Explain where the link attaches to the bracket (e.g., around Feature A) and which bracket dimensions it depends on -->
+The link connects to the bracket at ___. Because of this, the link's ___ has to match the bracket's ___, so I tied those dimensions directly to my bracket variables.
+
+<img width="" height="" alt="Bracket interface" src="PASTE-IMAGE-LINK" />
+
+### Parametric Equation Table
+
+<img width="1172" height="275" alt="Screenshot 2026-10-01 015411" src="https://github.com/user-attachments/assets/0f75089c-130e-4467-8db4-37e0a7cbc409" />
+
+### Solidworks Sketch With Linked Variables to Dimensions
+
+<img width="1093" height="807" alt="Screenshot 2026-10-01 015402" src="https://github.com/user-attachments/assets/9d279210-bf0d-4fe1-bd6f-d7cf83e12db1" />
+
+Once the sketch had its shape, I linked each dimension to my global variables. I made sure each linked dimension showed the Σ symbol so I knew it was being driven by an equation.
+
+### Extruding the Link
+
+Then I extruded the sketch to the thickness driven by "T 1", which gave me the 3D shape of the link.
+
+<img width="1417" height="900" alt="Screenshot 2026-10-01 015451" src="https://github.com/user-attachments/assets/63b8874c-5fa3-4f2b-81ac-b7a6ed9c0edc" />
+
+### Final Solid Model
+
+<img width="662" height="862" alt="image" src="https://github.com/user-attachments/assets/ce0e3138-f0f6-4184-b5c6-3b2bc189722c" />
+
+
 ### Mistakes 
 
 One mistake from the first part of the assignment in A5 that I needed to address was that feature B was too short to fit the cross-section of feature A. I went back to my calculations and decided to set a specific height instead of a specific thickness so feature A's cross-section would fit with the link and the strap. I set the height of feature B to 1 inch, which automatically updated the thickness of feature B in the SolidWorks equation
 
 ## Communicate
 
-### Engineering Drawing
+### Engineering Drawing Bracket
 
 <img width="1635" height="972" alt="A6 Bracket RT" src="https://github.com/user-attachments/assets/6f1a61ba-5a01-4f34-8c27-7aa8700f1f95" />
+
+### Engineering Drawing Link
+
 
 
 
