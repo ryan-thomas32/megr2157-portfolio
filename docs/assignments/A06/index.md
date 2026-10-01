@@ -56,19 +56,13 @@ For this part, I designed a link that connects to the bracket I modeled in Part 
 
 <img width="2208" height="2808" alt="CamScanner 9-24-26 06 14n" src="https://github.com/user-attachments/assets/a9db8dcb-281c-480c-a0a8-0bf61e215f88" />
 
-### Bracket Interface
-<!-- Explain where the link attaches to the bracket (e.g., around Feature A) and which bracket dimensions it depends on -->
-The link connects to the bracket at ___. Because of this, the link's ___ has to match the bracket's ___, so I tied those dimensions directly to my bracket variables.
-
-<img width="" height="" alt="Bracket interface" src="PASTE-IMAGE-LINK" />
-
 ### Parametric Equation Table
 
-<img width="1172" height="275" alt="Screenshot 2026-10-01 015411" src="https://github.com/user-attachments/assets/0f75089c-130e-4467-8db4-37e0a7cbc409" />
+<img width="1315" height="573" alt="Screenshot 2026-10-01 025719" src="https://github.com/user-attachments/assets/a1911410-a1a0-4fab-bd96-f64bc653de18" />
 
-### Solidworks Sketch With Linked Variables to Dimensions
+### SolidWorks Sketch With Linked Variables to Dimensions
 
-<img width="1093" height="807" alt="Screenshot 2026-10-01 015402" src="https://github.com/user-attachments/assets/9d279210-bf0d-4fe1-bd6f-d7cf83e12db1" />
+<img width="907" height="681" alt="Screenshot 2026-10-01 025558" src="https://github.com/user-attachments/assets/c2fe77a6-5334-4029-82bc-ed9b6b231c49" />
 
 Once the sketch had its shape, I linked each dimension to my global variables. I made sure each linked dimension showed the Σ symbol so I knew it was being driven by an equation.
 
@@ -76,12 +70,11 @@ Once the sketch had its shape, I linked each dimension to my global variables. I
 
 Then I extruded the sketch to the thickness driven by "T 1", which gave me the 3D shape of the link.
 
-<img width="1417" height="900" alt="Screenshot 2026-10-01 015451" src="https://github.com/user-attachments/assets/63b8874c-5fa3-4f2b-81ac-b7a6ed9c0edc" />
+<img width="1726" height="775" alt="Screenshot 2026-10-01 025638" src="https://github.com/user-attachments/assets/5475bb2c-ef28-484d-97ee-2c72a415e8fc" />
 
 ### Final Solid Model
 
-<img width="662" height="862" alt="image" src="https://github.com/user-attachments/assets/ce0e3138-f0f6-4184-b5c6-3b2bc189722c" />
-
+<img width="515" height="857" alt="Screenshot 2026-10-01 025705" src="https://github.com/user-attachments/assets/b4a01a17-336f-4210-bc63-44f2da9f80df" />
 
 ### Mistakes 
 
@@ -93,13 +86,9 @@ One mistake from the first part of the assignment in A5 that I needed to address
 
 <img width="1635" height="972" alt="A6 Bracket RT" src="https://github.com/user-attachments/assets/6f1a61ba-5a01-4f34-8c27-7aa8700f1f95" />
 
-### Engineering Drawing Link
+### Engineering Drawing 2157 Link
 
-
-
-
-
-## Analyze
+<img width="1610" height="947" alt="A6 Link RT" src="https://github.com/user-attachments/assets/589c1917-fa19-4e57-9d1f-888ae3955c28" />
 
 
 ## Decide
