@@ -1,4 +1,4 @@
-# A6 – [Topic]
+<img width="857" height="292" alt="image" src="https://github.com/user-attachments/assets/9b65d98c-8336-47dc-99c0-ec5d961f1ebf" /># A6 – [Topic]
 
 ## Analyze
 
@@ -96,3 +96,6 @@ One mistake from the first part of the assignment in A5 that I needed to address
 
 ## Communicate
 
+## Appendix
+
+[A6 Downloads Folder(4 Items)](https://drive.google.com/drive/folders/1YsM7HtLYIG-uyTXa7ah0Mi5yEQOvlUZQ?usp=sharing)
