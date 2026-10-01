@@ -1,4 +1,8 @@
 # A6 – Bracket Drawing
+## Objective
+For Assignment A6, we are continuing the bracket design by creating a parametric CAD model and a detailed engineering drawing, following up on our previous assignment, which covered tolerances and sliding fits. We will reuse the calculations from Assignment 5 to drive the parametric design, so every dimension in the model is linked to my equations and updates automatically if an input changes. We will also cover ASME  standards and use CAD to design both a bracket that slides over the T-beam and a link that fits onto Feature A, then create fully dimensioned multiview drawings with engineered tolerances for each. I am using titanium again, since that is what I chose for Assignment 5.
+
+<img width="323" height="238" alt="image" src="https://github.com/user-attachments/assets/bf7b3517-d4e4-4b81-9b17-3f7bf08610c0" />
 
 ## Analyze
 
@@ -8,7 +12,7 @@ I carried all dimensions for this section over from my stress calculations in A5
 <img width="2000" height="2600" alt="CamScanner 9-24-26 07 55n" src="https://github.com/user-attachments/assets/0d594c4b-f6f6-4d64-999e-13e3251cdd87" />
 
 ### First Attempt – Hard-Coded Dimensions
-My first attempt at my parametric table went well. I got all the correct numbers that matched each dimension I calculated from my stress analysis. Still, during my calculations, I noticed a small error in the height of feature 4: I forgot to include W in my height equation, so I updated my parametric equation table and got a new result.
+My first attempt at my parametric table went well. I got all the correct numbers that matched each dimension I calculated from my stress analysis. Still, during my calculations, I noticed a small error in the height of feature 4, I had forgotten to include W in my height equation, so I updated my parametric equation table and obtained a new result.
 
 ### Final Parametric Equation Table
 
@@ -20,7 +24,7 @@ I started by sketching the rough shape of the bracket's front feature on the fro
 
 <img width="915" height="466" alt="Screenshot 2026-09-30 220053" src="https://github.com/user-attachments/assets/e0c461af-7280-4da9-bc2e-89b4acbce0e9" />
 
-Then I added the basic sketch relations seen to make the shape symmetrical as required
+Then I added the basic sketch relations seen to make the shape symmetrical, as required
 
 <img width="892" height="470" alt="Screenshot 2026-09-30 220233" src="https://github.com/user-attachments/assets/9fe6c605-33c6-422c-a330-ac744d676aa3" />
 
@@ -91,14 +95,13 @@ Fits
 Hole A -> RC6  
 Hole 1in -> FN1
 
-<img width="1610" height="947" alt="A6 Link RT" src="https://github.com/user-attachments/assets/589c1917-fa19-4e57-9d1f-888ae3955c28" />
+<img width="1355" height="875" alt="image" src="https://github.com/user-attachments/assets/093ed658-e1bd-4208-8fdd-f5128849cbf7" />
 
 ## Communication
 
 ### Reflections
 
 I used one analytical equation for stress to drive at least one other dimension in my parametric model, which controlled the height of feature C. It was represented as an equation for height C, but height C was also linked to the height of feature E. The heights of Feature C and Feature E were linked into part of the equation for the height of Feature D. So, when I realized they made a calculation error in Feature C in the first part in a 5, when I changed the value in the equation to the actual correct equation, it adjusted each one of those parameters for each of the three features of E, D, and C, which greatly helped, as I had to rework my work manually. The models were able to calculate on their own from the equations that I had input into SolidWorks.
-
 
 One dimension where I applied a tighter tolerance was on the 2157 link part, around the one-inch hole. I used a tighter FN1 tolerance of half a thousandth because the requirements called for no limited movement at that connection. For the main part, where I applied a looser work tolerance, I used the dimensions for a select RC running fit because Simon described this feature as not one word. Accuracy was essential, but this feature does not require a close fit to function correctly. Choosing an RC7 gave the parts more clearance, and giving the neck more space does not affect how the T beam slides inside the bracket. It could lead to less wear over time. In the main bracket, one place I had a tighter tolerance was the bee slots with the flange overhangs. The flanges, which I ran at +0.0008 in, position the slides directly against the flange. This handles much of the bracket's alignment, so a tighter tolerance is better for less play while still allowing the slide to move along the bracket. With a looser fit, it would wiggle under the load applied to the strap.
 
