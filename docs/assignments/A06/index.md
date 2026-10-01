@@ -76,21 +76,37 @@ Then I extruded the sketch to the thickness driven by "T 1", which gave me the 3
 
 <img width="515" height="857" alt="Screenshot 2026-10-01 025705" src="https://github.com/user-attachments/assets/b4a01a17-336f-4210-bc63-44f2da9f80df" />
 
-### Mistakes 
-
-One mistake from the first part of the assignment in A5 that I needed to address was that feature B was too short to fit the cross-section of feature A. I went back to my calculations and decided to set a specific height instead of a specific thickness so feature A's cross-section would fit with the link and the strap. I set the height of feature B to 1 inch, which automatically updated the thickness of feature B in the SolidWorks equation
-
-## Communicate
 
 ### Engineering Drawing Bracket
+
+Fits  
+a -> RC7  
+b -> RC3  
+c -> RC4
 
 <img width="1635" height="972" alt="A6 Bracket RT" src="https://github.com/user-attachments/assets/6f1a61ba-5a01-4f34-8c27-7aa8700f1f95" />
 
 ### Engineering Drawing 2157 Link
+Fits  
+Hole A -> RC6  
+Hole 1in -> FN1
 
 <img width="1610" height="947" alt="A6 Link RT" src="https://github.com/user-attachments/assets/589c1917-fa19-4e57-9d1f-888ae3955c28" />
 
+## Communication
 
+### Reflections
+
+I used one analytical equation for stress to drive at least one other dimension in my parametric model, which controlled the height of feature C. It was represented as an equation for height C, but height C was also linked to the height of feature E. The heights of Feature C and Feature E were linked into part of the equation for the height of Feature D. So, when I realized they made a calculation error in Feature C in the first part in a 5, when I changed the value in the equation to the actual correct equation, it adjusted each one of those parameters for each of the three features of E, D, and C, which greatly helped, as I had to rework my work manually. The models were able to calculate on their own from the equations that I had input into SolidWorks.
+
+
+One dimension where I applied a tighter tolerance was on the 2157 link part, around the one-inch hole. I used a tighter FN1 tolerance of half a thousandth because the requirements called for no limited movement at that connection. For the main part, where I applied a looser work tolerance, I used the dimensions for a select RC running fit because Simon described this feature as not one word. Accuracy was essential, but this feature does not require a close fit to function correctly. Choosing an RC7 gave the parts more clearance, and giving the neck more space does not affect how the T beam slides inside the bracket. It could lead to less wear over time. In the main bracket, one place I had a tighter tolerance was the bee slots with the flange overhangs. The flanges, which I ran at +0.0008 in, position the slides directly against the flange. This handles much of the bracket's alignment, so a tighter tolerance is better for less play while still allowing the slide to move along the bracket. With a looser fit, it would wiggle under the load applied to the strap.
+
+### Mistakes 
+
+One mistake from the first part of the assignment in A5 that I needed to address was that feature B was too short to fit the cross-section of feature A. I went back to my calculations and decided to set a specific height rather than a specific thickness, so that feature A's cross-section would fit with the link and the strap. I set the height of feature B to 1 inch, which automatically updated the thickness of feature B in the SolidWorks equation to the correct value according to the changed parameter
+
+Another mistake I noticed while reviewing my calculations for my link for a 5 is that I used the wrong forces in both equations. For the stress calculation, I should have used 750 lbf instead of 1500 lbf as the applied force. For my deflection calculation, where I had 1500 written down for my total F, I may have mistaken it for 1200 lbf. If it were 1200/2, it would be 600, and 600 is what I wrote down for the applied force in the deflection calculation, but it should be 750 lbf. So I plugged those into my parametric equation for my length design, got the new values, and used those for my design. The final values should have been 750 lbf for both the stress and deflection calculations.
 ## Decide
 
 
