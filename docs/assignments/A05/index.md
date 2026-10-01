@@ -95,7 +95,7 @@ Based on these specifications, which require a running sliding fit for feature A
  Machinery's Handbook pg. 654
 
 ### 1.000" Hole Callout
-Based on these specifications, which require a light assembly pressure fit for feature A, I have assumed that an FN1 (light drive) fit is adequate for the job at hand. An FN1 fit dictates that the 1.000" diameter hole of the linkage must lie within a tolerance of +.0005", −.000" (1.0000"–1.0005"). Feature A, which interfaces with this hole, must be 1.000" and lie within a tolerance of +.0008" to +.0012" (1.0008"–1.0012"). This provides an interference of 0.0003" to 0.0012". The FN1 hole is an H6 tolerance, so it requires precision reaming.
+Based on these specifications, which require a light assembly pressure fit, I have assumed that an FN1 (light drive) fit is adequate for the job at hand. An FN1 fit dictates that the 1.000" diameter hole of the linkage must lie within a tolerance of +.0005", −.000" (1.0000"–1.0005"). The feature which interfaces with this hole, must be 1.000" and lie within a tolerance of +.0008" to +.0012" (1.0008"–1.0012"). This provides an interference of 0.0003" to 0.0012". The FN1 hole is an H6 tolerance, so it requires precision reaming.
  
  <img width="525" height="40" alt="image" src="https://github.com/user-attachments/assets/6fa00427-0cb9-44f8-b913-2904b5d9f626" />
  
