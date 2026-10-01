@@ -1,4 +1,4 @@
-<img width="857" height="292" alt="image" src="https://github.com/user-attachments/assets/9b65d98c-8336-47dc-99c0-ec5d961f1ebf" /># A6 – [Topic]
+# A6 – Bracket Drawing
 
 ## Analyze
 
