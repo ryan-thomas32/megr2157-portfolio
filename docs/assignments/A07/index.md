@@ -244,6 +244,209 @@ How a part is supported matters as much as how thick it is. In Design 1, feature
 
 FEA also showed me where my hand calculations were off. In A5, my stress and deflection calculations for feature B didn't match, and I couldn't figure out why. The Design 1 FEA showed feature B was the weakest part of the whole bracket, which confirmed my hand calc for feature B didn't match how it actually was going to be loaded.
 
+### 2157 Extra
+For the 2157 addition, I ran the same FEA process on the link I designed in A5 and A6. The link connects to feature A on the bracket and takes the full 1500 lbf from the strap, which is the total force I used in my A5 link calculations. Just like the bracket, I ran coarse, standard, and fine meshes on each design and checked that the results converged within 7% before making any changes.
+
+#### Link Design Requirements (from A5 and A6)
+
+- **Material:** Ti-6Al-4V, Material is not changed between designs.
+- **Applied load:** 1500 lbf
+- **Required safety factor:** 4 (allowable stress = 120,000 / 4 = 30,000 psi)
+- **0.730 in hole:** RC6 fit onto feature A
+- **1.000 in hole:** FN1 fit
+- **Thickness:** driven by the global variable "T 1" from A6
+
+#### Link Overall FEA Setup
+
+<img alt="Link fixtures and load" src="PASTE_LINK_HERE" />
+
+I fixed the link at the small hole, and put the 1500 lbf load on the large hole. The fixture and load stay in the same spots for every link design and mesh below.
+
+#### Link Design 1 FEA:
+
+Design 1 is the link from A6 with no changes. FEA is run first to find where the stress and displacement maximums occur, so the next design can address them.
+
+##### 1. Coarse Mesh FEA:
+*1,377 elements, 2,638 nodes, element size 0.0934–0.1868 in*
+
+<img width="955" height="757" alt="Screenshot 2026-10-22 034613" src="https://github.com/user-attachments/assets/88caf171-f767-4a89-9770-f7eca86fdc20" />
+
+<img width="952" height="727" alt="Screenshot 2026-10-22 034605" src="https://github.com/user-attachments/assets/3276e063-dc16-46f0-bd41-709aa16206e2" />
+
+<img width="943" height="731" alt="Screenshot 2026-10-22 034624" src="https://github.com/user-attachments/assets/c0c23e8d-066e-40bc-9369-f31bf7fb395a" />
+
+##### 2. Standard Mesh FEA:
+*8,249 elements, 13,675 nodes, element size 0.0934 in*
+
+<img width="917" height="625" alt="Screenshot 2026-10-22 035945" src="https://github.com/user-attachments/assets/29d14cd2-cd41-4d16-ad37-5425534275f9" />
+
+<img width="911" height="712" alt="Screenshot 2026-10-22 035951" src="https://github.com/user-attachments/assets/e75c3237-1ab1-4be6-8f1f-de0d65aabc22" />
+
+<img width="835" height="597" alt="Screenshot 2026-10-22 040004" src="https://github.com/user-attachments/assets/998eff56-989c-4b06-bfdc-4461d7c91093" />
+
+A fine mesh isn't required because the coarse vs. standard stress difference is already under 7%:
+
+Percent Difference = |(45,040 − 43,370) / 43,370| × 100% = |1,670 / 43,370| × 100% = **3.85%**
+
+Link Design 1 converged, so I'm using the standard mesh results as my final values.
+
+##### 3. Link Design 1 Results:
+
+| Mesh     | Elements | Nodes  | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
+|----------|----------|--------|------------------|---------------------|---------------|---------------|-------------------|
+| Coarse   | 1,377    | 2,638  | 43,370           | 0.003467            | 2.77          | —             | —                 |
+| Standard | 8,249    | 13,675 | 45,040           | 0.003509            | 2.66          | 3.85%         | 1.21%             |
+
+- **Max stress location:** sides of the large hole, where the load is applied
+- **Max deflection location:** bottom edge of the large hole
+- **Min SF location:** same spot as max stress
+
+Link Design 1 converged, but it doesn't pass. The safety factor is 2.66, which is under the 4 I need. The max stress is at the sides of the large hole where the load goes in, while the middle of the link and the area around the small hole stay at pretty low stress. The max deflection is 0.003509 in, so it's already under the 0.005 in target, which means stiffness isn't really the problem here, it's the strength around the large hole.
+
+In A5, I sized the link with σ = F/A, which assumes the stress is spread out evenly across the whole cross-section. The FEA showed the max stress right at the sides of the large hole, because the hole concentrates the stress around its edges. That's why my link passed on paper but only got a safety factor of 2.66 in FEA.
+
+#### Link Design II FEA and Alterations:
+
+##### 1. Design Alterations:
+
+TBD – what I changed from link Design 1 and why.
+
+<img width="1030" height="882" alt="Screenshot 2026-10-22 040803" src="https://github.com/user-attachments/assets/5309d652-d5a8-4e35-9248-6329ff37f5b4" />
+
+##### 2. Link Design II FEA:
+
+###### 1. Coarse Mesh FEA:
+*1,467 elements, 2,788 nodes, element size 0.0990–0.1981 in*
+
+<img width="1023" height="813" alt="Screenshot 2026-10-22 040958" src="https://github.com/user-attachments/assets/9cc8e118-d15a-44f3-8222-9503d32b1045" />
+
+<img width="1192" height="826" alt="Screenshot 2026-10-22 041017" src="https://github.com/user-attachments/assets/bbefa61a-da3b-4660-9bf1-e19b986a2a42" />
+
+<img width="875" height="775" alt="Screenshot 2026-10-22 041030" src="https://github.com/user-attachments/assets/fca97f34-d185-4919-ba2e-cfeea9fdc086" />
+
+###### 2. Standard Mesh FEA:
+*8,973 elements, 14,794 nodes, element size 0.0990 in*
+
+<img width="940" height="702" alt="Screenshot 2026-10-22 041302" src="https://github.com/user-attachments/assets/3a5a4289-7fe1-475e-870a-8f77baaf152a" />
+
+<img width="931" height="636" alt="Screenshot 2026-10-22 041308" src="https://github.com/user-attachments/assets/0b85f756-d171-4727-b166-0ec8abc1bacc" />
+
+<img width="917" height="648" alt="Screenshot 2026-10-22 041314" src="https://github.com/user-attachments/assets/7afb0ce2-1c8b-4672-a304-f21a66a86a77" />
+
+I had to run a fine mesh because the stress difference between coarse and standard was way over 7%:
+
+Percent Difference = |(39,330 − 30,380) / 30,380| × 100% = |8,950 / 30,380| × 100% = **29.46%**
+
+###### 3. Fine Mesh FEA:
+*69,238 elements, 103,293 nodes, element size 0.0495 in*
+
+<img width="1077" height="692" alt="Screenshot 2026-10-22 041643" src="https://github.com/user-attachments/assets/b7da9193-aa8e-4445-8adb-3cefb1b95541" />
+
+<img width="1057" height="656" alt="Screenshot 2026-10-22 041650" src="https://github.com/user-attachments/assets/78da4a45-05a9-47b0-8b9a-6405bf516ed5" />
+
+<img width="1002" height="662" alt="Screenshot 2026-10-22 041704" src="https://github.com/user-attachments/assets/b8593150-516f-4c48-bc62-9315cd1ccf11" />
+
+The stress between standard and fine was still over 7%:
+
+Percent Difference = |(58,600 − 39,330) / 39,330| × 100% = |19,270 / 39,330| × 100% = **48.99%**
+
+The deflection converged (1.07%, then 0.49%), but the stress didn't. Since this was my third attempt, I used the fine mesh results for link Design II like the assignment says.
+
+###### 4. Link Design II Results:
+
+| Mesh     | Elements | Nodes   | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
+|----------|----------|---------|------------------|---------------------|---------------|---------------|-------------------|
+| Coarse   | 1,467    | 2,788   | 30,380           | 0.002234            | 3.95          | —             | —                 |
+| Standard | 8,973    | 14,794  | 39,330           | 0.002258            | 3.05          | 29.46%        | 1.07%             |
+| Fine     | 69,238   | 103,293 | 58,600           | 0.002269            | 2.05          | 48.99%        | 0.49%             |
+
+- **Max stress location:** sides of the large hole on the coarse mesh and moved to the edge of the small hole at the fixture on the standard and fine meshes
+- **Max deflection location:** bottom edge of the large hole
+- **Min SF location:** same spot as max stress
+
+Link Design II made the link stiffer, the max deflection went from 0.003509 in down to 0.002269 in, but it still doesn't pass. On the coarse mesh the safety factor was 3.95, which was really close to 4, but once I refined the mesh the max stress moved to the edge of the small hole right where the fixture is, and it kept climbing every time. This is basically the same thing as the sharp corner on my bracket. A fixed restraint on a sharp edge is perfectly rigid, which doesn't happen in real life, so the stress there has nowhere to settle. The deflection only changed 0.49% between standard and fine, so the stiffness results are solid, but the safety factor of 2.05 is still under 4. The mass also went up from 0.13 lb to 0.16 lb.
+
+#### Link Design III FEA and Alterations:
+
+##### 1. Design Alterations:
+
+After looking at my link Design II results, I made two changes. First, I doubled the thickness of the link. In Design II, the safety factor dropped to 2.05 on the fine mesh, and the stress around both holes was way too high for the 1500 lbf load. Doubling the thickness gives the load twice as much material to spread through around each hole, which lowers the stress, and it also makes the link a lot stiffer.
+
+Second, I added fillets to the outside edges of the link with a radius of 1/4 of the original link thickness ("T 1" / 4). The fillets take off the sharp outer edges, which cuts down some of the weight added by doubling the thickness and gets rid of sharp corners where stress could build up. Just like the bracket, I kept both hole diameters the same so the RC6 and FN1 fits from A5 still work.
+
+##### 2. Link Design III FEA:
+
+###### 1. Coarse Mesh FEA:
+*6,596 elements, 10,859 nodes, element size 0.0427–0.2884 in*
+
+<img width="1067" height="766" alt="Screenshot 2026-10-22 043508" src="https://github.com/user-attachments/assets/b72b1d03-45c7-407a-8925-00db50eabb21" />
+
+<img width="1051" height="797" alt="Screenshot 2026-10-22 043514" src="https://github.com/user-attachments/assets/21c0c6d1-6a3f-4697-a4d1-444d4642840a" />
+
+<img width="1030" height="728" alt="Screenshot 2026-10-22 043523" src="https://github.com/user-attachments/assets/9b987058-801d-40db-949c-95cc330992dd" />
+
+###### 2. Standard Mesh FEA:
+*11,466 elements, 17,966 nodes, element size 0.0418–0.1255 in*
+
+<img width="1035" height="747" alt="Screenshot 2026-10-22 043803" src="https://github.com/user-attachments/assets/5b164d96-5fb2-4db8-9f00-0835f3d50f34" />
+
+<img width="970" height="753" alt="Screenshot 2026-10-22 043814" src="https://github.com/user-attachments/assets/6a22712b-de60-424f-ba4d-045c822112bb" />
+
+<img width="922" height="767" alt="Screenshot 2026-10-22 043822" src="https://github.com/user-attachments/assets/117fd059-1cd9-40ac-b57e-2b2234da8a13" />
+
+I had to run a fine mesh because the stress difference between coarse and standard was over 7%:
+
+Percent Difference = |(18,030 − 15,600) / 15,600| × 100% = |2,430 / 15,600| × 100% = **15.58%**
+
+###### 3. Fine Mesh FEA:
+*61,801 elements, 90,348 nodes, element size 0.0209–0.0628 in*
+
+<img width="1008" height="763" alt="Screenshot 2026-10-22 044014" src="https://github.com/user-attachments/assets/1ec8922a-a312-466d-87f0-b85400155425" />
+
+<img width="867" height="751" alt="Screenshot 2026-10-22 044027" src="https://github.com/user-attachments/assets/89611ba5-060a-4300-9faa-86ce5dec7445" />
+
+<img width="957" height="780" alt="Screenshot 2026-10-22 044035" src="https://github.com/user-attachments/assets/2e5e888d-c7c9-429c-8763-e876a763c747" />
+
+The stress between standard and fine was still over 7%:
+
+Percent Difference = |(28,340 − 18,030) / 18,030| × 100% = |10,310 / 18,030| × 100% = **57.18%**
+
+The deflection converged (0.86%, then 0.43%), but the stress didn't. Since this was my third attempt, I used the fine mesh results for link Design III like the assignment says.
+
+###### 4. Link Design III Results:
+
+| Mesh     | Elements | Nodes  | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
+|----------|----------|--------|------------------|---------------------|---------------|---------------|-------------------|
+| Coarse   | 6,596    | 10,859 | 15,600           | 0.001166            | 7.69          | —             | —                 |
+| Standard | 11,466   | 17,966 | 18,030           | 0.001176            | 6.65          | 15.58%        | 0.86%             |
+| Fine     | 61,801   | 90,348 | 28,340           | 0.001181            | 4.23          | 57.18%        | 0.43%             |
+
+- **Max stress location:** inside surface of the large hole on the coarse mesh and moved to the inside surface of the small hole at the fixture on the standard and fine meshes
+- **Max deflection location:** bottom edge of the large hole
+- **Min SF location:** same spot as max stress
+
+Link Design III finally passes. Even on the fine mesh, the safety factor is 4.23, which is above the 4 I need, and the max deflection of 0.001181 in is way under the 0.005 in target. The stress kept climbing at the fixture on the small hole every time I refined the mesh, just like in Design II, but even with that the link still stays above a safety factor of 4. The deflection only changed 0.43% between standard and fine, so the stiffness results are solid. Compared to Design II, the max stress dropped 52% and the deflection dropped 48%.
+
+#### Link Final Design Iteration Table and Lessons Learned
+
+##### 1. Link Design Table:
+
+|                              | Design 1                          | Design II                              | Design III                         |
+|------------------------------|-----------------------------------|----------------------------------------|------------------------------------|
+| Max Stress and location      | 45,040 psi, sides of large hole   | 58,600 psi, small hole edge at fixture | 28,340 psi, small hole at fixture  |
+| Max deflection and location  | 0.003509 in, bottom of large hole | 0.002269 in, bottom of large hole      | 0.001181 in, bottom of large hole  |
+| Mass                         | 0.13 lb                           | 0.16 lb                                | TBD                                |
+| Safety Factor                | 2.66                              | 2.05                                   | 4.23                               |
+| Number of elements           | 8,249                             | 69,238                                 | 61,801                             |
+
+##### 2. Link Lessons Learned:
+
+The biggest thing I learned from the link is that my hand calc from A5 wasn't telling the whole story. I used σ = F/A, which assumes the stress is the same everywhere across the cross-section, but the FEA showed the stress piling up right around the holes. The hole concentrates the stress at its edges, so the real max stress is a lot higher than the average my hand calc gave me.
+
+I also learned that fixtures can cause the same problem as sharp corners. In link Designs II and III, the max stress moved to the small hole right at the fixture and kept going up every time I refined the mesh, while the deflection barely changed. A fixed restraint is perfectly rigid, which isn't how a real pin would hold the link, so the stress at that spot never settles.
+
+Thickness made the biggest difference on the link. Doubling it in Design III took the safety factor from 2.05 up to 4.23 and cut the deflection almost in half. Since the thickness was linked to "T 1" from A6, I only had to change one value to update the whole link.
+
 ## Decide:
 
 For Designs 1 and II, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design II, I figured out that the stress wasn't converging because of the sharp corner, not because I set something up wrong, and that pointed me straight to the fix for Design III.
