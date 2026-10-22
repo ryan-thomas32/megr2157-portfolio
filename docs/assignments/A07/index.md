@@ -165,7 +165,7 @@ After looking at my Design II results, I made three changes to the bracket. Firs
 
 Second, I added a 1 in radius fillet between feature B and feature C. In Design II, the stress kept piling up at that sharp corner no matter how fine I made the mesh. The fillet gets rid of the sharp corner and spreads the stress out over a curve instead of a single edge, which should help lower the max stress.
 
-Third, I cut the height of feature E in half. In Design II, features C, D, and E stayed at really low stress, so feature E had way more material than it needed. Halving it is an easy way to cut more weight without hurting the strength of the bracket. Again like before, I kept all of my changes away from the T-beam slot so the fits from A6 still hold.
+Third, I cut the height of feature E by 3/4 . In Design II, features C, D, and E stayed at really low stress, so feature E had way more material than it needed. Halving it is an easy way to cut more weight without hurting the strength of the bracket. Again like before, I kept all of my changes away from the T-beam slot so the fits from A6 still hold.
 
 #### 2. Design III FEA:
 
@@ -234,31 +234,21 @@ Design III finally passes. The safety factor stays above 4 at every mesh level, 
 
 #### 2. Lessons Learned:
 
-The biggest thing I learned is how much sharp corners mess with FEA results. In Design II, the stress went up about 43% every time I refined the mesh, and it was always at the same sharp corner. Once I added the 1 in fillet in Design III, the stress only changed by less than 1% between the standard and fine meshes. A sharp corner has zero radius, so the stress there never settles, no matter how many elements you throw at it.
+One of the biggest things I learned is how much sharp corners mess with the FEA results. In Design II, the stress went up about 43% every time I refined the mesh, and it was always at the same sharp corner is the analysis. Once I added the 1 in fillet in Design III, the stress only changed by less than 1% between the standard and fine meshes. A sharp corner has zero radius, so there is nowhere for the stress to settle regardless of elements.
 
-I also learned that adding material isn't always the answer. In Design III, I made feature B thinner than it was in Design II, and the max stress still dropped 47% because the fillet fixed the actual problem. Where the material is and what shape it's in matters more than just how much of it there is.
+I also learned that adding material doesn't always work for different applications. In Design III, I made feature B thinner than it was in Design II, and the max stress still dropped 47% because the fillet was solving the actual problem. how the material is being shaped mean much more than the pure amount of material
 
 A coarse mesh can also make a failing design look like it passes. Design II's coarse mesh gave me a safety factor of 4.39, but the fine mesh dropped it to 2.14. If I had stopped at the coarse mesh, I would have thought Design II was done when it actually didn't meet the requirement.
 
-Another thing I noticed is that deflection converges a lot faster than stress. In Design II, the deflection only changed 0.81% between standard and fine, while the stress changed 42.40%. Deflection depends on how stiff the whole part is, but the max stress depends on one small spot, so it's way more sensitive to the mesh.
+How a part is supported matters as much as how thick it is. In Design 1, feature A was only held on one side like a cantilever. Supporting it on both ends in Design II, along with thickening feature B, dropped the max stress by about 70 times on the coarse mesh for example.
 
-How a part is supported matters as much as how thick it is. In Design 1, feature A was only held on one side like a cantilever. Supporting it on both ends in Design II, along with thickening feature B, dropped the max stress by about 70 times on the coarse mesh.
-
-FEA also showed me where my hand calculations were off. In A5, my stress and deflection calculations for feature B didn't match, and I couldn't figure out why. The Design 1 FEA showed feature B was the weakest part of the whole bracket, which confirmed my hand calc for feature B didn't match how it's actually loaded.
-
-Setting everything up with global variables in A6 paid off here. Since feature B's thickness was linked to `t B`, changing it was just one equation (`= 3 * "t B"` for Design II and `= 2 * "t B"` for Design III) instead of redrawing the whole feature.
-
-Finer meshes also take a lot longer to solve. My fine meshes had about 7 to 50 times more elements than my coarse meshes. TBD – add how long your solves actually took.
+FEA also showed me where my hand calculations were off. In A5, my stress and deflection calculations for feature B didn't match, and I couldn't figure out why. The Design 1 FEA showed feature B was the weakest part of the whole bracket, which confirmed my hand calc for feature B didn't match how it actually was going to be loaded.
 
 ## Decide:
 
 For Designs 1 and II, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design II, I figured out that the stress wasn't converging because of the sharp corner, not because I set something up wrong, and that pointed me straight to the fix for Design III.
 
-For Design III, I chose to add a 1 in fillet between feature B and feature C instead of making feature B even thicker. The problem in Design II wasn't a lack of material, it was the sharp corner, so the fillet went right at the cause. Since the fillet took care of the stress, I was able to bring feature B back down from 3 times to 2 times `t B` and halve the height of feature E to cut weight.
-
 I also kept all of my changes away from the T-beam slot, so the RC fits from A6 still hold and the bracket can still slide on the beam.
-
-TBD – any other decisions you made (for example, why you redid the first coarse run of Design 1 with 2,180 elements).
 
 ## Communicate:
 
