@@ -92,7 +92,7 @@ This is the third attempt, so per the assignment the fine mesh results are used 
 
 From my FEA simulations, design 1 fails at every mesh level. The safety factor is around 0.02, and Max stress is about 49 times the yield strength. Feature B attaches to only one end of feature A, so feature A hangs off feature B like a cantilever, and the strap is fully supported by A. So, for this design, all the forces are being loaded through feature B and not the rest of the features, like C, D, and E, which have near-zero stress
 
-### Step 3: Design II FEA and Alterations:
+### Step 3: Design 2 FEA and Alterations:
 
 #### 1. Design Alterations:
 
@@ -104,7 +104,7 @@ Second, I mirrored feature B to the other end of feature A. In Design 1, feature
 
 <img width="640" height="742" alt="Design II – mirror feature" src="https://github.com/user-attachments/assets/32f27564-2a16-40a0-b142-4fb581d6b8d2" />
 
-#### 2. Design II FEA:
+#### 2. Design 2 FEA:
 
 ##### 1. Coarse Mesh FEA:
 *1,863 elements, 3,606 nodes, element size 0.1531–0.2986 in*
@@ -143,7 +143,7 @@ Percent Difference = |(56,150 − 39,430) / 39,430| × 100% = |16,720 / 39,430| 
 
 The deflection did converge 2.69%, then 0.81%, but the stress didn't. Since this was my third attempt, I used the fine mesh results for Design II like the assignment says again.
 
-##### 4. Design II Results:
+##### 4. Design 2 Results:
 
 | Mesh     | Elements | Nodes   | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
 |----------|----------|---------|------------------|---------------------|---------------|---------------|-------------------|
@@ -155,19 +155,19 @@ The deflection did converge 2.69%, then 0.81%, but the stress didn't. Since this
 - **Max deflection location:** middle of feature A where the strap wraps
 - **Min SF location:** same spot as max stress
 
-Design II was a huge improvement over Design 1, but it still doesn't pass. The stress kept going up about 43% every time I refined the mesh, and it was always at the same sharp corner where feature B meets feature C. What surprised me is that the coarse mesh showed a safety factor of 4.39, which would have passed, but the fine mesh dropped it to 2.14. The max deflection of 0.006977 in is also over the 0.005 in target from A5. Features C, D, and E are still at low stress, so I again have some wiggle room to take material out of there.
+Design 2 was a huge improvement over Design 1, but it still doesn't pass. The stress kept going up about 43% every time I refined the mesh, and it was always at the same sharp corner where feature B meets feature C. What surprised me is that the coarse mesh showed a safety factor of 4.39, which would have passed, but the fine mesh dropped it to 2.14. The max deflection of 0.006977 in is also over the 0.005 in target from A5. Features C, D, and E are still at low stress, so I again have some wiggle room to take material out of there.
 
-### Step 4: Design III FEA and Alterations:
+### Step 4: Design 3 FEA and Alterations:
 
 #### 1. Design Alterations:
 
-After looking at my Design II results, I made three changes to the bracket. First, I brought the thickness of feature B on each side down from 3 times to 2 times `t B`. In Design II, feature A is supported on both ends now, so each feature B only carries half of the strap load, and I didn't need it to be as thick as I made it. Dropping it to = 2 * "t B" takes weight off the bracket.
+After looking at my Design 2 results, I made three changes to the bracket. First, I brought the thickness of feature B on each side down from 3 times to 2 times `t B`. In Design 2, feature A is supported on both ends now, so each feature B only carries half of the strap load, and I didn't need it to be as thick as I made it. Dropping it to = 2 * "t B" takes weight off the bracket.
 
-Second, I added a 1 in radius fillet between feature B and feature C. In Design II, the stress kept piling up at that sharp corner no matter how fine I made the mesh. The fillet gets rid of the sharp corner and spreads the stress out over a curve instead of a single edge, which should help lower the max stress.
+Second, I added a 1 in radius fillet between feature B and feature C. In Design 2, the stress kept piling up at that sharp corner no matter how fine I made the mesh. The fillet gets rid of the sharp corner and spreads the stress out over a curve instead of a single edge, which should help lower the max stress.
 
-Third, I cut the height of feature E by 3/4 . In Design II, features C, D, and E stayed at really low stress, so feature E had way more material than it needed. Halving it is an easy way to cut more weight without hurting the strength of the bracket. Again like before, I kept all of my changes away from the T-beam slot so the fits from A6 still hold.
+Third, I cut the height of feature E by 3/4 . In Design 2, features C, D, and E stayed at really low stress, so feature E had way more material than it needed. Halving it is an easy way to cut more weight without hurting the strength of the bracket. Again like before, I kept all of my changes away from the T-beam slot so the fits from A6 still hold.
 
-#### 2. Design III FEA:
+#### 2. Design 3 FEA:
 
 ##### 1. Coarse Mesh FEA:
 *2,366 elements, 4,675 nodes, element size 0.1372–0.2538 in*
@@ -204,9 +204,9 @@ I still ran a fine mesh just to make sure the results held up:
 
 Percent Difference = |(29,830 − 29,690) / 29,690| × 100% = |140 / 29,690| × 100% = **0.47%**
 
-Design III converged, so I'm using the fine mesh results as my final values.
+Design 3 converged, so I'm using the fine mesh results as my final values.
 
-##### 4. Design III Results:
+##### 4. Design 3 Results:
 
 | Mesh     | Elements | Nodes   | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
 |----------|----------|---------|------------------|---------------------|---------------|---------------|-------------------|
@@ -218,7 +218,7 @@ Design III converged, so I'm using the fine mesh results as my final values.
 - **Max deflection location:** feature A where the strap wraps
 - **Min SF location:** same spot as max stress
 
-Design III finally passes. The safety factor stays above 4 at every mesh level, and the max deflection of 0.004825 in is under my 0.005 in target from A5. The max stress is now on the smooth fillet instead of a sharp corner, so it stopped climbing every time I refined the mesh. Compared to Design II, the max stress dropped 47% and the deflection dropped 31%. What stood out to me is that feature B is actually thinner in Design III than in Design II, and the stress still went down. That shows how that sharp corner was causing problems.
+Design 3 finally passes. The safety factor stays above 4 at every mesh level, and the max deflection of 0.004825 in is under my 0.005 in target from A5. The max stress is now on the smooth fillet instead of a sharp corner, so it stopped climbing every time I refined the mesh. Compared to Design II, the max stress dropped 47% and the deflection dropped 31%. What stood out to me is that feature B is actually thinner in Design III than in Design II, and the stress still went down. That shows how that sharp corner was causing problems.
 
 ### Step 5: Final Design Iteration Table and Lessons Learned
 
@@ -234,13 +234,13 @@ Design III finally passes. The safety factor stays above 4 at every mesh level, 
 
 #### 2. Lessons Learned:
 
-One of the biggest things I learned is how much sharp corners mess with the FEA results. In Design II, the stress went up about 43% every time I refined the mesh, and it was always at the same sharp corner is the analysis. Once I added the 1 in fillet in Design III, the stress only changed by less than 1% between the standard and fine meshes. A sharp corner has zero radius, so there is nowhere for the stress to settle regardless of elements.
+One of the biggest things I learned is how much sharp corners mess with the FEA results. In Design 2, the stress went up about 43% every time I refined the mesh, and it was always at the same sharp corner is the analysis. Once I added the 1 in fillet in Design 3, the stress only changed by less than 1% between the standard and fine meshes. A sharp corner has zero radius, so there is nowhere for the stress to settle regardless of elements.
 
-I also learned that adding material doesn't always work for different applications. In Design III, I made feature B thinner than it was in Design II, and the max stress still dropped 47% because the fillet was solving the actual problem. how the material is being shaped mean much more than the pure amount of material
+I also learned that adding material doesn't always work for different applications. In Design 3, I made feature B thinner than it was in Design 2, and the max stress still dropped 47% because the fillet was solving the actual problem. how the material is being shaped mean much more than the pure amount of material
 
-A coarse mesh can also make a failing design look like it passes. Design II's coarse mesh gave me a safety factor of 4.39, but the fine mesh dropped it to 2.14. If I had stopped at the coarse mesh, I would have thought Design II was done when it actually didn't meet the requirement.
+A coarse mesh can also make a failing design look like it passes. Design 2's coarse mesh gave me a safety factor of 4.39, but the fine mesh dropped it to 2.14. If I had stopped at the coarse mesh, I would have thought Design 2 was done when it actually didn't meet the requirement.
 
-How a part is supported matters as much as how thick it is. In Design 1, feature A was only held on one side like a cantilever. Supporting it on both ends in Design II, along with thickening feature B, dropped the max stress by about 70 times on the coarse mesh for example.
+How a part is supported matters as much as how thick it is. In Design 1, feature A was only held on one side like a cantilever. Supporting it on both ends in Design 2, along with thickening feature B, dropped the max stress by about 70 times on the coarse mesh for example.
 
 FEA also showed me where my hand calculations were off. In A5, my stress and deflection calculations for feature B didn't match, and I couldn't figure out why. The Design 1 FEA showed feature B was the weakest part of the whole bracket, which confirmed my hand calc for feature B didn't match how it actually was going to be loaded.
 
@@ -258,7 +258,7 @@ For the 2157 addition, I ran the same FEA process on the link I designed in A5 a
 
 #### Link Overall FEA Setup
 
-<img alt="Link fixtures and load" src="PASTE_LINK_HERE" />
+<img width="667" height="766" alt="Screenshot 2026-10-22 032555" src="https://github.com/user-attachments/assets/28ba639e-95ee-4685-99a8-78840ecc3a32" />
 
 I fixed the link at the small hole, and put the 1500 lbf load on the large hole. The fixture and load stay in the same spots for every link design and mesh below.
 
@@ -305,7 +305,7 @@ Link Design 1 converged, but it doesn't pass. The safety factor is 2.66, which i
 
 In A5, I sized the link with σ = F/A, which assumes the stress is spread out evenly across the whole cross-section. The FEA showed the max stress right at the sides of the large hole, because the hole concentrates the stress around its edges. That's why my link passed on paper but only got a safety factor of 2.66 in FEA.
 
-#### Link Design II FEA and Alterations:
+#### Link Design 2 FEA and Alterations:
 
 ##### 1. Design Alterations:
 
@@ -313,7 +313,7 @@ TBD – what I changed from link Design 1 and why.
 
 <img width="1030" height="882" alt="Screenshot 2026-10-22 040803" src="https://github.com/user-attachments/assets/5309d652-d5a8-4e35-9248-6329ff37f5b4" />
 
-##### 2. Link Design II FEA:
+##### 2. Link Design 2 FEA:
 
 ###### 1. Coarse Mesh FEA:
 *1,467 elements, 2,788 nodes, element size 0.0990–0.1981 in*
@@ -352,7 +352,7 @@ Percent Difference = |(58,600 − 39,330) / 39,330| × 100% = |19,270 / 39,330| 
 
 The deflection converged (1.07%, then 0.49%), but the stress didn't. Since this was my third attempt, I used the fine mesh results for link Design II like the assignment says.
 
-###### 4. Link Design II Results:
+###### 4. Link Design 2 Results:
 
 | Mesh     | Elements | Nodes   | Max Stress (psi) | Max Deflection (in) | Safety Factor | % Diff Stress | % Diff Deflection |
 |----------|----------|---------|------------------|---------------------|---------------|---------------|-------------------|
@@ -364,17 +364,17 @@ The deflection converged (1.07%, then 0.49%), but the stress didn't. Since this 
 - **Max deflection location:** bottom edge of the large hole
 - **Min SF location:** same spot as max stress
 
-Link Design II made the link stiffer, the max deflection went from 0.003509 in down to 0.002269 in, but it still doesn't pass. On the coarse mesh the safety factor was 3.95, which was really close to 4, but once I refined the mesh the max stress moved to the edge of the small hole right where the fixture is, and it kept climbing every time. This is basically the same thing as the sharp corner on my bracket. A fixed restraint on a sharp edge is perfectly rigid, which doesn't happen in real life, so the stress there has nowhere to settle. The deflection only changed 0.49% between standard and fine, so the stiffness results are solid, but the safety factor of 2.05 is still under 4. The mass also went up from 0.13 lb to 0.16 lb.
+Link Design 2 made the link stiffer, the max deflection went from 0.003509 in down to 0.002269 in, but it still doesn't pass. On the coarse mesh the safety factor was 3.95, which was really close to 4, but once I refined the mesh the max stress moved to the edge of the small hole right where the fixture is, and it kept climbing every time. This is basically the same thing as the sharp corner on my bracket. A fixed restraint on a sharp edge is perfectly rigid, which doesn't happen in real life, so the stress there has nowhere to settle. The deflection only changed 0.49% between standard and fine, so the stiffness results are solid, but the safety factor of 2.05 is still under 4. The mass also went up from 0.13 lb to 0.16 lb.
 
-#### Link Design III FEA and Alterations:
+#### Link Design 3 FEA and Alterations:
 
 ##### 1. Design Alterations:
 
-After looking at my link Design II results, I made two changes. First, I doubled the thickness of the link. In Design II, the safety factor dropped to 2.05 on the fine mesh, and the stress around both holes was way too high for the 1500 lbf load. Doubling the thickness gives the load twice as much material to spread through around each hole, which lowers the stress, and it also makes the link a lot stiffer.
+After looking at my link Design 2 results, I made two changes. First, I doubled the thickness of the link. In Design 2, the safety factor dropped to 2.05 on the fine mesh, and the stress around both holes was way too high for the 1500 lbf load. Doubling the thickness gives the load twice as much material to spread through around each hole, which lowers the stress, and it also makes the link a lot stiffer.
 
 Second, I added fillets to the outside edges of the link with a radius of 1/4 of the original link thickness ("T 1" / 4). The fillets take off the sharp outer edges, which cuts down some of the weight added by doubling the thickness and gets rid of sharp corners where stress could build up. Just like the bracket, I kept both hole diameters the same so the RC6 and FN1 fits from A5 still work.
 
-##### 2. Link Design III FEA:
+##### 2. Link Design 3 FEA:
 
 ###### 1. Coarse Mesh FEA:
 *6,596 elements, 10,859 nodes, element size 0.0427–0.2884 in*
@@ -411,7 +411,7 @@ The stress between standard and fine was still over 7%:
 
 Percent Difference = |(28,340 − 18,030) / 18,030| × 100% = |10,310 / 18,030| × 100% = **57.18%**
 
-The deflection converged (0.86%, then 0.43%), but the stress didn't. Since this was my third attempt, I used the fine mesh results for link Design III like the assignment says.
+The deflection converged (0.86%, then 0.43%), but the stress didn't. Since this was my third attempt, I used the fine mesh results for link Design 3 like the assignment says.
 
 ###### 4. Link Design III Results:
 
@@ -425,39 +425,35 @@ The deflection converged (0.86%, then 0.43%), but the stress didn't. Since this 
 - **Max deflection location:** bottom edge of the large hole
 - **Min SF location:** same spot as max stress
 
-Link Design III finally passes. Even on the fine mesh, the safety factor is 4.23, which is above the 4 I need, and the max deflection of 0.001181 in is way under the 0.005 in target. The stress kept climbing at the fixture on the small hole every time I refined the mesh, just like in Design II, but even with that the link still stays above a safety factor of 4. The deflection only changed 0.43% between standard and fine, so the stiffness results are solid. Compared to Design II, the max stress dropped 52% and the deflection dropped 48%.
+Link Design 3 finally passes. Even on the fine mesh, the safety factor is 4.23, which is above the 4 I need, and the max deflection of 0.001181 in is way under the 0.005 in target. The stress kept climbing at the fixture on the small hole every time I refined the mesh, just like in Design 2, but even with that the link still stays above a safety factor of 4. The deflection only changed 0.43% between standard and fine, so the stiffness results are solid. Compared to Design 2, the max stress dropped 52% and the deflection dropped 48%.
 
 #### Link Final Design Iteration Table and Lessons Learned
 
 ##### 1. Link Design Table:
 
-|                              | Design 1                          | Design II                              | Design III                         |
+|                              | Design 1                          | Design 2                              | Design 3                         |
 |------------------------------|-----------------------------------|----------------------------------------|------------------------------------|
 | Max Stress and location      | 45,040 psi, sides of large hole   | 58,600 psi, small hole edge at fixture | 28,340 psi, small hole at fixture  |
 | Max deflection and location  | 0.003509 in, bottom of large hole | 0.002269 in, bottom of large hole      | 0.001181 in, bottom of large hole  |
-| Mass                         | 0.13 lb                           | 0.16 lb                                | TBD                                |
+| Mass                         | 0.13 lb                           | 0.16 lb                                | 0.32                               |
 | Safety Factor                | 2.66                              | 2.05                                   | 4.23                               |
 | Number of elements           | 8,249                             | 69,238                                 | 61,801                             |
 
 ##### 2. Link Lessons Learned:
 
-The biggest thing I learned from the link is that my hand calc from A5 wasn't telling the whole story. I used σ = F/A, which assumes the stress is the same everywhere across the cross-section, but the FEA showed the stress piling up right around the holes. The hole concentrates the stress at its edges, so the real max stress is a lot higher than the average my hand calc gave me.
+The biggest thing I learned from the link is that my hand calc from A5 were super far off and i mentioned this in A6 about my A5 work having to do the FEA on the parts makes it easy to verify any possible errors you made in your calculations along with the parametric equations.
 
-I also learned that fixtures can cause the same problem as sharp corners. In link Designs II and III, the max stress moved to the small hole right at the fixture and kept going up every time I refined the mesh, while the deflection barely changed. A fixed restraint is perfectly rigid, which isn't how a real pin would hold the link, so the stress at that spot never settles.
-
-Thickness made the biggest difference on the link. Doubling it in Design III took the safety factor from 2.05 up to 4.23 and cut the deflection almost in half. Since the thickness was linked to "T 1" from A6, I only had to change one value to update the whole link.
+Thickness made the biggest difference on the link. Doubling it in Design 3 took the safety factor from 2.05 up to 4.23 and cut the deflection almost in half. Since the thickness was linked to "T 1" from A6, I only had to change one value to update the whole link.
 
 ## Decide:
 
-For Designs 1 and II, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design II, I figured out that the stress wasn't converging because of the sharp corner, not because I set something up wrong, and that pointed me straight to the fix for Design III.
+For Designs 1 and 2, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design 2, I figured out that the stress wasn't converging because of the sharp corner, not because I set something up wrong, and that pointed me straight to the fix for Design 3.
 
 I also kept all of my changes away from the T-beam slot, so the RC fits from A6 still hold and the bracket can still slide on the beam.
 
 ## Communicate:
 
 ### Reflections
-
-TBD – your own reflection on the assignment. The instructions say to be specific and avoid words like "good" and "bad."
 
 ### Mistakes
 
