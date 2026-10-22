@@ -447,24 +447,18 @@ Thickness made the biggest difference on the link. Doubling it in Design 3 took 
 
 ## Decide:
 
-For Designs 1 and 2, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design 2, I figured out that the stress wasn't converging because of the sharp corner, not because I set something up wrong, and that pointed me straight to the fix for Design 3.
+For Designs 1 and 2, the stress never converged within three attempts, so I used the fine mesh results like the assignment says. For Design 2, I figured out that the stress wasn't converging because of one of the corners, not because I set something up wrong which I had initially assumed, and that pointed me straight to the fix for Design 3 for the bracket.
 
-I also kept all of my changes away from the T-beam slot, so the RC fits from A6 still hold and the bracket can still slide on the beam.
-
-## Communicate:
-
-### Reflections
+I also again kept all of my changes away from the T-beam slot, so the RC fits from A6 still hold and the bracket can still slide on the beam.
 
 ### Mistakes
 
 One mistake that carried over from A5 was feature B being undersized. My stress and deflection calculations for feature B didn't agree, and I let it ride instead of figuring out why. The Design 1 FEA showed feature B failing with a safety factor of 0.0203, so that unresolved calculation ended up in my CAD model.
 
-TBD – any other mistakes.
-
 ### Time Spent
 
-This assignment took me about TBD hours from start to finish.
+This assignment took me around 8 Hours to complete from start to finish
 
 ## Appendix
 
-[A7 Downloads Folder](TBD – link)
+[A7 Parts Folder](https://drive.google.com/drive/folders/1YrD_X1NY8J8nvU5k1vPIMKFW72U5bTFp?usp=sharing)
