@@ -25,60 +25,102 @@ For Assignment A8, I designed a single-reduction spur gearbox around the McMaste
 
 ### Step 1: Shaft Calculations and Design Alterations:
 
-- Both shafts are checked in pure torsion, using AISI 1018 cold-drawn steel (Sy = 54,000 psi). Material data source: TODO (paste link, for example MatWeb).
+- Both shafts are checked in pure torsion, using AISI 1020 steel (Sy = 50,800 psi). Material data source: TODO (paste link, for example MatWeb).
+- The safety factor is the yield strength divided by the shear stress: SF = Sy / τ.
 - The input shaft carries T = 0.469 in-lbf and the output shaft carries T = 1.25 in-lbf.
 
 #### Input Shaft (Power Transmission):
 
-<!-- IMAGE: input shaft knowns and unknowns -->
+**Knowns:** gear ratio 24:9, n_out = 1100 rpm, T_out = 1.25 in-lbf, d = 0.125 in, L = 1 in, AISI 1020 steel with Sy = 50,800 psi
 
-<!-- IMAGE: input shaft FBD -->
+**Unknowns:** T_in, J, τ, SF
 
-<!-- IMAGE: input shaft equations and calculations -->
+<!-- IMAGE: input shaft hand calculations (knowns, unknowns, FBD, symbolic and numerical solution) -->
 
-**Result:** shear stress = **1,220 psi**, safety factor ≈ 25.5. The 0.125 in diameter is sufficient.
+**Symbolic solution:** T_in = T_out / G, J = π d⁴ / 32, τ = T_in c / J, SF = Sy / τ
+
+**Numerical solution:**
+
+- T_in = 1.25 (9/24) = 0.469 in-lbf
+- J = (π/32)(0.125)⁴ = π/131,072 in⁴
+- c = 0.125 / 2 = 0.0625 in
+- τ = (0.469)(0.0625) / (π/131,072) = 1,222.96 ≈ **1,223 psi**
+- SF = 50,800 / 1,222.96 = **41.54**
+
+**Result:** The safety factor is 41.54, so the 0.125 in diameter is sufficient.
 
 #### Output Shaft (Short Shaft):
 
-<!-- IMAGE: output shaft knowns and unknowns -->
+**Knowns:** gear ratio 24:9, n_out = 1100 rpm, T_out = 1.25 in-lbf, d = 0.25 in, L = 1 in, AISI 1020 steel with Sy = 50,800 psi
 
-<!-- IMAGE: output shaft FBD -->
+**Unknowns:** J, τ, SF
 
-<!-- IMAGE: output shaft equations and calculations -->
+<!-- IMAGE: output shaft hand calculations (knowns, unknowns, FBD, symbolic and numerical solution) -->
 
-**Result:** shear stress = **407 psi**, safety factor ≈ 76.5. The 0.25 in diameter is sufficient.
+**Symbolic solution:** J = π d⁴ / 32, τ = T_out c / J, SF = Sy / τ
 
-| Shaft  | d (in) | T (in-lbf) | Stress (psi) | Safety Factor | Sufficient? |
-|--------|--------|------------|--------------|---------------|-------------|
-| Input  | 0.125  | 0.469      | 1,220        | 25.5          | Yes         |
-| Output | 0.250  | 1.250      | 407          | 76.5          | Yes         |
+**Numerical solution:**
+
+- J = (π/32)(0.25)⁴ = π/8,192 in⁴
+- c = 0.25 / 2 = 0.125 in
+- τ = (1.25)(0.125) / (π/8,192) = **407.44 psi**
+- SF = 50,800 / 407.44 = **124.68**
+
+**Result:** The safety factor is 124.68, so the 0.25 in diameter is sufficient.
+
+| Shaft  | d (in) | T (in-lbf) | Stress (psi) | Safety Factor (Sy / τ) | Sufficient? |
+|--------|--------|------------|--------------|------------------------|-------------|
+| Input  | 0.125  | 0.469      | 1,223        | 41.54                  | Yes         |
+| Output | 0.250  | 1.250      | 407.44       | 124.68                 | Yes         |
 
 ### Step 2: Design Journal Bearings:
 
 #### Journal Bearing Sizing:
 
 - I used two bearings per shaft, with the gear at the middle, so each bearing carries half of the gear force.
-- The bearing length comes from the layout inside the gearbox: shaft sticking out of the housing (TODO in) + bearing contact length (TODO in) + gear face width and clearance (TODO in) = TODO in total. I chose the McMaster bearing closest to that length.
-- The gear pitch diameter is TODO in, so the tangential force is TODO lbf and each bearing carries TODO lbf. (My first estimate used a 1.25 in placeholder pitch diameter. TODO: update with the real value.)
+- I chose the bearing length equal to the shaft diameter (L/D = 1), so L = 0.125 in for the input bearing and L = 0.25 in for the output bearing.
+- The gear pitch diameter is D_g = 1.25 in. TODO: confirm against the McMaster gear listing.
 
-<!-- IMAGE: bearing knowns and unknowns -->
+**Knowns:** T_out = 1.25 in-lbf, n_out = 1100 rpm, G = 24/9, d_in = 0.125 in, d_out = 0.25 in, D_g = 1.25 in
 
-<!-- IMAGE: journal bearing FBD -->
+**Unknowns:** n_in, W_t, R, L, P, V, PV
 
-<!-- IMAGE: bearing equations and calculations -->
+<!-- IMAGE: journal bearing FBD (shaft with W_t at the gear and R at each bearing) -->
 
-**Result:** (TODO: update with the real values)
+<!-- IMAGE: journal bearing hand calculations (knowns, unknowns, symbolic and numerical solution) -->
 
-| | d (in) | L (in) | P (psi) | V (fpm) | PV (psi·fpm) |
+**Symbolic solution:**
+
+- n_in = n_out G
+- ΣF = 0: R_A + R_B = W_t, and by symmetry R_A = R_B = R
+- W_t = T_out / (D_g/2) = 2 T_out / D_g
+- R = W_t / 2 = T_out / D_g
+- L = d (L/D = 1)
+- P = R / (d L) = T_out / (D_g d L)
+- V = π d n / 12 (ft/min)
+- PV = P × V
+
+**Numerical solution:**
+
+- n_in = 1100 (24/9) = 2,933 rpm
+- Input bearing: P = 1.25 / ((1.25)(0.125)(0.125)) = **64 psi**, V = π(0.125)(24/9)(1100)/12 = 275π/9 ≈ **95.99 ft/min**, PV = 64 × 95.99 = **6,143.6 psi·ft/min**
+- Output bearing: P = 1.25 / ((1.25)(0.25)(0.25)) = **16 psi**, V = π(0.25)(1100)/12 = 275π/12 ≈ **72 ft/min**, PV = 16 × 71.99 = **1,151.92 psi·ft/min**
+
+| | d (in) | L (in) | P (psi) | V (ft/min) | PV (psi·ft/min) |
 |---|---|---|---|---|---|
-| Input bearing  | 0.125 | TODO | TODO | 96 | TODO |
-| Output bearing | 0.250 | TODO | TODO | 72 | TODO |
-
-*(Placeholder results with L = d: input P = 64 psi, PV ≈ 6,100; output P = 16 psi, PV ≈ 1,150.)*
+| Input bearing  | 0.125 | 0.125 | 64 | 95.99 | 6,143.6 |
+| Output bearing | 0.250 | 0.250 | 16 | 72 | 1,151.92 |
 
 #### Bearing Material:
 
-I picked **porous bronze** from the lecture table, which allows 4,500 psi, 1,500 fpm, and a PV of 50,000 psi·fpm. Both bearings are well under all three limits.
+I picked **porous bronze with graphite lubricant**. The graphite resists wear better than oil. The bearings pass the limits for both lecture table rows:
+
+| Lecture table row | Load (psi) | Speed (ft/min) | PV limit | Input bearing (P / V / PV) | Output bearing (P / V / PV) |
+|---|---|---|---|---|---|
+| Porous bronze | 4,500 | 1,500 | 50,000 | 64 / 96 / 6,144 | 16 / 72 / 1,152 |
+| Graphite (lubricated) | 600 | 2,500 | 150,000 | 64 / 96 / 6,144 | 16 / 72 / 1,152 |
+
+Both bearings are under every limit. The PV margin on porous bronze is 50,000 / 6,144 ≈ 8.1 for the input bearing and 50,000 / 1,152 ≈ 43.4 for the output bearing.
 
 <!-- IMAGE: lecture bearing material table with the circled columns -->
 
@@ -90,7 +132,7 @@ I picked **porous bronze** from the lecture table, which allows 4,500 psi, 1,500
 
 <!-- IMAGE: bearing thickness equations and calculations -->
 
-**Result:** the minimum thickness is 0.0009 in (input) and 0.0004 in (output). Strength doesn't set the wall, so the press fit and machining do. The selected bearings have walls of 1/16 in (input) and 1/32 in (output), which are more than enough.
+**Result:** the minimum thickness is 0.0009 in (input) and 0.0004 in (output). Strength doesn't set the wall, so the press fit and machining do. The selected bearings have walls of 1/16 in (input) and 1/32 in (output), which are more than enough. TODO: update with your hand-calculated values.
 
 #### McMaster-Carr Bearings:
 
@@ -99,13 +141,13 @@ I picked **porous bronze** from the lecture table, which allows 4,500 psi, 1,500
 | Input bearing  | 9368T95 | 1/8"  | 1/4"  | 1/8" | 2 |
 | Output bearing | 9368T11 | 1/4"  | 5/16" | 1/4" | 2 |
 
-Both are 841 Bearing Bronze sleeve bearings (TODO: copy the exact product name, and update the part numbers if your length budget picks different sizes).
+Both are 841 Bearing Bronze sleeve bearings (TODO: copy the exact product name. If you add graphite lubricant, check that the part number matches the graphite version).
 
 <!-- IMAGE: McMaster bearing table with the selected rows -->
 
 ### Step 3: Gearbox Sketch:
 
-The housing is two pieces, a box and a cover, held together with M3 × 0.5 bolts into tapped holes in the box wall (TODO: change if you use a different fastener). Each half has bearing bores, 1/4" for the input bearing and 5/16" for the output bearing, so each shaft is supported at both ends.
+The housing is two pieces, a box and a cover, held together with M2 × 0.4 bolts into tapped holes in the box wall. Each half has bearing bores, 1/4" for the input bearing and 5/16" for the output bearing, so each shaft is supported at both ends.
 
 <!-- IMAGE: housing sketch -->
 
@@ -113,8 +155,29 @@ The housing is two pieces, a box and a cover, held together with M3 × 0.5 bolts
 
 ### Step 4: Gearbox 3D Model:
 
-- I built the model parametrically when possible, starting from the known gear and bearing dimensions
-- Gears were downloaded from McMaster-Carr. The shafts, housing, and bearings and screws were modeled from my own sketches.
+- I built the model parametrically as much as possible, starting from the known gear and bearing dimensions.
+- Gears were downloaded from McMaster-Carr. The shafts, housing, bearings, and screws were modeled from my own sketches.
+
+#### Fit Selection:
+
+- **Gear to shaft (press fit):** ANSI/ASME B4.1 Class FN 1, since the shafts are press fit through the gear hubs. Hole H6, shaft per the FN 1 column.
+- **Shaft to bearing (running sliding fit):** ANSI/ASME B4.1 Class RC 4, as the assignment requires. Hole H8, shaft f7.
+- The 0.125 in shaft uses the 0.12–0.24 in row, and the 0.25 in shaft uses the 0.24–0.40 in row.
+
+<!-- IMAGE: FN 1 table with the circled rows (both images) -->
+
+<!-- IMAGE: RC 4 table with the circled rows (both images) -->
+
+| | Input (0.125 in) | Output (0.25 in) |
+|---|---|---|
+| Gear bore, H6 | 0.1250 – 0.1253 | 0.2500 – 0.2504 |
+| Shaft at gear seat | 0.1254 – 0.1256 | 0.2505 – 0.25075 |
+| Interference | 0.0001 – 0.0006 | 0.0001 – 0.00075 |
+| Bearing bore, H8 | 0.1250 – 0.1257 | 0.2500 – 0.2509 |
+| Shaft at bearing, f7 | 0.1241 – 0.1246 | 0.2489 – 0.2495 |
+| Clearance | 0.0004 – 0.0016 | 0.0005 – 0.0020 |
+
+Each shaft is dimensioned with a larger diameter at the gear seat and a smaller diameter in the bearing.
 
 #### Box:
 
@@ -124,16 +187,16 @@ The box is the back half of the gearbox, and it holds the gears. It is made of c
 
 #### Cover:
 
-The cover is the front half of the gearbox. It has holes for the bolts that fasten it to the box, and two bores for the bearings. It is made of cast alloy stee; for the same reasons above.
+The cover is the front half of the gearbox. It has holes for the bolts that fasten it to the box, and two bores for the bearings. It is made of cast alloy steel for the same reasons as above.
 
 <img width="1072" height="732" alt="image" src="https://github.com/user-attachments/assets/b6a7e955-7aa5-4a19-a697-3dbbcc1b310d" />
 
 #### Shafts, Gears, and Bearings:
 
-9368T95
+Input bearing, 9368T95
 <img width="1037" height="610" alt="image" src="https://github.com/user-attachments/assets/5ceb9368-b22c-4a0d-bb96-e1c2446a696b" />
 
-9368T95
+Output bearing, 9368T11
 <img width="1018" height="700" alt="image" src="https://github.com/user-attachments/assets/211e5693-14bd-4c14-9259-646041e43851" />
 
 Input Shaft
@@ -145,7 +208,6 @@ Output Shaft
 M2 x 10mm Bolt
 <img width="766" height="742" alt="image" src="https://github.com/user-attachments/assets/01ae05c6-acb8-44e9-a57f-4b0d839f3f07" />
 
-
 #### Assembly:
 
 The gearbox goes together in this order: press the bearings into the box and cover, press the gears onto the shafts, slide the shafts into the back bearings and mesh the gears, fit the cover, and bolt it down.
@@ -154,35 +216,35 @@ The gearbox goes together in this order: press the bearings into the box and cov
 
 <img width="1043" height="717" alt="image" src="https://github.com/user-attachments/assets/c5233a53-f36c-429d-a037-f6abf683ca7f" />
 
-
 <!-- IMAGE: section view, caption: [Section view showing the gear mesh and bearings] -->
 
 ### MEGR 2157 Addition:
 
 - Six multi-view CAD drawings and one assembly drawing with complete dimensioning and proper tolerancing, in third-angle projection (ASME Y14.5).
 - Tolerance block: X.X ± .02, X.XX ± .01, and X.XXX ± .005.
-- At least two callouts with different tolerances on critical features: TODO (for example, the bearing bore fit and the shaft diameter).
+- Two different tolerance callouts on critical features: the gear seat on each shaft (FN 1 press fit) and the bearing journal on each shaft (RC 4 running fit).
 
-<!-- IMAGE: input shaft drawing -->
+<img width="953" height="697" alt="Screenshot 2026-10-29 061412" src="https://github.com/user-attachments/assets/3e1c0497-ac94-4a97-ba32-6647c1274ceb" />
 
-<!-- IMAGE: output shaft drawing -->
+<img width="837" height="651" alt="image" src="https://github.com/user-attachments/assets/ee6f34bc-1abe-49da-aa3f-4a7b9cc3f099" />
 
-<!-- IMAGE: box drawing -->
+<img width="837" height="646" alt="image" src="https://github.com/user-attachments/assets/b04172ee-40ba-412b-8211-a40363de5362" />
 
-<!-- IMAGE: cover drawing -->
+<img width="935" height="696" alt="image" src="https://github.com/user-attachments/assets/5af84832-0300-4757-b874-11d620ca850b" />
 
-<!-- IMAGE: input bearing drawing -->
+<img width="977" height="752" alt="image" src="https://github.com/user-attachments/assets/24efa880-27cc-42a2-9d29-ad62f94de09d" />
 
-<!-- IMAGE: output bearing drawing -->
+<img width="988" height="762" alt="image" src="https://github.com/user-attachments/assets/9505e38d-2fe6-4c71-afae-082775ec9208" />
 
-<!-- IMAGE: assembly drawing with bill of materials -->
-
+<img width="1021" height="660" alt="Screenshot 2026-10-29 061001" src="https://github.com/user-attachments/assets/d4a7acb9-c9ef-40e7-885c-f99c8d2e8785" />
 ## Decide
 
 - **Housing material:** cast alloy steel. I based the choice on what automotive gearbox housings use for high load capacity. The gearbox loads are very small, so the steel is much stronger than it needs to be. The trade-off is extra weight and machining effort compared with aluminum, which would also work.
-- **Shaft material:** AISI 1021 steel, because the stresses are far below its strength and it is easy to machine. TODO: confirm.
-- **Bearing material:** porous bronze with graphite lubricant, because it passes the load, speed, and PV limits with a wide margin and the graphite is resistant to wear vs oil.
+- **Shaft material:** AISI 1020 steel, because the stresses are far below its strength (safety factors of 41.54 and 124.68) and it is easy to machine.
+- **Bearing material:** porous bronze with graphite lubricant, because it passes the load, speed, and PV limits with a wide margin and the graphite resists wear better than oil.
+- **Bearing length:** equal to the shaft diameter (L/D = 1), which keeps the pressure low and matches stocked McMaster sizes.
 - **Fastening:** M2 bolts into tapped holes, so the box can be taken apart.
+- **Fits:** FN 1 for the gear on the shaft and RC 4 for the shaft in the bearing, as the assignment requires a running sliding fit at the bearings.
 
 ## Communicate
 
