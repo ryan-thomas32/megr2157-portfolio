@@ -187,9 +187,7 @@ The gearbox goes together in this order: press the bearings into the box and cov
 - **Fits:** FN 1 for the gear on the shaft and RC 4 for the shaft in the bearing, as the assignment requires a running sliding fit at the bearings.
 
 ## Communicate
-
-**Lessons learned**
-
+### Lessons Learned
 I figured out pretty early into this assignment that torque and speed basically trade off through the gear ratio, so the faster input shaft ends up carrying way less torque than the output. Both shafts had really low stress, so the diameters we were given were already plenty strong enough and strength was not what decided the design. For this assignment I did not find myself doing a lot of documenting felt more the research focused looking at materials and bearings to choose from.
 
 ## Appendix
