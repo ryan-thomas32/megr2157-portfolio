@@ -113,96 +113,47 @@ The housing is two pieces, a box and a cover, held together with M3 × 0.5 bolts
 
 ### Step 4: Gearbox 3D Model:
 
-- I built the model parametrically, starting from the known gear and bearing dimensions as global variables and finishing with the housing dimensions and material.
-- Gears and bearings were downloaded from McMaster-Carr. The shafts and housing were modeled from my own sketches.
+- I built the model parametrically when possible, starting from the known gear and bearing dimensions
+- Gears were downloaded from McMaster-Carr. The shafts, housing, and bearings and screws were modeled from my own sketches.
 
 #### Box:
 
-The box is the back half of the gearbox, and it holds the gears. It is made of cast alloy steel. I chose it for its high load capacity, based on what automotive gearbox housings use. The gearbox loads are very small (tangential force about 2 lbf, bearing pressures 16 to 64 psi), so the steel is much stronger than it needs to be. TODO: housing mass from SolidWorks, and the trade-off against aluminum (more weight and machining effort, and why I accepted it).
+The box is the back half of the gearbox, and it holds the gears. It is made of cast alloy steel. I chose it for its high load capacity, based on what automotive gearbox housings use. The gearbox loads are very small (tangential force about 2 lbf, bearing pressures 16 to 64 psi), so the steel is much stronger than it needs to be.
 
-##### 1.
-
-TODO: why you started here. For example: how you sized the cavity from the real gear diameters, the clearance on every inner face, and the wall thickness you assumed.
-
-<!-- IMAGE: box step 1, caption: [Initial box sketch using global variables] -->
-
-##### 2.
-
-TODO: how you decided the extrusion depths, and any sketch on paper that helped.
-
-<!-- IMAGE: box step 2a, caption: [Back wall extrusion] -->
-
-<!-- IMAGE: box step 2b, caption: [Side wall extrusion] -->
-
-##### 3.
-
-TODO: tapped bolt holes for the cover (size, pitch, depth, and why).
-
-<!-- IMAGE: box step 3, caption: [Tapped holes for M3 x 0.5 bolts] -->
-
-##### 4.
-
-TODO: bearing bores in the back wall (diameters, depth, positions, and how you located them).
-
-<!-- IMAGE: box step 4a, caption: [Sketch for bearing bore positions] -->
-
-<!-- IMAGE: box step 4b, caption: [Bearing bores in the back wall] -->
-
-##### 5.
-
-Final product and global variables.
-
-<!-- IMAGE: final box, caption: [Final box] -->
-
-<!-- IMAGE: box global equations, caption: [Global equations] -->
+<img width="945" height="731" alt="image" src="https://github.com/user-attachments/assets/02fb7aa4-614f-4069-8194-9cbced409cd3" />
 
 #### Cover:
 
-The cover is the front half of the gearbox. It has holes for the bolts that fasten it to the box, and two bores for the bearings. It is made of TODO (material, and why).
+The cover is the front half of the gearbox. It has holes for the bolts that fasten it to the box, and two bores for the bearings. It is made of cast alloy stee; for the same reasons above.
 
-##### 1.
-
-TODO: how you started the cover (for example, from the box outline so the halves match).
-
-<!-- IMAGE: cover step 1, caption: [Cover sketch] -->
-
-##### 2.
-
-TODO: bearing bores in the cover (sizes and positions, matching the box).
-
-<!-- IMAGE: cover step 2, caption: [Bearing bores in the cover] -->
-
-##### 3.
-
-TODO: bolt holes in the cover, and any problem you noticed with the fit.
-
-<!-- IMAGE: cover step 3, caption: [Bolt holes in the cover] -->
-
-##### 4.
-
-Final product and global equations.
-
-<!-- IMAGE: final cover, caption: [Final cover] -->
-
-<!-- IMAGE: cover global equations, caption: [Global equations] -->
+<img width="1072" height="732" alt="image" src="https://github.com/user-attachments/assets/b6a7e955-7aa5-4a19-a697-3dbbcc1b310d" />
 
 #### Shafts, Gears, and Bearings:
 
-TODO: how you made or downloaded each part.
+9368T95
+<img width="1037" height="610" alt="image" src="https://github.com/user-attachments/assets/5ceb9368-b22c-4a0d-bb96-e1c2446a696b" />
 
-<!-- IMAGE: shafts, caption: [Input and output shafts] -->
+9368T95
+<img width="1018" height="700" alt="image" src="https://github.com/user-attachments/assets/211e5693-14bd-4c14-9259-646041e43851" />
 
-<!-- IMAGE: McMaster parts in SolidWorks, caption: [Gears and bearings from McMaster-Carr] -->
+Input Shaft
+<img width="1202" height="533" alt="image" src="https://github.com/user-attachments/assets/5c04c80f-73dc-4bd2-94e6-ba7111bfc26c" />
+
+Output Shaft
+<img width="1075" height="722" alt="image" src="https://github.com/user-attachments/assets/8c446245-669f-4e45-bd0a-7fbb31164d52" />
+
+M2 x 10mm Bolt
+<img width="766" height="742" alt="image" src="https://github.com/user-attachments/assets/01ae05c6-acb8-44e9-a57f-4b0d839f3f07" />
+
 
 #### Assembly:
 
 The gearbox goes together in this order: press the bearings into the box and cover, press the gears onto the shafts, slide the shafts into the back bearings and mesh the gears, fit the cover, and bolt it down.
 
-**Clearance check:** TODO (gear to wall, gear face to wall).
+<img width="1277" height="572" alt="image" src="https://github.com/user-attachments/assets/456071cc-4d83-48ab-9a7d-60117b732c15" />
 
-<!-- IMAGE: exploded assembly, caption: [Exploded view] -->
+<img width="1043" height="717" alt="image" src="https://github.com/user-attachments/assets/c5233a53-f36c-429d-a037-f6abf683ca7f" />
 
-<!-- IMAGE: assembled gearbox, caption: [Assembled gearbox] -->
 
 <!-- IMAGE: section view, caption: [Section view showing the gear mesh and bearings] -->
 
@@ -228,10 +179,10 @@ The gearbox goes together in this order: press the bearings into the box and cov
 
 ## Decide
 
-- **Housing material:** cast alloy steel. I based the choice on what automotive gearbox housings use for high load capacity. The gearbox loads are very small, so the steel is much stronger than it needs to be. The trade-off is extra weight and machining effort compared with aluminum, which would also work. I chose steel because TODO (for example, stiffness for bearing alignment, strong M3 threads, or a conservative first design).
-- **Shaft material:** AISI 1018 steel, because the stresses are far below its strength and it is easy to machine. TODO: confirm.
-- **Bearing material:** porous bronze, because it passes the load, speed, and PV limits with a wide margin. TODO: confirm.
-- **Fastening:** M3 bolts into tapped holes, so the box can be taken apart. TODO: confirm.
+- **Housing material:** cast alloy steel. I based the choice on what automotive gearbox housings use for high load capacity. The gearbox loads are very small, so the steel is much stronger than it needs to be. The trade-off is extra weight and machining effort compared with aluminum, which would also work.
+- **Shaft material:** AISI 1021 steel, because the stresses are far below its strength and it is easy to machine. TODO: confirm.
+- **Bearing material:** porous bronze with graphite lubricant, because it passes the load, speed, and PV limits with a wide margin and the graphite is resistant to wear vs oil.
+- **Fastening:** M2 bolts into tapped holes, so the box can be taken apart.
 
 ## Communicate
 
@@ -255,10 +206,4 @@ Includes the box, cover, shafts, gears, bearings, assembly, and drawings.
 
 ## Time Spent:
 
-| Task | Time (hours) |
-|---|---|
-| Reading and planning | TODO |
-| Shaft calculations | TODO |
-| Journal bearing calculations | TODO |
-| McMaster selection | TODO |
-|
+
