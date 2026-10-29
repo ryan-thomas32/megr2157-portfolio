@@ -190,8 +190,6 @@ The gearbox goes together in this order: press the bearings into the box and cov
 
 **Lessons learned**
 
-**Lessons learned**
-
 I figured out pretty early into this assignment that torque and speed basically trade off through the gear ratio, so the faster input shaft ends up carrying way less torque than the output. Both shafts had really low stress, so the diameters we were given were already plenty strong enough and strength was not what decided the design.
 
 ## Appendix
