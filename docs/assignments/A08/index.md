@@ -190,10 +190,9 @@ The gearbox goes together in this order: press the bearings into the box and cov
 
 **Lessons learned**
 
-- Torque and speed trade off through the gear ratio. The faster input shaft carries less torque.
-- The shaft stresses are very low, so the given diameters, not strength, set the shaft design.
-- The tangential force at the mesh is what loads the bearings, so the gear pitch diameter drives the bearing numbers.
-- The bearing wall thickness is set by manufacturing and the press fit, not by stress.
+**Lessons learned**
+
+I figured out pretty early into this assignment that torque and speed basically trade off through the gear ratio, so the faster input shaft ends up carrying way less torque than the output. Both shafts had really low stress, so the diameters we were given were already plenty strong enough and strength was not what decided the design.
 
 ## Appendix
 
