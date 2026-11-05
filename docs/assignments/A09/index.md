@@ -6,6 +6,10 @@ Pulley Diameter: Both pulleys shall have a diameter of 3 inches. - Rotational Sp
 
 <img width="295" height="100" alt="image" src="https://github.com/user-attachments/assets/e557e4de-b342-459e-9395-e3dce67f7a3c" />
 
+### Design Choices:
+
+For my design, I set the center distance between the two shafts at 6 in, the top of the allowed range, which gives the belt plenty of room. I chose an operating speed of 1500 rpm, right in the middle of the 1000–2000 rpm range, and a static belt tension of 4 lbf at the low end of the 4–6 lbf range to keep the loads on the shafts and bearings down. Both pulleys are 3 in in diameter and made from 6061-T6 aluminum. I originally planned to use ABS, but I switched to aluminum because I could find a friction coefficient for polyurethane on aluminum (μ = 0.4). The belt is polyurethane rubber with a yield strength of 471.37 psi, the shafts are 1060 hardened steel with a shear yield strength of 98,200 psi, and every part of the design was checked against a minimum safety factor of 3.
+
 ## Analyze: Belt, Shafts, and Journal Bearings:
 
 For each part, I listed my knowns and unknowns, drew an FBD, solved symbolically, and then solved numerically.
