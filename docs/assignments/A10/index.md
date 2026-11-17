@@ -195,7 +195,7 @@ The hand calculations were entered as global variables in the SolidWorks Equatio
 
 [McMaster-Carr 93410A916](https://www.mcmaster.com/93410A916/)
 
-<img width="1342" height="676" alt="image" src="https://github.com/user-attachments/assets/94e101c2-8617-4b1a-b058-5055b4b71751" />
+<img width="1232" height="530" alt="image" src="https://github.com/user-attachments/assets/e646ac86-351d-4172-b1ec-5e55814e6992" />
 
 [Lead screw model]
 
