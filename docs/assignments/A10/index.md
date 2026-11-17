@@ -83,7 +83,7 @@ Any of the lead screws in the following figure are possible choices:
 <img width="905" height="382" alt="38 Lead Screw Diagram" src="https://github.com/user-attachments/assets/0e868820-c0f6-45ab-91df-aa4e4dd5037b" />
 [3/8"-12 lead screw dimensions drawing sourced from [site](https://www.mcmaster.com/93420A882/)]
 
-For the sake of the cost tabulation detailed later in the project, we will assume that a lead screw length of 12in will be sufficient for our tensile tester design, as the next size up (24in) will most likely be overkill. 
+For the sake of the cost tabulation detailed later in the project, we will assume that a lead screw length of 24in will be sufficient for our tensile tester design.
 
 
 ### Nut and Flange Design (10pts): Misha
@@ -134,7 +134,7 @@ Although the overall length of the crosshead is 11in (updated from the initial l
 
 #### Crosshead final dimensions: 11in long, 1.25in x 1.25in cross section
 
-Based on an assumed base dimension of 1.25in, our crosshead needs to have a height of 1.091in to resist the stress created by the applied loads. However, since this height is not limited by our design constraints, using a 11in long, 1.25in x 1.25in piece of aluminum bar stock will simplify any further calculations, and ensure that sourcing components will be a simple process.
+Based on an assumed base dimension of 1.25in, our crosshead needs to have a height of 1.091in to resist the stress created by the applied loads. However, since this height is not limited by our design constraints, using a 11in long, 1.25in x 1.25in piece of aluminum bar stock will simplify any further calculations and ensure that sourcing components will be a simple process.
 
 
 #### Generate a multiview paper sketch of the crosshead. 
@@ -151,7 +151,7 @@ For this multiview sketch, the overhanging portions of the crosshead that mate w
 
 Selected: 40 SERIES, 40mm x 40mm Mono Slot T Slot Aluminum Framing Extrusion
 
-The T-slot frame column we selected to design our crosshead around was an E40-4001-C – 40mm x 40mm MONO SLOT ALUMINUM EXTRUSION from parco-inc. We couldn't find the full technical drawings of the T-slot framing available at Grainger, so we chose a different supplier. The T-frame can be accessed at this [link](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/). For our theoretical design and cost table, a length of 24" should be adequate. If the overall design changes, we can easily alter both our frame design and our cost table.
+The T-slot frame column we selected to design our crosshead around was an E40-4001-C – 40mm x 40mm MONO SLOT ALUMINUM EXTRUSION from parco-inc. We couldn't find the full technical drawings of the T-slot framing available at Grainger, so we chose a different supplier. The T-frame can be accessed at this [link](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/). For our theoretical design and cost table, 2 rails, with lengths of 11in and 30in should be adequate. If the overall design changes, we can easily alter both our frame design and our cost table.
 
 
 ### Tabulating Costs (10 pts): Misha
@@ -159,12 +159,12 @@ In order to get credit for this portion of the assignment, you must not use an i
 
 
 | Item Number | Quantity | Name | Cost/Item | Cost | Purchase Link |
-| :---: | :-: | :--- | :-: | :-: | :---: |
-| 1 | 2 | 40mm x 40mm Mono Slot T-Slotted Extrusion, 24" Long | $21.32 | $42.64 | [Parco Inc](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/) |
-| 2 | 2 | Alloy Steel Acme Lead Screw, Right Hand, 3/8"-12 Thread, 12" Long | $31.13 | $62.26 | [McMaster-Carr](https://www.mcmaster.com/93410A916/) |
-| 3 | 2 | 932 Bearing Bronze Acme Flange Nut, Right Hand, 3/8"-12 Thread | $111.78 | $223.56 | [McMaster-Carr](https://www.mcmaster.com/95120A592/) |
-| | | | **Total Cost** | **$328.46** | |
-
+| --- | --- | --- | --- | --- | --- |
+| 1 | 2 | 40mm x 40mm Mono Slot T-Slotted Extrusion, 11" Long | $9.78 | $19.56 | [Parco Inc](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/) |
+| 2 | 2 | 40mm x 40mm Mono Slot T-Slotted Extrusion, 30" Long | $26.67 | $53.34 | [Parco Inc](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/) |
+| 3 | 2 | Alloy Steel Acme Lead Screw, Right Hand, 3/8"-12 Thread, 2 Feet Long | $57.73 | $115.46 | [McMaster-Carr](https://www.mcmaster.com/93410A111/) |
+| 4 | 2 | 932 Bearing Bronze Acme Flange Nut, Right Hand, 3/8"-12 Thread | $111.78 | $223.56 | [McMaster-Carr](https://www.mcmaster.com/95120A592/) |
+|  |  |  | **Total Cost** | **$411.92** |  |
 
 
 ### Parametric Modeling (20 pts): Ryan
@@ -193,9 +193,9 @@ The hand calculations were entered as global variables in the SolidWorks Equatio
 
 #### Leadscrew (downloaded):
 
-[McMaster-Carr 93410A916](https://www.mcmaster.com/93410A916/)
+[McMaster-Carr 93410A916](https://www.mcmaster.com/93410A111/)
 
-<img width="1232" height="530" alt="image" src="https://github.com/user-attachments/assets/e646ac86-351d-4172-b1ec-5e55814e6992" />
+<img width="1342" height="676" alt="image" src="https://github.com/user-attachments/assets/94e101c2-8617-4b1a-b058-5055b4b71751" />
 
 [Lead screw model]
 
@@ -211,16 +211,17 @@ The hand calculations were entered as global variables in the SolidWorks Equatio
 
 [Parco E40-4001-C](https://parco-inc.com/product/40mm-x-40mm-mono-slot-t-slotted-extrusion/)
 
-SS
+<img width="545" height="902" alt="image" src="https://github.com/user-attachments/assets/a434fd95-58d1-4640-9a8a-99f07eac64bd" />
 
 [T-slot frame model]
 
 #### Assembly:
 
-SS
+<img width="697" height="885" alt="image" src="https://github.com/user-attachments/assets/412f5d17-7f8f-4210-8bdd-5baaf83accd5" />
 
 [Full assembly]
 
+The area of the frame directly beneath the lead screws was intentionally left empty in the assembly. This space is reserved for the drive motors, which will be mounted below each lead screw in our final design.
 
 ### 2157 Addition: Use Finite Element Analysis (FEA) on the crosshead (20 pts): Ryan
 
@@ -238,6 +239,9 @@ Decided to add a puck similar to the load device onto the bottom of the crosshea
 
 #### Meshing & Verification:
 
+Applying the full 2 kN load at a single point or along a single edge of the crosshead would create an unrealistic stress concentration, since a point load acts over an area of essentially zero and the solver would report artificially high stresses directly under it. In reality, the load is transferred into the crosshead through the face of the grip/load device, which spreads the force over a finite contact area.
+
+To capture this more accurately, I estimated the size of the feature that would be in contact with the crosshead, based on the footprint of a typical tensile grip mount, and modeled the puck at that size. The 2 kN load is then applied through the puck, so it acts on the crosshead as a pressure distributed over the estimated contact area rather than as a concentrated force. This gives a more realistic stress distribution at the center of the crosshead and keeps the peak stresses in the results tied to actual geometric features (the lead screw holes) instead of to the load application point.
 ##### Mesh 1 – Coarse (2,804 elements)
 
 <img width="1257" height="820" alt="Screenshot 2026-11-12 062342" src="https://github.com/user-attachments/assets/b5c5d384-4b6e-44b0-91b5-1962c2d88dcd" />
@@ -343,7 +347,7 @@ The pocket cut mass by 7.9% (1.58 lb → 1.46 lb). Hole stress rose about 5% and
 
 ### 2157 Addition: Create a detailed drawing of the crosshead with a proper title block (20 pts): Ryan
 
-SS
+<img width="997" height="768" alt="image" src="https://github.com/user-attachments/assets/5a562f62-8f2d-47de-abe1-23c0708e54a4" />
 
 [Crosshead drawing]
 
@@ -352,7 +356,6 @@ SS
 
 
 We decided that Misha would complete the hand calculation portion of this project, while Ryan would complete the 3D modelling and assembly sections. 
-
 
 
 ## Communicate
@@ -364,4 +367,7 @@ To maximize efficiency and sanity, it is important to consider components that a
 
 Time Spent
 Misha: 10 hours
-Ryan:
+Ryan: 6 Hours
+
+## Apendix
+[A10 CAD Folder](https://drive.google.com/drive/folders/1nBWY8t1kYcQthW3WGljc9gPIUMdEUClD?usp=sharing).
