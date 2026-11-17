@@ -358,12 +358,17 @@ The pocket cut mass by 7.9% (1.58 lb → 1.46 lb). Hole stress rose about 5% and
 We decided that Misha would complete the hand calculation portion of this project, while Ryan would complete the 3D modelling and assembly sections. 
 
 
+
 ## Communicate
 
 
 Lessons learned: 
 
 To maximize efficiency and sanity, it is important to consider components that are most likely to fail, such as smaller fasteners. If I had considered how small the flange nut would have to be when using a 1/4"-16 lead screw, I would have instantly chosen a larger diameter screw and saved myself the trouble of all my extra calculations. - Misha
+
+I was able to learn how to add the third-angle projection symbol to a SolidWorks drawing file. In addition, I was able to learn in SolidWorks how to thread a lead screw through a threaded hole so that you can turn the lead screw in SolidWorks and make the crosshead move. - Ryan
+
+I was able to learn through my FEA work that the maximum stress from an FEA study is not always the critical point of a part. My results changed from mesh to mesh, and I ended up taking the results from my finest mesh, where the maximum stress moved to the sharp edge where the load puck meets the crosshead and kept rising as I refined the mesh. I made a puck to transfer the load through, and I used global variables in the SolidWorks Equations Manager. It made designing and doing my FEA calculations quicker. Finally, my optimization pass showed me that removing material is a trade-off, as I reduced the mass but also increased the stress a little bit. The stress was still within the limits, so I deemed it to be a fine optimization solution. - Ryan
 
 Time Spent
 Misha: 10 hours
