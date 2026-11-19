@@ -1,7 +1,7 @@
 # A11 – Motor Selection
 
 
-## Objectives:
+## Objectives
 
 
 Part 2 Scope of Work:
@@ -14,13 +14,14 @@ Provide a complete CAD model of the engineered parts of the Tensile Tester
 Deliver a Bill of Materials and Engineering Cost
 
 
-## Analyze:
+## Analyze
 
 
-### Motor Selection and Attachments: 
+## Motor Selection and Attachments
 
+## Motor Selection: Misha Likhtenbaum
 
-(10pts) Use torque and speed requirements derived from the lead screw design to select an appropriate motor (DC, stepper, or gearmotor). Document all relevant motor parameters: rated torque, speed, efficiency, voltage/current, and mounting interface. Verify that: *Misha*
+(10pts) Use torque and speed requirements derived from the lead screw design to select an appropriate motor (DC, stepper, or gearmotor). Document all relevant motor parameters: rated torque, speed, efficiency, voltage/current, and mounting interface. Verify that:
 
 A useful source for understanding how T-slot rail hardware functions can be found [here](https://8020.net/blog/guide-to-industrial-fasteners-for-t-slot-framing.html)
 
@@ -30,6 +31,7 @@ A useful source for understanding how T-slot rail hardware functions can be foun
 Based on the following hand calculations, the "Stepper Motor with Square Body, NEMA 23, 173.5 in.-oz. Maximum Holding Torque (SN: 6627T53)" from McMaster-Carr can provide an adequate amount of torque (when assuming an ACME lead screw efficiency of 30%) to create 1KN of force per lead screw. The motor specifications can be accessed at this [link](https://www.mcmaster.com/6627T53/)
 
 <img width="2073" height="1634" alt="Motor Selection" src="https://github.com/user-attachments/assets/a30ff62f-08ef-40b5-bf3d-343fafbeb96d" />
+
 [Hand calculations for torque conversion and thread efficiency]
 
 <img width="627" height="477" alt="Stepper Motor Image" src="https://github.com/user-attachments/assets/63db5a08-6417-4a33-9222-4a95cd20463f" />
@@ -45,7 +47,9 @@ Based on the following hand calculations, the "Stepper Motor with Square Body, N
 [Chosen stepper motor speed-torque curve]
 
 
-(10pts) Design a motor mount bracket or housing to securely attach the motor to the tester frame. Use the mounting holes in the motor as a pattern for features in the bracket. Select a four-hole pattern to secure the mount to the top of the frame. The mount must: a.) Maintain precise alignment with the lead screw to prevent binding or eccentric loading. b.) Accommodate service access for assembly and maintenance. c.) Withstand both operational torque and reaction forces without excessive deflection. *Misha*
+## Motor Mount Bracket: Misha Likhtenbaum
+
+(10pts) Design a motor mount bracket or housing to securely attach the motor to the tester frame. Use the mounting holes in the motor as a pattern for features in the bracket. Select a four-hole pattern to secure the mount to the top of the frame. The mount must: a.) Maintain precise alignment with the lead screw to prevent binding or eccentric loading. b.) Accommodate service access for assembly and maintenance. c.) Withstand both operational torque and reaction forces without excessive deflection.
 
 The T-slot bolts we will use to couple the motor mount to the T-slot rails can be found [here](https://8020.net/3611.html)
 The T-slot nuts we will use to couple the motor mount to the T-slot rails can be found [here](https://8020.net/40-3203.html).
@@ -62,13 +66,17 @@ When solving for tear-out thickness in the following calculations, L is simplifi
 After conducting our calculations, a minimum thickness of .0054 in was determined. This dimension may resist the applied force on paper, but would not function in any real application; therefore, our bracket will be made of 1/16 in thick 6061-H12 Plate.
 
 <img width="2086" height="2989" alt="Force Calculation" src="https://github.com/user-attachments/assets/403b2bcd-6180-44eb-84e1-82c859f5472a" />
+
 [Motor mounting and motor hole force calculations]
 
 <img width="2358" height="1530" alt="Thickness Determination" src="https://github.com/user-attachments/assets/7a324c7c-99c7-48fe-9242-773e1b4cfc24" />
+
 [Resultant thickness calculations]
 
 
-(10pts) Select/design a coupler to connect. Use shear stress torsion analysis to determine the inner and outer diameter of the coupler. *Misha*
+## Coupler Design: Misha Likhtenbaum
+
+(10pts) Select/design a coupler to connect. Use shear stress torsion analysis to determine the inner and outer diameter of the coupler.
 
 - List all the knowns and unknowns.
 - Detail an FBD for the torsional stress
@@ -84,12 +92,14 @@ Applicable coupler grub screws (Black-Oxide Alloy Steel Cone-Tip Set Screw 5-40 
 [1/8 x 3/16 (5-40 thread size) grub screw example (sourced from [this](https://www.ebay.co.uk/itm/187812375772) page]
 
 <img width="2187" height="3125" alt="Coupler OD" src="https://github.com/user-attachments/assets/d14664f8-6d11-4e79-bc61-6c6d943d4cb1" />
+
 [Hand calculations for outer diameter/coupler thickness]
 
-### Analyze and design a Frame:
+## Analyze and Design a Frame
 
+## Frame Connector Bracket (Motor Twist Analysis): Misha Likhtenbaum
 
-(10pts) Analyze the applied twist by the motors to design a bracket to affix the vertical standoffs of the frame to the top of the frame. Select proper Connectors for T-Slot Framing using the resources. *Misha*
+(10pts) Analyze the applied twist by the motors to design a bracket to affix the vertical standoffs of the frame to the top of the frame. Select proper Connectors for T-Slot Framing using the resources.
 
 - List all the knowns and unknowns.
 - Detail an FBD for the top of the frame
@@ -109,17 +119,19 @@ After the aforementioned calculations were conducted, it was determined that eac
 80-20 40-4481 40 Series 5 Hole - “L” Flat Plate connectors are viable for use in our design and can be accessed through [this](https://8020.net/40-4481.html) link. Grainger did not have L-shaped plate connectors available; all of theirs were flanged, which would require us to lengthen the horizontal footprint of our design.
 
 <img width="2335" height="3207" alt="L Connector calc" src="https://github.com/user-attachments/assets/ab216209-a1de-4422-a28c-c451ac15d680" />
-[Hand calculations for bottom tensile tester rail and joint connectors]      
+
+[Hand calculations for bottom tensile tester rail and joint connectors]
 
 
-### CAD Assembly
+## CAD Assembly
 
 
 <img width="833" height="873" alt="Screenshot 2026-11-19 072635" src="https://github.com/user-attachments/assets/69965588-2586-41d0-8871-6b76ecea5343" />
 
 
+## Top Frame FEA: Ryan Thomas
 
-(20 pts) Verify that the top of the frame constructed from heavy 40 Series will provide the strength necessary to hold the loads of the lead screw load and torque. Conduct an FEA using the proper constraints and loads. *Ryan*
+(20 pts) Verify that the top of the frame constructed from heavy 40 Series will provide the strength necessary to hold the loads of the lead screw load and torque. Conduct an FEA using the proper constraints and loads.
 
 **Model Setup:**
 
@@ -179,6 +191,7 @@ Both meshes used the blended curvature-based mesher at high quality (16 Jacobian
 [Top rail resultant displacement (URES) plot, Fine mesh]
 
 <img width="841" height="862" alt="Screenshot 2026-11-19 044359" src="https://github.com/user-attachments/assets/b5fab2dd-6af4-4af0-9354-2641fb373fd0" />
+
 [Top rail Factor of Safety plot, Fine mesh]
 
 **Load Path and Twisting/Warping:**
@@ -186,9 +199,12 @@ Both meshes used the blended curvature-based mesher at high quality (16 Jacobian
 The 2 kN specimen load travels from the crosshead nuts into our two lead screws, which are held in tension by the floating flange bearings on the top rail. Each bearing pulls down on the rail, bending it between the L-plate connectors, which then pass the load into the vertical rails as axial compression. The deformed shape matches the fixed-fixed model from our hand calculations, with the maximum deflection at midspan (the grip line) and the highest stresses at the edges of the bearing mount plates, where the stiff plates hand the load off to the rail. Some slight warping of the T-slot lips is visible next to the plates, but no significant twisting was observed, since the 10.84 lbf·in motor torques are small compared to the bending from the axial loads.
 
 **Optimization Pass:**
+
 Our top rail is already plenty strong FOS of 17.2, so we don need to make it stronger. The highest stress is at the sharp edges of the bearing mount plates. Rounding off those edges with a fillet would spread the load out more smoothly and lower that stress. After this change, the highest stress would most likely move to the ends of the rail where it connects to the frame.
 
-(20 pts) Verify that the vertical components of the frame constructed from heavy 40 Series will provide the strength necessary to hold the loads of the lead screw load and torque. Conduct an FEA using the proper constraints and loads. Note: there should be two forces, one axial compression and one transverse load. *Ryan*
+## Vertical Frame FEA: Ryan Thomas
+
+(20 pts) Verify that the vertical components of the frame constructed from heavy 40 Series will provide the strength necessary to hold the loads of the lead screw load and torque. Conduct an FEA using the proper constraints and loads. Note: there should be two forces, one axial compression and one transverse load.
 
 **Model Setup:**
 
@@ -257,10 +273,10 @@ The lead screws pull down on our top rail, which sends the load through the L-pl
 **Optimization Pass:**
 
 Our vertical rails are very lightly loaded, so they do not need to be stronger. The best change would be adding a diagonal brace or gusset at the top corners, where the vertical rails meet the top rail. This would stop the frame from bowing outward. After this, the highest stress would most likely stay at the bearing mount plate edges.
-### Design Floating Bearing Mount:
 
+## Floating Bearing Mount: Misha Likhtenbaum
 
-(10pts) Design a mounting bearing that allows the end of the leadscrew to rotate using an RC3 Fit class and affix to the bottom of the frame. Clearance holes for bolts must be researched in the Machinery’s Handbook. *Misha*
+(10pts) Design a mounting bearing that allows the end of the leadscrew to rotate using an RC3 Fit class and affix to the bottom of the frame. Clearance holes for bolts must be researched in the Machinery’s Handbook.
 
 - Justify each size and location dimension of the mount.
 - Note the functional tolerances for the appropriate dimensions.
@@ -274,27 +290,30 @@ The following hand calculations determined the required dimensions of the thrust
 Following the pressure and velocity analysis, the thrust element of the flange bearing is specified as SAE 841 bronze with a 3/8 in (0.375 in) inner diameter (+0.0006 in) and a 7/8 in (0.875 in) outer diameter (+0.0011/+0.0007 in). It has a thickness of 1/8 in. The journal portion of the flange bearing is specified in SAE 841 bronze with a 3/8 in (0.375 in) inner diameter (+0.0006 in) and an outer diameter of 5/8 in (+0.0009/+0.0006 in). It also has a thickness of 1/8 in.
 
 
-
 <img width="2284" height="3271" alt="Axial force calc" src="https://github.com/user-attachments/assets/1372a499-c115-436d-895d-8aa4e78f576f" />
+
 [Axial force calculations for thrust element design]
 
 <img width="1589" height="1059" alt="Rc3 for bearing mount" src="https://github.com/user-attachments/assets/1c180be5-aad1-40fc-915e-12c5c9c0a5e2" />
+
 [RC3 fit class used for 3/8 in lead screw hole]
 
 <img width="1273" height="718" alt="FN1 for bearing mount" src="https://github.com/user-attachments/assets/fe3e8608-d95d-455e-91e4-a30fb6d59a4d" />
+
 [FN1 fit class used for flange bearing dimensions]
 
 <img width="1823" height="2707" alt="Floating bearing mount drawing" src="https://github.com/user-attachments/assets/34fef2ea-1b0d-4a0b-85f8-40acb4aa0d70" />
+
 [Floating bearing mount hand drawing]
 
 <img width="2426" height="1525" alt="Flange bearing drawing" src="https://github.com/user-attachments/assets/7e657f70-ad54-4a46-afa1-84644f6148eb" />
+
 [Flange bearing hand drawing]
 
 
-### Bill of Materials and Labor Costs:
+## Bill of Materials and Labor Costs: Misha Likhtenbaum
 
-
-(10pt) Tabulate all the costs associated with both assignment parts. Use the following template to show the associated costs. You are to use an entry-level mechanical engineering designer cost per hour of $35/hour. *Misha*
+(10pt) Tabulate all the costs associated with both assignment parts. Use the following template to show the associated costs. You are to use an entry-level mechanical engineering designer cost per hour of $35/hour.
 
 A10 (Initial Design BOM and Labor Costs):
 
@@ -336,39 +355,42 @@ Design cost:
 | — | **Total Design Cost** | **28** | — | **\$980.00** |
 
 
-### 2157 Addition:
+## 2157 Addition – Drawing Package: Ryan Thomas and Misha Likhtenbaum
 
-
-(30pts) Create a drawing package that includes detailed drawings of the designed components, an assembly isometric drawing, and a Bill of Materials (BOM). Note: Include the crosshead drawing from the previous assignment. *Ryan and Misha*
+(30pts) Create a drawing package that includes detailed drawings of the designed components, an assembly isometric drawing, and a Bill of Materials (BOM). Note: Include the crosshead drawing from the previous assignment.
 
 - Each drawing has its proper title block.
 - Apply ASME Y14.5 standards for dimensioning and tolerancing.
 - Include the following:
-- Third-angle projection layout.
-- Tolerance block consistent with course standards:
-  - X.X ± .02
-  - X.XX ± .01
-  - X.XXX ± .005
+  - Third-angle projection layout.
+  - Tolerance block consistent with course standards:
+    - X.X ± .02
+    - X.XX ± .01
+    - X.XXX ± .005
  
 Drawings: 
 
 <img width="1456" height="1124" alt="image" src="https://github.com/user-attachments/assets/4486a747-c36b-4971-90b1-b8ddff093311" />
+
 [Flange/floating bearing drawing]
 
 <img width="1468" height="1138" alt="image" src="https://github.com/user-attachments/assets/991665ec-8cad-4b50-87ba-6b470907f3bb" />
+
 [Flange/floating bearing mount drawing]
 
 <img width="1384" height="1068" alt="image" src="https://github.com/user-attachments/assets/15278620-4c1f-46d9-86ec-cd4ef8c92ba2" />
+
 [Motor mount drawing]
 
 <img width="997" height="768" alt="crosshead drawing" src="https://github.com/user-attachments/assets/2895315b-755a-4dbf-82f2-52be338dd307" />
-[Crosshead drawing]  
 
-<img width="1610" height="947" alt="A11FULL_ASSEMD" src="https://github.com/user-attachments/assets/1f0357df-ab3d-49c1-a5ae-83a47c985e2a" />
+[Crosshead drawing]
+
+<img width="621" height="801" alt="Screenshot 2026-11-19 075714" src="https://github.com/user-attachments/assets/99d83e12-bbf5-456b-898c-60b31b0326f4" />
 
 [Assembly drawing]
 
-## Decide: 
+## Decide
 
 
 We chose a stepper motor for our tensile tester because it can measure strain when connected to a microcontroller, allowing us to use Hooke's Law to determine the test material's modulus of elasticity.
@@ -376,10 +398,14 @@ We chose a stepper motor for our tensile tester because it can measure strain wh
 As mentioned in the "Analyze the applied twist" subsection of the "Analyze and design a Frame" section, we chose to mount our motors on the bottom portion of our tensile tester, which reduces the torque output required to create the necessary tensile force, and lessens the buckling forces acting on our frame.
 
 
-## Communicate:
+## Communicate
 
-Misha: This project took me about 7 hours. One important lesson I learned was the importance of using accurate simplifications for stress and deflection calculations, as making lazy assumptions that oversimplify the actual physics behind a design can be disastrous, leading to wasted time and numerous design iterations. However, it is vital to know when a simplification is valid, since it can make a design more comprehensible and aid in the ease of calculations.
+## Lessons Learned: Misha Likhtenbaum
 
-Ryan: This project took me 6 hours to complete one important lesson that I learned was being able to work with assemblies in more detail I made subassemblies which I use to test my FEA in a more realistic manner and using the creation of those subassemblies I added them right into the final assembly which made the workflow a lot quicker and more efficient throughout this assignment.
+This project took me about 7 hours. One important lesson I learned was the importance of using accurate simplifications for stress and deflection calculations, as making lazy assumptions that oversimplify the actual physics behind a design can be disastrous, leading to wasted time and numerous design iterations. However, it is vital to know when a simplification is valid, since it can make a design more comprehensible and aid in the ease of calculations.
+
+## Lessons Learned: Ryan Thomas
+
+This project took me 6 hours to complete one important lesson that I learned was being able to work with assemblies in more detail I made subassemblies which I use to test my FEA in a more realistic manner and using the creation of those subassemblies I added them right into the final assembly which made the workflow a lot quicker and more efficient throughout this assignment.
 
 SolidWorks file downloads [here](https://drive.google.com/drive/folders/1IhMKdD6ZhvOsRu4-RQheC9PkQh70olW9?usp=sharing)
